@@ -1,30 +1,175 @@
----
-layout: null
----
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>{{ site.title | xml_escape }}</title>
-    <description>{{ site.description | xml_escape }}</description>
-    <link>{{ site.url }}{{ site.baseurl }}/</link>
-    <atom:link href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml"/>
-    <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
-    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
-    <generator>Jekyll v{{ jekyll.version }}</generator>
-    {% for post in site.posts limit:10 %}
+    <title>Van Le</title>
+    <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+</description>
+    <link>http://vann.io/</link>
+    <atom:link href="http://vann.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sun, 17 Jan 2016 16:55:59 +0000</pubDate>
+    <lastBuildDate>Sun, 17 Jan 2016 16:55:59 +0000</lastBuildDate>
+    <generator>Jekyll v3.0.1</generator>
+    
       <item>
-        <title>{{ post.title | xml_escape }}</title>
-        <description>{{ post.content | xml_escape }}</description>
-        <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-        <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
-        <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
-        {% for tag in post.tags %}
-        <category>{{ tag | xml_escape }}</category>
-        {% endfor %}
-        {% for cat in post.categories %}
-        <category>{{ cat | xml_escape }}</category>
-        {% endfor %}
+        <title>S.M.R.T. (the smart mirror)</title>
+        <description>&lt;p&gt;Update Jan 5&lt;sup&gt;th&lt;/sup&gt; —&lt;br /&gt;I shared this on Reddit. I think people &lt;a href=&quot;https://www.reddit.com/r/MakeupAddiction/comments/3zc5qh/i_built_a_smart_mirror_for_my_vanity/&quot; target=&quot;\_blank&quot;&gt;liked it&lt;/a&gt;.&lt;/p&gt;
+
+&lt;figure&gt;
+&lt;img src=&quot;/assets/smrt-1.jpg&quot; alt=&quot;Smart mirror wide view&quot; class=&quot;xl&quot; /&gt;
+&lt;figcaption&gt;Grab a brush and put a little makeup&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;I moved out of my family home recently, but found that there was no dressing-table mirror in my new flat *gasp*. Since moving out, my time-keeping has also taken a nosedive and I’ve found myself constantly being late, so to make living independently smoother and to solve such problems in one fell swoop, I made a smart mirror!&lt;/p&gt;
+
+&lt;p&gt;The mirror itself is a sheet of 2-way glass, custom cut to fit inside a cheap photo frame I got from Ikea. Unlike regular mirror glass it only reflects about 50% of light, but otherwise lets the rest through.&lt;/p&gt;
+
+&lt;figure&gt;
+&lt;img src=&quot;/assets/smrt-2.jpg&quot; alt=&quot;Smart mirror set-up&quot; /&gt;
+&lt;figcaption&gt;Monitor and Raspberry Pi setup behind the mirror&lt;br /&gt;(sorry for potato-quality)&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;An old monitor hooked up to a Raspberry Pi lives behind the glass, and a simple web-app is displayed in kiosk mode. Once the mirror is in place (aka haphazardly balanced on the monitor), anything that isn’t black shows through the glass.&lt;/p&gt;
+
+&lt;p&gt;The web-app, which can be found &lt;a href=&quot;/graveyard/smrt&quot; target=&quot;\_blank&quot;&gt;here&lt;/a&gt;, is what makes the mirror ‘smart’ — it includes the date and time, travel updates (TfL) to speed up my mornings, and the weather forecast (MetOffice) so that I leave the flat in weather-appropriate clothes.&lt;/p&gt;
+
+&lt;figure&gt;
+&lt;img src=&quot;/assets/smrt-3.jpg&quot; alt=&quot;Smart mirror close-up view&quot; /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;If I ever get round to it, motion detection — to make the monitor switch itself on as someone walks by — would be a pretty awesome addition.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 03 Jan 2016 22:21:00 +0000</pubDate>
+        <link>http://vann.io/projects/2016/01/03/smrt.html</link>
+        <guid isPermaLink="true">http://vann.io/projects/2016/01/03/smrt.html</guid>
+        
+        
+        <category>projects</category>
+        
       </item>
-    {% endfor %}
+    
+      <item>
+        <title>How to AWS, Apache and virtual host</title>
+        <description>&lt;p&gt;Since I nabbed free Amazon Web Services (AWS) credit from my student days, and since they offer a year’s free access on top of that, I wanted to use it to set up an Apache (ah-patch-ee? appa-shay?) virtual host, which allows me to run multiple websites from one server. This blog now sits on said server, although only static sites can be hosted as I haven’t installed any database stuff just yet — I’ll cross that bridge when I need to.&lt;/p&gt;
+
+&lt;p&gt;I was completely baffled by the idea of virtual hosts way back when, but they make deploying and updating sites from git repos such a doddle (because shell access, duh) — and to think, I was dragging and dropping files using FTP on shared hosting &lt;em&gt;for years&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;The dashboard for AWS can be really, really daunting. What we’re looking for is the EC2 (Elastic Compute Cloud) service.&lt;/p&gt;
+
+&lt;figure&gt;
+&lt;img src=&quot;/assets/aws-cp.png&quot; alt=&quot;Amazon Web Services dashboard&quot; /&gt;
+&lt;figcaption&gt;Top left! Peekaboo&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;On the EC2 dashboard, create a key pair and save the private &lt;code&gt;.pem&lt;/code&gt; key somewhere recoverable on your computer. We&#39;ll use this later to stop unauthorised access from an imposter.
+&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;
+Launch a new EC2 instance from a Ubuntu 14.04 virtual machine image. There are two versions to pick from: HVM and PV. I&#39;ll admit that I have little knowledge of the difference, so I chose HVM since Amazon seem to be recommending it and because &lt;a href=&quot;//highscalability.com/blog/2014/8/18/1-aerospike-server-x-1-amazon-ec2-instance-1-million-tps-for.html&quot; target=&quot;\_blank&quot;&gt;this guy&lt;/a&gt; said so.
+&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;
+Choose the instance type &amp;mdash; t2.micro is a good choice if you&#39;re not expecting a lot of traffic, and it&#39;s free! I like free. Use default settings for the config, storage and tag options, unless something compels you to choose otherwise.
+&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;
+Create a security group that allows incoming SSH access from your own IP address, and that allows HTTP and HTTPS access from anywhere. Then launch!
+&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;
+Optional: If you have a domain name you&#39;d like to use, set up a CNAME or A record on your domain&#39;s control panel that points to the IP address of your new EC2 instance. This is the bit that can sometimes take a while to propagate, so do this as soon as you can.
+&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Now whip open terminal to SSH into your server, making sure to include the private key generated earlier &amp;mdash; &lt;code&gt;ubuntu&lt;/code&gt; is the default user. I kept it as is, because ain&#39;t nobody got time to be changing it.
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;ssh -i path-of-file.pem ubuntu@ec2-public-ip-address&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;
+Install the Apache web server using Ubuntu&#39;s package manager.
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;sudo apt-get update
+sudo apt-get install apache2&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;
+Once that&#39;s all done and dusted, sort out the directory structure &amp;mdash; the default document root should be &lt;code&gt;/home/ubuntu/public&lt;/code&gt;. Create an empty directory inside it (or &lt;code&gt;git clone&lt;/code&gt; your content) using the desired url as the name, then create some dummy content.
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;sudo mkdir /home/ubuntu/public/testing.com
+nano /home/ubuntu/public/testing.com/index.html&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;
+Managing the virtual host files is the fiddly bit. These specify the configuration of the virtual host, and Apache will use them to respond to domain requests.
+&lt;/p&gt;&lt;p&gt;Apache already has a default virtual host file. Shamelessly copy this and edit it for each site you&#39;d like to serve.
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/testing.com.conf
+sudo nano /etc/apache2/sites-available/testing.com.conf&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+
+These directives need to be updated:
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;ServerName&lt;/code&gt; &amp;mdash; matches this virtual host to the domain, eg. testing.com&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ServerAlias&lt;/code&gt; &amp;mdash; points additional domains (if you have any) to this virtual host as well, eg. testing.co.uk&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;DocumentRoot&lt;/code&gt; &amp;mdash; where the files live&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;
+Once the file is saved, the site needs to be enabled and the server needs to be reloaded.
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;sudo a2ensite /etc/apache2/sites-available/testing.com.conf
+sudo service apache2 reload&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;
+Optional: Update the default virtual host file to handle errors somewhat. Open up the file editor:
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;sudo nano /etc/apache2/sites-available/000-default.conf&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+
+Then add these lines somewhere reasonable in it, updating the error page path as necessary:
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-apache&quot; data-lang=&quot;apache&quot;&gt;&lt;span class=&quot;nl&quot;&gt;ErrorDocument&lt;/span&gt; 404 /path-of-error-page.html
+&lt;span class=&quot;nl&quot;&gt;ErrorDocument&lt;/span&gt; 500 /path-of-error-page.html
+&lt;span class=&quot;nl&quot;&gt;ErrorDocument&lt;/span&gt; 502 /path-of-error-page.html
+&lt;span class=&quot;nl&quot;&gt;ErrorDocument&lt;/span&gt; 503 /path-of-error-page.html
+&lt;span class=&quot;nl&quot;&gt;ErrorDocument&lt;/span&gt; 504 /path-of-error-page.html&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+
+You&#39;ll see that when this blog throws a server error (eg. 404) it points to &lt;a href=&quot;/oops.html&quot; target=&quot;\_blank&quot;&gt;oops.html&lt;/a&gt;, so that&#39;s that in action!
+&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        <pubDate>Sun, 27 Dec 2015 00:25:00 +0000</pubDate>
+        <link>http://vann.io/server/2015/12/27/apache.html</link>
+        <guid isPermaLink="true">http://vann.io/server/2015/12/27/apache.html</guid>
+        
+        
+        <category>server</category>
+        
+      </item>
+    
+      <item>
+        <title>Hello, it&#39;s me</title>
+        <description>&lt;p&gt;&lt;em&gt;I was wondering if after all these years&lt;br /&gt;I should start a blog…&lt;/em&gt; 🎶&lt;/p&gt;
+
+&lt;p&gt;Last Wednesday marked the 4th session of the &lt;a href=&quot;http://girlsintechuk.com/programmes/mentoring-programme/&quot; target=&quot;\_blank&quot;&gt;Girls in Tech&lt;/a&gt; mentoring scheme. The scheme is essentially a monthly speed-dating session with respected, influential individuals (mainly women) in the tech industry. One of the mentors mentioned that keeping a blog immensely helped her and inspired me to do the same. For the first time in years, I also have the time to actually read for pleasure! I’m currently reading the classic ‘Dracula’ by Bram Stoker which — if you have read it, will understand — constantly reminds me of the importance of keeping journals.&lt;/p&gt;
+
+&lt;p&gt;So that brings us here, to this &lt;a href=&quot;//jekyllrb.com/&quot; target=&quot;\_blank&quot;&gt;jekyll-based&lt;/a&gt; blog. Hello. This will be my space to talk all things web development, and where you can follow my journey of learning/doing/building, should you choose to do so.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 19 Dec 2015 10:44:00 +0000</pubDate>
+        <link>http://vann.io/general/2015/12/19/hello.html</link>
+        <guid isPermaLink="true">http://vann.io/general/2015/12/19/hello.html</guid>
+        
+        
+        <category>general</category>
+        
+      </item>
+    
   </channel>
 </rss>
