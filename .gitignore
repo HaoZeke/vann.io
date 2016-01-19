@@ -1,0 +1,10 @@
+_assets
+_drafts
+_posts
+_site
+.publish
+assets
+css
+graveyard
+node_modules
+scripts
