@@ -1,0 +1,30 @@
+/**
+ * Wrapper
+ */
+.wrapper {
+  max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
+  margin: 0 auto;
+  padding: 0 $spacing-unit;
+  @extend %clearfix;
+
+  @include media-query($on-laptop) {
+    max-width: calc(#{$content-width} - (#{$spacing-unit}));
+    padding: 0 $spacing-unit / 2;
+  }
+}
+
+.page-content {
+  padding-top: $spacing-unit * 2;
+  padding-bottom: $spacing-unit * 2;
+  overflow-x: hidden;
+
+  @include media-query($on-palm) {
+    padding-top: 1px;
+  }
+}
+
+.text-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 $spacing-unit;
+}

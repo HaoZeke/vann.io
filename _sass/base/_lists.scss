@@ -1,0 +1,16 @@
+/**
+ * Lists
+ */
+ul {
+  max-width: 80%;
+
+  li {
+    margin-bottom: 0.5em;
+
+    > ul,
+    > ol {
+      margin-top: 0.5em;
+      margin-bottom: 1em;
+    }
+  }
+}

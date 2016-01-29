@@ -1,0 +1,31 @@
+/**
+ * Images
+ */
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+/**
+ * Figures
+ */
+figure {
+  margin: 1.5em auto;
+}
+
+figure > img {
+  display: block;
+  border-radius: 4px;
+
+  &.xl {
+    width: 140%;
+    margin-left: -20%;
+    max-width: 140%;
+  }
+}
+
+figcaption {
+  font-size: $small-font-size;
+  text-align: center;
+  margin-top: 0.5em;
+}
