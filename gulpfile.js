@@ -9,10 +9,6 @@ var uglify      = require('gulp-uglify');
 var ghPages     = require('gulp-gh-pages');
 var imagemin    = require('gulp-imagemin');
 
-// var messages = {
-//   jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
-// };
-
 /**
 * Compile files from _sass into both _site/css (for live injecting) and site (for future jekyll builds)
 */
@@ -34,11 +30,7 @@ gulp.task('sass', function () {
 gulp.task('uglify', function () {
   return gulp.src('_js/main.js')
     .pipe(rename('main.min.js'))
-    // .pipe(gulp.dest('scripts'))
-    .pipe(uglify({
-      onError: browserSync.notify
-    }))
-    // .pipe(rename('main.min.js'))
+    .pipe(uglify({onError: browserSync.notify}))
     .pipe(gulp.dest('scripts'));
 });
 
@@ -70,7 +62,7 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
 /**
 * Wait for jekyll-build, then launch the Server
 */
-gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
+gulp.task('browser-sync', ['sass', 'uglify', 'jekyll-build'], function() {
   browserSync({
     notify: {
       styles: [
