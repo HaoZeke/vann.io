@@ -3,15 +3,13 @@ var $ = require('jquery');
 var outer = '.page-content';
 var inner = '.text-wrapper';
 
-$('body').on('click','.site-nav a, .post-title a', function(e){
-  e.preventDefault();
-  var target = $(this).attr('href');
-
+function ajaxLoad(target){
   $.ajax({
     type: 'get',
     url: target,
     cache: false,
     success: function(response){
+      history.pushState(null, null, target);
       var content =  $($.parseHTML(response)).filter(outer).find(inner);
       $(outer).fadeOut('fast',function(){
         $(outer).html('');
@@ -20,4 +18,9 @@ $('body').on('click','.site-nav a, .post-title a', function(e){
       });
     }
   });
+};
+
+$('body').on('click','.site-nav a, .post-title a', function(e){
+  e.preventDefault();
+  ajaxLoad($(this).attr('href'));
 });
