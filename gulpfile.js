@@ -8,6 +8,7 @@ var minifyCSS   = require('gulp-minify-css');
 var uglify      = require('gulp-uglify');
 var ghPages     = require('gulp-gh-pages');
 var imagemin    = require('gulp-imagemin');
+var webpack     = require('webpack-stream');
 
 /**
 * Compile files from _sass into both _site/css (for live injecting) and site (for future jekyll builds)
@@ -29,6 +30,7 @@ gulp.task('sass', function () {
 
 gulp.task('uglify', function () {
   return gulp.src('_js/main.js')
+    .pipe(webpack())
     .pipe(rename('main.min.js'))
     .pipe(uglify({onError: browserSync.notify}))
     .pipe(gulp.dest('scripts'));
