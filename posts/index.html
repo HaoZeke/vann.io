@@ -28,7 +28,7 @@
         </svg>
       </a>
       <div class="trigger">
-        <a class="page-link" href="/">Home</a>
+        <a class="page-link ajax-link" href="/">Home</a>
         
           
         
@@ -39,11 +39,12 @@
           
         
           
-          <a class="page-link" href="/posts/">Posts</a>
+          <a class="page-link ajax-link" href="/posts/">Posts</a>
           
         
           
         
+        <a class="page-link contact-link" href="#contact">Contact</a>
       </div>
     </nav>
   </div>
@@ -60,7 +61,7 @@
 
   <article class="post post-index" itemscope itemtype="http://schema.org/BlogPosting">
     <header class="post-header">
-      <h3 class="post-title" itemprop="name headline"><a href="/projects/2016/01/03/smrt.html">S.M.R.T. (the smart mirror)</a></h3>
+      <h3 class="post-title" itemprop="name headline"><a href="/projects/2016/01/03/smrt.html" class="ajax-link">S.M.R.T. (the smart mirror)</a></h3>
       <p class="post-meta"><time datetime="2016-01-03T22:21:00+00:00" itemprop="datePublished">Jan 3, 2016</time></p>
     </header>
     <div class="post-content" itemprop="articleBody">
@@ -93,114 +94,6 @@
     </div>
   </article>
   
-
-
-
-  <article class="post post-index" itemscope itemtype="http://schema.org/BlogPosting">
-    <header class="post-header">
-      <h3 class="post-title" itemprop="name headline"><a href="/server/2015/12/27/apache.html">How to AWS, Apache and virtual host</a></h3>
-      <p class="post-meta"><time datetime="2015-12-27T00:25:00+00:00" itemprop="datePublished">Dec 27, 2015</time></p>
-    </header>
-    <div class="post-content" itemprop="articleBody">
-      <p>Since I nabbed free Amazon Web Services (AWS) credit from my student days, and since they offer a year’s free access on top of that, I wanted to use it to set up an Apache (ah-patch-ee? appa-shay?) virtual host, which allows me to run multiple websites from one server. This blog now sits on said server, although only static sites can be hosted as I haven’t installed any database stuff just yet — I’ll cross that bridge when I need to.</p>
-
-<p>I was completely baffled by the idea of virtual hosts way back when, but they make deploying and updating sites from git repos such a doddle (because shell access, duh) — and to think, I was dragging and dropping files using FTP on shared hosting <em>for years</em>.</p>
-
-<p>The dashboard for AWS can be really, really daunting. What we’re looking for is the EC2 (Elastic Compute Cloud) service.</p>
-
-<figure>
-<img src="/assets/aws-cp.png" alt="Amazon Web Services dashboard" />
-<figcaption>Top left! Peekaboo</figcaption>
-</figure>
-
-<ol>
-<li><p>On the EC2 dashboard, create a key pair and save the private <code>.pem</code> key somewhere recoverable on your computer. We'll use this later to stop unauthorised access from an imposter.
-</p></li>
-
-<li><p>
-Launch a new EC2 instance from a Ubuntu 14.04 virtual machine image. There are two versions to pick from: HVM and PV. I'll admit that I have little knowledge of the difference, so I chose HVM since Amazon seem to be recommending it and because <a href="//highscalability.com/blog/2014/8/18/1-aerospike-server-x-1-amazon-ec2-instance-1-million-tps-for.html" target="\_blank">this guy</a> said so.
-</p></li>
-
-<li><p>
-Choose the instance type &mdash; t2.micro is a good choice if you're not expecting a lot of traffic, and it's free! I like free. Use default settings for the config, storage and tag options, unless something compels you to choose otherwise.
-</p></li>
-
-<li><p>
-Create a security group that allows incoming SSH access from your own IP address, and that allows HTTP and HTTPS access from anywhere. Then launch!
-</p></li>
-
-<li><p>
-Optional: If you have a domain name you'd like to use, set up a CNAME or A record on your domain's control panel that points to the IP address of your new EC2 instance. This is the bit that can sometimes take a while to propagate, so do this as soon as you can.
-</p></li>
-
-<li><p>Now whip open terminal to SSH into your server, making sure to include the private key generated earlier &mdash; <code>ubuntu</code> is the default user. I kept it as is, because ain't nobody got time to be changing it.
-
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell">ssh -i path-of-file.pem ubuntu@ec2-public-ip-address</code></pre></figure>
-
-</p></li>
-
-<li><p>
-Install the Apache web server using Ubuntu's package manager.
-
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell">sudo apt-get update
-sudo apt-get install apache2</code></pre></figure>
-
-</p></li>
-
-<li><p>
-Once that's all done and dusted, sort out the directory structure &mdash; the default document root should be <code>/home/ubuntu/public</code>. Create an empty directory inside it (or <code>git clone</code> your content) using the desired url as the name, then create some dummy content.
-
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell">sudo mkdir /home/ubuntu/public/testing.com
-nano /home/ubuntu/public/testing.com/index.html</code></pre></figure>
-
-</p></li>
-
-<li><p>
-Managing the virtual host files is the fiddly bit. These specify the configuration of the virtual host, and Apache will use them to respond to domain requests.
-</p><p>Apache already has a default virtual host file. Shamelessly copy this and edit it for each site you'd like to serve.
-
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell">sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/testing.com.conf
-sudo nano /etc/apache2/sites-available/testing.com.conf</code></pre></figure>
-
-
-These directives need to be updated:
-<ul>
-<li><code>ServerName</code> &mdash; matches this virtual host to the domain, eg. testing.com</li>
-<li><code>ServerAlias</code> &mdash; points additional domains (if you have any) to this virtual host as well, eg. testing.co.uk</li>
-<li><code>DocumentRoot</code> &mdash; where the files live</li>
-</ul>
-</p></li>
-
-<li><p>
-Once the file is saved, the site needs to be enabled and the server needs to be reloaded.
-
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell">sudo a2ensite /etc/apache2/sites-available/testing.com.conf
-sudo service apache2 reload</code></pre></figure>
-
-</p></li>
-
-<li><p>
-Optional: Update the default virtual host file to handle errors somewhat. Open up the file editor:
-
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell">sudo nano /etc/apache2/sites-available/000-default.conf</code></pre></figure>
-
-
-Then add these lines somewhere reasonable in it, updating the error page path as necessary:
-
-<figure class="highlight"><pre><code class="language-apache" data-lang="apache"><span class="nl">ErrorDocument</span> 404 /path-of-error-page.html
-<span class="nl">ErrorDocument</span> 500 /path-of-error-page.html
-<span class="nl">ErrorDocument</span> 502 /path-of-error-page.html
-<span class="nl">ErrorDocument</span> 503 /path-of-error-page.html
-<span class="nl">ErrorDocument</span> 504 /path-of-error-page.html</code></pre></figure>
-
-
-You'll see that when this blog throws a server error (eg. 404) it points to <a href="/oops.html" target="\_blank">oops.html</a>, so that's that in action!
-</p></li>
-</ol>
-
-    </div>
-  </article>
-  
 <h2>Older Posts</h2>
   <ul class="post-list">
   
@@ -208,7 +101,15 @@ You'll see that when this blog throws a server error (eg. 404) it points to <a h
 
 
   <li>
-    <span class="post-title"><a class="post-link" href="/general/2015/12/19/hello.html">Hello, it's me</a></span>
+    <span class="post-title"><a class="post-link ajax-link" href="/server/2015/12/27/apache.html">How to AWS, Apache and virtual host</a></span>
+    <p class="post-meta"><time datetime="2015-12-27T00:25:00+00:00" itemprop="datePublished">Dec 27, 2015</time></p>
+  </li>
+  
+
+
+
+  <li>
+    <span class="post-title"><a class="post-link ajax-link" href="/general/2015/12/19/hello.html">Hello, it's me</a></span>
     <p class="post-meta"><time datetime="2015-12-19T10:44:00+00:00" itemprop="datePublished">Dec 19, 2015</time></p>
   </li>
   
@@ -219,7 +120,7 @@ You'll see that when this blog throws a server error (eg. 404) it points to <a h
 
       </div>
     </div>
-    <footer class="site-footer">
+    <footer class="site-footer" id="contact">
   <div class="text-wrapper">
     <h2>Contact</h2>
     <p>
