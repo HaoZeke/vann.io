@@ -5,8 +5,8 @@
     <description></description>
     <link>http://vann.io/</link>
     <atom:link href="http://vann.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 30 Jan 2016 13:46:23 +0000</pubDate>
-    <lastBuildDate>Sat, 30 Jan 2016 13:46:23 +0000</lastBuildDate>
+    <pubDate>Sat, 30 Jan 2016 13:51:01 +0000</pubDate>
+    <lastBuildDate>Sat, 30 Jan 2016 13:51:01 +0000</lastBuildDate>
     <generator>Jekyll v3.1.0</generator>
     
       <item>
@@ -38,9 +38,11 @@
 &lt;p&gt;If I ever get round to it, motion detection — to make the monitor switch itself on as someone walks by — would be a pretty awesome addition.&lt;/p&gt;
 </description>
         <pubDate>Sun, 03 Jan 2016 22:21:00 +0000</pubDate>
-        <link>http://vann.io/projects/2016/01/03/smrt.html</link>
-        <guid isPermaLink="true">http://vann.io/projects/2016/01/03/smrt.html</guid>
+        <link>http://vann.io/posts/projects/2016/01/03/smrt.html</link>
+        <guid isPermaLink="true">http://vann.io/posts/projects/2016/01/03/smrt.html</guid>
         
+        
+        <category>posts</category>
         
         <category>projects</category>
         
@@ -145,9 +147,11 @@ You&#39;ll see that when this blog throws a server error (eg. 404) it points to 
 &lt;/ol&gt;
 </description>
         <pubDate>Sun, 27 Dec 2015 00:25:00 +0000</pubDate>
-        <link>http://vann.io/server/2015/12/27/apache.html</link>
-        <guid isPermaLink="true">http://vann.io/server/2015/12/27/apache.html</guid>
+        <link>http://vann.io/posts/server/2015/12/27/apache.html</link>
+        <guid isPermaLink="true">http://vann.io/posts/server/2015/12/27/apache.html</guid>
         
+        
+        <category>posts</category>
         
         <category>server</category>
         
@@ -162,9 +166,11 @@ You&#39;ll see that when this blog throws a server error (eg. 404) it points to 
 &lt;p&gt;So that brings us here, to this &lt;a href=&quot;//jekyllrb.com/&quot; target=&quot;\_blank&quot;&gt;jekyll-based&lt;/a&gt; blog. Hello. This will be my space to talk all things web development, and where you can follow my journey of learning/doing/building, should you choose to do so.&lt;/p&gt;
 </description>
         <pubDate>Sat, 19 Dec 2015 10:44:00 +0000</pubDate>
-        <link>http://vann.io/general/2015/12/19/hello.html</link>
-        <guid isPermaLink="true">http://vann.io/general/2015/12/19/hello.html</guid>
+        <link>http://vann.io/posts/general/2015/12/19/hello.html</link>
+        <guid isPermaLink="true">http://vann.io/posts/general/2015/12/19/hello.html</guid>
         
+        
+        <category>posts</category>
         
         <category>general</category>
         
