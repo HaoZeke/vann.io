@@ -8,7 +8,11 @@
 
 .site-nav {
   float: right;
-  line-height: 56px;
+  padding-top: $spacing-unit / 2;
+
+  @include media-query($on-palm) {
+    padding-top: 0;
+  }
 
   .menu-icon {
     display: none;

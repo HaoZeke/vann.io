@@ -17,7 +17,9 @@
   color: $grey-color;
 
   .post-list & {
-    margin-bottom: $spacing-unit * 1.5;
+    margin-bottom: $spacing-unit / 2;
+    margin-top: 0;
+    line-height: 2.6;
   }
 }
 
@@ -53,11 +55,14 @@
 
   .post-list & {
     letter-spacing: 0;
+    display: block;
 
     a {
       font-family: $base-font-family;
       font-weight: 400;
       text-decoration: underline;
+      display: inline-block;
+      line-height: 2;
     }
   }
 }
