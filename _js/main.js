@@ -3,6 +3,15 @@ var $ = require('jquery');
 var outer = '.page-content';
 var inner = '.text-wrapper';
 
+function scrollTop(){
+  var currentScroll = $(window).scrollTop();
+  var limitScroll = $(window).height();
+
+  if (currentScroll >= limitScroll) {
+    $('html, body').animate({ scrollTop: 0 }, 500);
+  }
+}
+
 function ajaxLoad(target){
   $.ajax({
     type: 'get',
@@ -10,6 +19,8 @@ function ajaxLoad(target){
     cache: false,
     success: function(response){
       history.pushState(null, null, target);
+      scrollTop();
+
       var content =  $($.parseHTML(response)).filter(outer).find(inner);
       $(outer).fadeOut('fast',function(){
         $(outer).html('');
@@ -18,6 +29,8 @@ function ajaxLoad(target){
       });
     },
     error: function(){
+      scrollTop();
+
       $(outer).fadeOut('fast',function(){
         $(outer).html('');
         $(outer).html('<div class="text-wrapper">Oops, something went wrong!</div>');
@@ -30,14 +43,4 @@ function ajaxLoad(target){
 $('body').on('click','.ajax-link', function(e){
   e.preventDefault();
   ajaxLoad($(this).attr('href'));
-});
-
-// Smooth scrolling to contact anchor
-$('body').on('click','.contact-link',function(e) {
-  e.preventDefault();
-
-  var target = $(this.hash);
-  $('html,body').animate({
-    scrollTop: target.offset().top
-  }, 1000);
 });
