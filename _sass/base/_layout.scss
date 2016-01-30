@@ -17,6 +17,8 @@
   padding-top: $spacing-unit * 2;
   padding-bottom: $spacing-unit * 2;
   overflow-x: hidden;
+  position: relative;
+  z-index: 1;
 
   @include media-query($on-palm) {
     padding-top: 1px;
