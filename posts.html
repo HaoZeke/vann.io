@@ -13,7 +13,7 @@ nav: true
 {% if forloop.index <= fullposts %}
   <article class="post post-index" itemscope itemtype="http://schema.org/BlogPosting">
     <header class="post-header">
-      <h3 class="post-title" itemprop="name headline"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+      <h3 class="post-title" itemprop="name headline"><a href="{{ post.url | prepend: site.baseurl }}" class="ajax-link">{{ post.title }}</a></h3>
       <p class="post-meta"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}</time>{% if post.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ post.author }}</span></span>{% endif %}</p>
     </header>
     <div class="post-content" itemprop="articleBody">
@@ -26,7 +26,7 @@ nav: true
   {% endif %}
 {% else if forloop.length > 1 %}
   <li>
-    <span class="post-title"><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></span>
+    <span class="post-title"><a class="post-link ajax-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></span>
     <p class="post-meta"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}</time>{% if post.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ post.author }}</span></span>{% endif %}</p>
   </li>
   {% if forloop.last %}
