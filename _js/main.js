@@ -17,16 +17,14 @@ $(document).ready(function(){
     $.ajax({
       type: 'get',
       url: target,
+      cache: false,
       success: function(response){
-        history.pushState({ title: title, target: target }, null, target);
-        scrollTop();
-
-        var content =  $($.parseHTML(response)).filter(outer).find(inner);
         $(outer).fadeOut('fast',function(){
           $(outer).html('');
-          $(outer).html(content);
-          $(outer).hide().fadeIn('fast');
+          $(outer).html($($.parseHTML(response)).filter(outer).find(inner));
+          $(outer).fadeIn('fast');
         });
+        scrollTop();
       },
       error: function(){
         $(outer).fadeOut('fast',function(){
@@ -45,10 +43,14 @@ $(document).ready(function(){
     var title = $(this)[0].innerText;
 
     ajaxLoad(target, title);
+    history.pushState({ title: title, target: target }, null, target);
+
   });
 
   $(window).on('popstate', function () {
-    ajaxLoad(history.state.target, history.state.title);
+    if (history.state !== null){
+      ajaxLoad(history.state.target, history.state.title);
+    }
   });
 
   // Disable the mobile nav button from doing anything!
