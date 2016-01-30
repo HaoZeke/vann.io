@@ -15,4 +15,4 @@ This is a static blog site built using Jekyll and Gulp.
 ### Deployment
 This is automatically ready to deploy, so long as `gulp` has been running during development — otherwise use `jekyll build`.
 
-Deploy to the `prod` branch with `gulp deploy`.
+Built code lives in the ``_site`` directory. Deploy this to the `prod` branch with `gulp deploy`.
