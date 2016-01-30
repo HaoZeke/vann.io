@@ -30,9 +30,14 @@ h1, h2, h3, h4, h5, h6 {
 
 h2 {
   margin-bottom: $spacing-unit;
+  line-height: 1;
 
   .text-wrapper & {
     margin-top: 0;
+  }
+
+  .post-single & {
+    margin-bottom: 0;
   }
 }
 
