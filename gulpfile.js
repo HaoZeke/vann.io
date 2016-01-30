@@ -20,19 +20,23 @@ gulp.task('sass', function () {
       onError: browserSync.notify
     }))
     .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
-    .pipe(minifyCSS({keepBreaks: false, keepSpecialComments:true}))
-    .pipe(gulp.dest('_site/css'))
-    .pipe(rename('main.min.css'))
+    .pipe(rename('main.css'))
+    .pipe(gulp.dest('css'))
     .pipe(gulp.dest('_site/css'))
     .pipe(browserSync.reload({stream:true}))
-    .pipe(gulp.dest('css'));
+    .pipe(minifyCSS({keepBreaks: false, keepSpecialComments:true}))
+    .pipe(rename('main.min.css'))
+    .pipe(gulp.dest('css'))
+    .pipe(gulp.dest('_site/css'));
 });
 
 gulp.task('uglify', function () {
   return gulp.src('_js/main.js')
     .pipe(webpack())
-    .pipe(rename('main.min.js'))
+    .pipe(rename('main.js'))
+    .pipe(gulp.dest('scripts'))
     .pipe(uglify({onError: browserSync.notify}))
+    .pipe(rename('main.min.js'))
     .pipe(gulp.dest('scripts'));
 });
 
@@ -49,7 +53,6 @@ gulp.task('images', () => {
 * Build the Jekyll Site
 */
 gulp.task('jekyll-build', function (done) {
-  // browserSync.notify(messages.jekyllBuild);
   return cp.spawn('jekyll', ['build'], {stdio: 'inherit'})
     .on('close', done);
 });
@@ -77,7 +80,7 @@ gulp.task('browser-sync', ['sass', 'uglify', 'jekyll-build'], function() {
         'left: 5px;',
         'top: 5px;',
         'color: #fff;',
-        'border-radius: 4px',
+        'border-radius: 2px',
         'background-color: #333;',
         'background-color: rgba(50,50,50,0.8);'
       ]
@@ -106,9 +109,20 @@ gulp.task('watch', function () {
 gulp.task('default', ['browser-sync', 'watch']);
 
 /**
-* For pushing the build to github/bitbucket
+ * Build the Jekyll Site for production
+ */
+gulp.task('jekyll-build-prod', function (done) {
+  var productionEnv = process.env;
+  productionEnv.JEKYLL_ENV = 'production';
+
+  return cp.spawn('jekyll', ['build'], { stdio: 'inherit' , env:productionEnv })
+    .on('close', done);
+});
+
+/**
+* Push the build to github/bitbucket
 */
-gulp.task('deploy', function() {
+gulp.task('deploy', ['jekyll-build-prod'], function() {
   return gulp.src('./_site/**/*')
     .pipe(ghPages({
       branch: 'prod'
