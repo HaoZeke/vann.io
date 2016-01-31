@@ -1,6 +1,6 @@
 _assets
-_drafts
-_posts
+posts/_posts
+posts/_drafts
 _site
 .publish
 assets

@@ -53,7 +53,7 @@ gulp.task('images', () => {
 * Build the Jekyll Site
 */
 gulp.task('jekyll-build', function (done) {
-  return cp.spawn('jekyll', ['build'], {stdio: 'inherit'})
+  return cp.spawn('jekyll', ['build', '--drafts'], {stdio: 'inherit'})
     .on('close', done);
 });
 
@@ -71,6 +71,7 @@ gulp.task('browser-sync', ['sass', 'uglify', 'jekyll-build'], function() {
   browserSync({
     notify: {
       styles: [
+        'font-weight: bold;',
         'padding: 10px;',
         'margin: 0;',
         'position: fixed;',
@@ -111,7 +112,7 @@ gulp.task('default', ['browser-sync', 'watch']);
 /**
  * Build the Jekyll Site for production
  */
-gulp.task('jekyll-build-prod', function (done) {
+gulp.task('build-prod', function (done) {
   var productionEnv = process.env;
   productionEnv.JEKYLL_ENV = 'production';
 
@@ -122,7 +123,7 @@ gulp.task('jekyll-build-prod', function (done) {
 /**
 * Push the build to github/bitbucket
 */
-gulp.task('deploy', ['jekyll-build-prod'], function() {
+gulp.task('deploy', ['build-prod'], function() {
   return gulp.src('./_site/**/*')
     .pipe(ghPages({
       branch: 'prod'
