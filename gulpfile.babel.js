@@ -10,6 +10,8 @@ import ghPages from 'gulp-gh-pages';
 import imagemin from 'gulp-imagemin';
 import webpack from 'webpack-stream';
 
+const reload = browserSync.reload;
+
 /**
 * Compile files from _sass into both _site/css (for live injecting) and site (for future jekyll builds)
 */
@@ -23,7 +25,7 @@ gulp.task('sass', () => {
     .pipe(rename('main.css'))
     .pipe(gulp.dest('css'))
     .pipe(gulp.dest('_site/css'))
-    .pipe(browserSync.reload({stream:true}))
+    .pipe(reload({stream:true}))
     .pipe(minifyCSS({keepBreaks: false, keepSpecialComments:true}))
     .pipe(rename('main.min.css'))
     .pipe(gulp.dest('css'))
@@ -46,9 +48,12 @@ gulp.task('uglify', () => {
     }))
     .pipe(rename('main.js'))
     .pipe(gulp.dest('scripts'))
+    .pipe(gulp.dest('_site/scripts'))
+    .pipe(reload({stream:true}))
     .pipe(uglify({onError: browserSync.notify}))
     .pipe(rename('main.min.js'))
-    .pipe(gulp.dest('scripts'));
+    .pipe(gulp.dest('scripts'))
+    .pipe(gulp.dest('_site/scripts'));
 });
 
 gulp.task('images', () => {
@@ -72,7 +77,7 @@ gulp.task('jekyll-build', done => {
 * Rebuild Jekyll & do page reload
 */
 gulp.task('jekyll-rebuild', ['jekyll-build'], () => {
-  browserSync.reload();
+  reload();
 });
 
 /**
@@ -111,7 +116,7 @@ gulp.task('watch', () => {
   gulp.watch(['_sass/**/*.scss','css/*.scss'], ['sass']);
   gulp.watch(['_js/*.js'], ['uglify']);
   gulp.watch(['_assets/*'], ['images']);
-  gulp.watch(['*.html', '_includes/*', '_layouts/*.html', 'posts/_posts/*', 'scripts/*', 'assets/**/*', 'graveyard/**/*'], ['jekyll-rebuild']);
+  gulp.watch(['*.html', '_includes/*', '_layouts/*.html', 'posts/_posts/*', 'assets/**/*', 'graveyard/**/*'], ['jekyll-rebuild']);
 });
 
 /**
