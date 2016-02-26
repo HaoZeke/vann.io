@@ -59,7 +59,6 @@ blockquote {
   border-left: 4px solid #f3f3f2;
   padding-left: 15px;
   font-size: 18px;
-  letter-spacing: -1px;
   font-style: italic; }
   blockquote > :last-child {
     margin-bottom: 0; }
@@ -85,12 +84,17 @@ pre {
     padding-left: 0;
     word-wrap: normal; }
 
+sup {
+  font-size: 1em;
+  line-height: 1; }
+
 /**
  * Images
  */
 img {
   max-width: 100%;
-  vertical-align: middle; }
+  vertical-align: middle;
+  margin: 0 auto; }
 
 /**
  * Figures
@@ -122,6 +126,9 @@ ul {
     ul li > ol {
       margin-top: 0.5em;
       margin-bottom: 1em; }
+    ul li > p {
+      margin-top: 0.5em;
+      margin-bottom: 1em; }
 
 /**
  * Wrapper
@@ -149,6 +156,11 @@ ul {
   max-width: 600px;
   margin: 0 auto;
   padding: 0 30px; }
+
+.credit {
+  margin-top: 3em;
+  font-size: 0.8em;
+  text-align: right; }
 
 /**
  * Syntax highlighting styles
@@ -329,13 +341,11 @@ ul {
     margin-top: 0; }
 
 .post-title {
-  letter-spacing: -1px;
   margin-bottom: 0;
   line-height: 1.6; }
   .post-title a {
     text-decoration: none; }
   .post-list .post-title {
-    letter-spacing: 0;
     display: block; }
     .post-list .post-title a {
       font-family: "Quicksand", sans-serif;
