@@ -5,22 +5,22 @@
     <description></description>
     <link>http://vann.io/</link>
     <atom:link href="http://vann.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 26 Feb 2016 22:52:21 +0000</pubDate>
-    <lastBuildDate>Fri, 26 Feb 2016 22:52:21 +0000</lastBuildDate>
+    <pubDate>Sat, 27 Feb 2016 01:51:33 +0000</pubDate>
+    <lastBuildDate>Sat, 27 Feb 2016 01:51:33 +0000</lastBuildDate>
     <generator>Jekyll v3.1.0</generator>
     
       <item>
-        <title>12 weeks to MAKE</title>
-        <description>&lt;p&gt;I have a degree in Chemistry. For a couple of years after graduating and deciding the industry was not for me, I bounced around various comms-based jobs, unsure of what I really wanted. I ended up doing a masters in Science Communication, whilst working as a front-end web developer at a company who specialise in communicating scientific issues.&lt;/p&gt;
+        <title>Makers Academy</title>
+        <description>&lt;p&gt;I have a degree in Chemistry. After graduating and deciding the industry was not for me, I bounced around various comms-based jobs, unsure of what I really wanted. I ended up doing a masters in Science Communication, whilst working as a front-end web developer at a company who specialise in communicating scientific issues.&lt;/p&gt;
 
-&lt;p&gt;I’ve been happy for the past 2 years, because my hobby had become my job. But now I want to be more than a front-end developer; I want to do more than make static sites look pretty. I need to become a well-rounded full-stack developer — and fast.&lt;/p&gt;
+&lt;p&gt;I’ve been happy for the past 2 years, because my hobby had become my job. But now I’m starting to realise that front-end alone isn’t enough; I want to do more than make static sites. I want to be a well-rounded full-stack developer — and fast.&lt;/p&gt;
 
 &lt;figure&gt;
-&lt;img src=&quot;/assets/makers-intro.jpg&quot; alt=&quot;Smart mirror wide view&quot; /&gt;
+&lt;img src=&quot;/assets/makers-intro.jpg&quot; alt=&quot;Smart mirror wide view&quot; style=&quot;max-width: 350px&quot; /&gt;
 &lt;figcaption&gt;Predicting my future&lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;After lots of umm-ing/ahh-ing, advice from mentors and excitable justification to anyone who would listen, I bit the bullet by leaving my job — all so that I can embark on an intensive development course at Makers Academy and then whatever else comes at me afterwards.&lt;/p&gt;
+&lt;p&gt;After lots of umm-ing/ahh-ing, advice from mentors and excitable justification to anyone who would listen, I bit the bullet by leaving my job. Come May, I’ll be embarking on an intensive 12-week development course at Makers Academy to really give myself a solid foundation of knowledge. I have no idea what will happen once I’m finished — I’ll just have to tackle any challenges as they come!&lt;/p&gt;
 </description>
         <pubDate>Fri, 26 Feb 2016 00:00:00 +0000</pubDate>
         <link>http://vann.io/posts/general/2016/02/26/makers.html</link>
