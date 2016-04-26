@@ -115,6 +115,10 @@ figcaption {
   text-align: center;
   margin-top: 0.5em; }
 
+iframe.instagram-media {
+  max-width: 400px !important;
+  margin: 2rem auto !important; }
+
 /**
  * Lists
  */

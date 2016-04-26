@@ -5,9 +5,33 @@
     <description></description>
     <link>http://vann.io/</link>
     <atom:link href="http://vann.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 27 Feb 2016 01:56:19 +0000</pubDate>
-    <lastBuildDate>Sat, 27 Feb 2016 01:56:19 +0000</lastBuildDate>
+    <pubDate>Tue, 26 Apr 2016 23:26:32 +0100</pubDate>
+    <lastBuildDate>Tue, 26 Apr 2016 23:26:32 +0100</lastBuildDate>
     <generator>Jekyll v3.1.0</generator>
+    
+      <item>
+        <title>It begins</title>
+        <description>&lt;p&gt;Yesterday evening was the induction to the precourse at Makers Academy. During the part-time precourse, we’re expected to get to the same skill-level as each other before starting the full-time course, so that trivial things like basic syntax and environment setup don’t hold us back. I met some of the other students too, of course. They’re all super friendly and keen (I expected no less) with very varied backgrounds — one student sells maps, which I think is amazing because it’s so damn niche.&lt;/p&gt;
+
+&lt;p&gt;I finally had a chance to look at the materials after work today. Command line and version control is up first? Easy peasy, I use these all the time! But hold up — what does &lt;code class=&quot;highlighter-rouge&quot;&gt;touch&lt;/code&gt; do? What about &lt;code class=&quot;highlighter-rouge&quot;&gt;tail&lt;/code&gt;? And &lt;code class=&quot;highlighter-rouge&quot;&gt;cat&lt;/code&gt;?&lt;/p&gt;
+
+&lt;blockquote class=&quot;instagram-media&quot; data-instgrm-captioned=&quot;&quot; data-instgrm-version=&quot;6&quot; style=&quot; background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 2rem auto; max-width:400px; padding:0; width:99.375%;&quot;&gt;&lt;div style=&quot;padding:8px;&quot;&gt; &lt;div style=&quot; background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;&quot;&gt; &lt;div style=&quot; background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;&quot;&gt;&lt;/div&gt;&lt;/div&gt; &lt;p style=&quot; margin:8px 0 0 0; padding:0 4px;&quot;&gt; &lt;a href=&quot;https://www.instagram.com/p/BEPI6ivkkB7/&quot; style=&quot; color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;&quot; target=&quot;_blank&quot;&gt;Cat coaster&lt;/a&gt;&lt;/p&gt; &lt;p style=&quot; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;&quot;&gt;A photo posted by Vannio (@vannio) on &lt;time style=&quot; font-family:Arial,sans-serif; font-size:14px; line-height:17px;&quot; datetime=&quot;2016-04-15T21:48:20+00:00&quot;&gt;Apr 15, 2016 at 2:48pm PDT&lt;/time&gt;&lt;/p&gt;&lt;/div&gt;&lt;/blockquote&gt;
+&lt;script async=&quot;&quot; defer=&quot;&quot; src=&quot;//platform.instagram.com/en_US/embeds.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;This is a cat, which I discovered is &lt;strong&gt;not&lt;/strong&gt; related to &lt;code class=&quot;highlighter-rouge&quot;&gt;cat&lt;/code&gt; unfortunately. &lt;code class=&quot;highlighter-rouge&quot;&gt;cat&lt;/code&gt; is actually short for concatenate. I learnt something new already, even as a &lt;em&gt;somewhat&lt;/em&gt; experienced developer, and I’ve only been looking at this stuff for an hour.&lt;/p&gt;
+
+&lt;p&gt;I skipped ahead a little (oops) just to see the challenge I’m working towards this week. It’s some kind of murder mystery gamified task. Bring it on, I love a good puzzle!&lt;/p&gt;
+</description>
+        <pubDate>Tue, 26 Apr 2016 20:00:00 +0100</pubDate>
+        <link>http://vann.io/posts/general/2016/04/26/it-begins.html</link>
+        <guid isPermaLink="true">http://vann.io/posts/general/2016/04/26/it-begins.html</guid>
+        
+        
+        <category>posts</category>
+        
+        <category>general</category>
+        
+      </item>
     
       <item>
         <title>Makers Academy</title>
