@@ -30,3 +30,9 @@ figcaption {
   text-align: center;
   margin-top: 0.5em;
 }
+
+// Override inline styles
+iframe.instagram-media {
+	max-width: 400px !important;
+	margin: 2rem auto !important;
+}
