@@ -5,15 +5,15 @@
     <description></description>
     <link>http://vann.io/</link>
     <atom:link href="http://vann.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 01 May 2016 16:09:28 +0100</pubDate>
-    <lastBuildDate>Sun, 01 May 2016 16:09:28 +0100</lastBuildDate>
+    <pubDate>Sun, 01 May 2016 16:19:36 +0100</pubDate>
+    <lastBuildDate>Sun, 01 May 2016 16:19:36 +0100</lastBuildDate>
     <generator>Jekyll v3.1.0</generator>
     
       <item>
         <title>Not just &#39;how&#39;</title>
         <description>&lt;p&gt;Initially, streams and pipes were just some magic terms that I thought were too hard for me to bother learning about, so I made an educated guess and continued to work on those assumptions for a long time. Now that I’ve actually taken the time to learn, it just seems so glaringly obvious (and in all fairness, pretty spot-on from what I had guessed). I’ve been writing gulpfiles and ‘piping streams’ for god knows how long, without being confident that I understood what I was doing.&lt;/p&gt;
 
-&lt;p&gt;There are a lot of things I naturally learnt how to do, but have rarely been able to describe &lt;em&gt;why&lt;/em&gt;. That in itself is a lesson learnt: understand the ‘why’ as well as the ‘how’ because it provides so much clarity, and as a result, gives room for improvement.&lt;/p&gt;
+&lt;p&gt;There are a lot of things I learnt how to do that have become second-nature, but I have rarely been able to describe &lt;em&gt;why&lt;/em&gt; I do such things. That in itself is a lesson learnt: understand the ‘why’ as well as the ‘how’ because it provides so much clarity, and as a result, allows room for reflection and improvement.&lt;/p&gt;
 
 &lt;p&gt;I finished the first week’s challenge rather belatedly this morning. It was as fun as I had imagined, and it was great to see that the guides were written with a sense of humour, like using a bank robbery scenario as an example of version control (e.g. messing up; needing to restore a previous commit → forgetting a balaclava during the robbery; needing to time-travel back to retry).&lt;/p&gt;
 
