@@ -375,6 +375,18 @@ ul {
       .post-content h4 {
         font-size: 18px; } }
 
+.post-nav {
+  display: block;
+  width: auto;
+  overflow: hidden; }
+  .post-nav__link {
+    display: block;
+    width: 50%;
+    float: left;
+    margin: 1em 0; }
+  .post-nav .next {
+    text-align: right; }
+
 .site-header {
   min-height: 56px;
   background-color: #fff;
