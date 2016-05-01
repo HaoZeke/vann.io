@@ -5,15 +5,15 @@
     <description></description>
     <link>http://vann.io/</link>
     <atom:link href="http://vann.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 01 May 2016 12:46:41 +0100</pubDate>
-    <lastBuildDate>Sun, 01 May 2016 12:46:41 +0100</lastBuildDate>
+    <pubDate>Sun, 01 May 2016 12:58:17 +0100</pubDate>
+    <lastBuildDate>Sun, 01 May 2016 12:58:17 +0100</lastBuildDate>
     <generator>Jekyll v3.1.0</generator>
     
       <item>
         <title>Not just &#39;how&#39;</title>
-        <description>&lt;p&gt;Initially, streams and pipes were just some magic terms that I thought were too hard for me to bother learning about, so I made an educated guess and continued to work on those assumptions for a long time. Now that I’ve actually taken the time to learn, it just seems so glaringly obvious (and in all fairness, pretty spot-on from what I had guessed). I’ve been writing gulpfiles and ‘piping streams’ for god knows how long, without being confident that I understood what they were.&lt;/p&gt;
+        <description>&lt;p&gt;Initially, streams and pipes were just some magic terms that I thought were too hard for me to bother learning about, so I made an educated guess and continued to work on those assumptions for a long time. Now that I’ve actually taken the time to learn, it just seems so glaringly obvious (and in all fairness, pretty spot-on from what I had guessed). I’ve been writing gulpfiles and ‘piping streams’ for god knows how long, without being confident that I understood what I was doing.&lt;/p&gt;
 
-&lt;p&gt;There’s a lot of things I naturally learnt how to do, but have never been able to describe &lt;em&gt;why&lt;/em&gt; they were done, and as such, I never knew what to improve. That in itself is a lesson learnt: understand the ‘why’ as well as the ‘how’ because it provides so much clarity.&lt;/p&gt;
+&lt;p&gt;There are a lot of things I naturally learnt how to do, but have rarely been able to describe &lt;em&gt;why&lt;/em&gt;. That in itself is a lesson learnt: understand the ‘why’ as well as the ‘how’ because it provides so much clarity, and as a result, gives room for improvement.&lt;/p&gt;
 
 &lt;p&gt;I finished the first week’s challenge rather belatedly this morning. It was as fun as I had imagined, and it was great to see that the guides were written with a sense of humour, like using a bank robbery scenario as an example of version control (e.g. messing up; needing to restore a previous commit → forgetting a balaclava during the robbery; needing to time-travel back to retry).&lt;/p&gt;
 
@@ -21,7 +21,7 @@
 
 &lt;p&gt;&lt;img src=&quot;/assets/pull-req.png&quot; alt=&quot;First pull request&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;This was the teeny-tiniest adjustment (literally the removal of a single dash) but it took me what felt like half an hour just going back and forth to check it was correct before submitting. Now that I’m well past my first pull request hurdle and I’ve just about stopped my nervous shakes, I’m just that little bit more confident to contribute to open-source projects. A very wise supermarket slogan once told me that every little helps 😊&lt;/p&gt;
+&lt;p&gt;This was the teeny-tiniest adjustment (literally the removal of a single dash) but it took me what felt like half an hour just going back and forth to check it was correct before submitting. Now that I’m well past my first pull request hurdle and I’ve just about stopped my nervous shakes, I’m that little bit more confident to contribute to open-source projects. A very wise supermarket slogan once told me that every little helps 😊&lt;/p&gt;
 </description>
         <pubDate>Sun, 01 May 2016 10:30:00 +0100</pubDate>
         <link>http://vann.io/posts/general/2016/05/01/may.html</link>
