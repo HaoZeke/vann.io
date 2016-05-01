@@ -102,3 +102,21 @@
     }
   }
 }
+
+.post-nav {
+  // font-size: 14px;
+  display: block;
+  width: auto;
+  overflow: hidden;
+
+  &__link {
+    display: block;
+    width: 50%;
+    float: left;
+    margin: 1em 0;
+  }
+
+  .next {
+    text-align: right;
+  }
+}
