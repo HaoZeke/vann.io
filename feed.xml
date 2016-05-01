@@ -5,9 +5,34 @@
     <description></description>
     <link>http://vann.io/</link>
     <atom:link href="http://vann.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 26 Apr 2016 23:51:34 +0100</pubDate>
-    <lastBuildDate>Tue, 26 Apr 2016 23:51:34 +0100</lastBuildDate>
+    <pubDate>Sun, 01 May 2016 12:46:41 +0100</pubDate>
+    <lastBuildDate>Sun, 01 May 2016 12:46:41 +0100</lastBuildDate>
     <generator>Jekyll v3.1.0</generator>
+    
+      <item>
+        <title>Not just &#39;how&#39;</title>
+        <description>&lt;p&gt;Initially, streams and pipes were just some magic terms that I thought were too hard for me to bother learning about, so I made an educated guess and continued to work on those assumptions for a long time. Now that I’ve actually taken the time to learn, it just seems so glaringly obvious (and in all fairness, pretty spot-on from what I had guessed). I’ve been writing gulpfiles and ‘piping streams’ for god knows how long, without being confident that I understood what they were.&lt;/p&gt;
+
+&lt;p&gt;There’s a lot of things I naturally learnt how to do, but have never been able to describe &lt;em&gt;why&lt;/em&gt; they were done, and as such, I never knew what to improve. That in itself is a lesson learnt: understand the ‘why’ as well as the ‘how’ because it provides so much clarity.&lt;/p&gt;
+
+&lt;p&gt;I finished the first week’s challenge rather belatedly this morning. It was as fun as I had imagined, and it was great to see that the guides were written with a sense of humour, like using a bank robbery scenario as an example of version control (e.g. messing up; needing to restore a previous commit → forgetting a balaclava during the robbery; needing to time-travel back to retry).&lt;/p&gt;
+
+&lt;p&gt;Embarrassingly, I’d never done a pull request up until now either.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/pull-req.png&quot; alt=&quot;First pull request&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This was the teeny-tiniest adjustment (literally the removal of a single dash) but it took me what felt like half an hour just going back and forth to check it was correct before submitting. Now that I’m well past my first pull request hurdle and I’ve just about stopped my nervous shakes, I’m just that little bit more confident to contribute to open-source projects. A very wise supermarket slogan once told me that every little helps 😊&lt;/p&gt;
+</description>
+        <pubDate>Sun, 01 May 2016 10:30:00 +0100</pubDate>
+        <link>http://vann.io/posts/general/2016/05/01/may.html</link>
+        <guid isPermaLink="true">http://vann.io/posts/general/2016/05/01/may.html</guid>
+        
+        
+        <category>posts</category>
+        
+        <category>general</category>
+        
+      </item>
     
       <item>
         <title>It begins</title>
@@ -18,7 +43,7 @@
 &lt;blockquote class=&quot;instagram-media&quot; data-instgrm-captioned=&quot;&quot; data-instgrm-version=&quot;6&quot; style=&quot; background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 2rem auto; max-width:400px; padding:0; width:99.375%;&quot;&gt;&lt;div style=&quot;padding:8px;&quot;&gt; &lt;div style=&quot; background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;&quot;&gt; &lt;div style=&quot; background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;&quot;&gt;&lt;/div&gt;&lt;/div&gt; &lt;p style=&quot; margin:8px 0 0 0; padding:0 4px;&quot;&gt; &lt;a href=&quot;https://www.instagram.com/p/BEPI6ivkkB7/&quot; style=&quot; color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;&quot; target=&quot;_blank&quot;&gt;Cat coaster&lt;/a&gt;&lt;/p&gt; &lt;p style=&quot; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;&quot;&gt;A photo posted by Vannio (@vannio) on &lt;time style=&quot; font-family:Arial,sans-serif; font-size:14px; line-height:17px;&quot; datetime=&quot;2016-04-15T21:48:20+00:00&quot;&gt;Apr 15, 2016 at 2:48pm PDT&lt;/time&gt;&lt;/p&gt;&lt;/div&gt;&lt;/blockquote&gt;
 &lt;script async=&quot;&quot; defer=&quot;&quot; src=&quot;//platform.instagram.com/en_US/embeds.js&quot;&gt;&lt;/script&gt;
 
-&lt;p&gt;This is a cat, but I discovered that it is &lt;strong&gt;not&lt;/strong&gt; related to &lt;code class=&quot;highlighter-rouge&quot;&gt;cat&lt;/code&gt;, unfortunately. &lt;code class=&quot;highlighter-rouge&quot;&gt;cat&lt;/code&gt; is actually short for concatenate. I’ve learnt something new already, even as a &lt;em&gt;somewhat&lt;/em&gt; experienced developer, and I’ve only been looking at this stuff for an hour.&lt;/p&gt;
+&lt;p&gt;This cat is &lt;strong&gt;not&lt;/strong&gt; related to &lt;code class=&quot;highlighter-rouge&quot;&gt;cat&lt;/code&gt;, unfortunately. &lt;code class=&quot;highlighter-rouge&quot;&gt;cat&lt;/code&gt; is actually short for concatenate. I learnt something new already, even as a &lt;em&gt;somewhat&lt;/em&gt; experienced developer, and I’ve only been looking at this stuff for an hour.&lt;/p&gt;
 
 &lt;p&gt;I skipped ahead a little (oops) just to see the challenge I’m working towards this week — it’s some kind of murder mystery gamified task. Bring it on, I love a good puzzle.&lt;/p&gt;
 </description>
