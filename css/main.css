@@ -135,10 +135,8 @@ ul {
   max-width: 80%;
   margin-bottom: 3em; }
   @media screen and (max-width: 600px) {
-    ul {
-      padding-left: 1em; }
-      ul strong {
-        display: block; } }
+    ul strong {
+      display: block; } }
   ul li {
     margin-bottom: 0.5em; }
     ul li > ul,
