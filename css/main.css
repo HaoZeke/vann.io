@@ -132,7 +132,8 @@ iframe.instagram-media {
  * Lists
  */
 ul {
-  max-width: 80%; }
+  max-width: 80%;
+  margin-bottom: 3em; }
   @media screen and (max-width: 600px) {
     ul {
       padding-left: 1em; }
