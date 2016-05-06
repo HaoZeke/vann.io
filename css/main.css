@@ -88,6 +88,10 @@ sup {
   font-size: 1em;
   line-height: 1; }
 
+.smallprint {
+  font-size: 0.9rem;
+  text-align: right; }
+
 /**
  * Images
  */
