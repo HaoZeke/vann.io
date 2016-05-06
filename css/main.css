@@ -85,12 +85,17 @@ pre {
     word-wrap: normal; }
 
 sup {
-  font-size: 1em;
-  line-height: 1; }
+  font-size: 0.8em;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased; }
 
 .smallprint {
-  font-size: 0.9rem;
   text-align: right; }
+  .smallprint span {
+    font-size: 0.9rem; }
+  @media screen and (max-width: 600px) {
+    .smallprint {
+      text-align: left; } }
 
 /**
  * Images
@@ -128,6 +133,11 @@ iframe.instagram-media {
  */
 ul {
   max-width: 80%; }
+  @media screen and (max-width: 600px) {
+    ul {
+      padding-left: 1em; }
+      ul strong {
+        display: block; } }
   ul li {
     margin-bottom: 0.5em; }
     ul li > ul,
