@@ -95,6 +95,19 @@ pre {
 }
 
 sup {
-  font-size: 1em;
+  font-size: 0.8em;
   line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+.smallprint {
+	text-align: right;
+
+	span {
+		font-size: 0.9rem;
+	}
+
+	@include media-query($on-palm) {
+		text-align: left;
+	}
 }
