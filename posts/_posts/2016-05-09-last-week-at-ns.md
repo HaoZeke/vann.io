@@ -11,7 +11,7 @@ It's my final week at Nice and Serious. I say that with a heavy heart, but also 
 
 The site uses the SVG.js library to dynamically create and tile squiggly sprinkles, so that they don't overflow the containers, don't overlap each other, don't intercept the text (much) and scale reasonably on different screen sizes. It was so much work for such a seemingly small feature!
 
-&#x1F632; &#x1f61e;
+&#x1F632; &#x1f61e;gul
 
 I'm still struggling to find the time to do any of the precourse work outside of my working hours, so in all honesty I am quite relieved to be leaving soon.
 
