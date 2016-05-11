@@ -5,8 +5,8 @@
     <description></description>
     <link>http://vann.io/</link>
     <atom:link href="http://vann.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 11 May 2016 00:49:23 +0100</pubDate>
-    <lastBuildDate>Wed, 11 May 2016 00:49:23 +0100</lastBuildDate>
+    <pubDate>Wed, 11 May 2016 18:19:20 +0100</pubDate>
+    <lastBuildDate>Wed, 11 May 2016 18:19:20 +0100</lastBuildDate>
     <generator>Jekyll v3.1.0</generator>
     
       <item>
@@ -17,7 +17,7 @@
 
 &lt;p&gt;The site uses the SVG.js library to dynamically create and tile squiggly sprinkles, so that they don’t overflow the containers, don’t overlap each other, don’t intercept the text (much) and scale reasonably on different screen sizes. It was so much work for such a seemingly small feature!&lt;/p&gt;
 
-&lt;p&gt;😲 😞gul&lt;/p&gt;
+&lt;p&gt;😲 😞&lt;/p&gt;
 
 &lt;p&gt;I’m still struggling to find the time to do any of the precourse work outside of my working hours, so in all honesty I am quite relieved to be leaving soon.&lt;/p&gt;
 
@@ -26,6 +26,8 @@
         <pubDate>Mon, 09 May 2016 19:00:00 +0100</pubDate>
         <link>http://vann.io/posts/general/2016/05/09/last-week-at-ns.html</link>
         <guid isPermaLink="true">http://vann.io/posts/general/2016/05/09/last-week-at-ns.html</guid>
+        
+        <category>makers</category>
         
         
         <category>posts</category>
@@ -70,6 +72,8 @@
         <link>http://vann.io/posts/general/2016/05/01/not-just-how.html</link>
         <guid isPermaLink="true">http://vann.io/posts/general/2016/05/01/not-just-how.html</guid>
         
+        <category>makers</category>
+        
         
         <category>posts</category>
         
@@ -94,6 +98,8 @@
         <link>http://vann.io/posts/general/2016/04/26/it-begins.html</link>
         <guid isPermaLink="true">http://vann.io/posts/general/2016/04/26/it-begins.html</guid>
         
+        <category>makers</category>
+        
         
         <category>posts</category>
         
@@ -117,6 +123,8 @@
         <pubDate>Fri, 26 Feb 2016 00:00:00 +0000</pubDate>
         <link>http://vann.io/posts/general/2016/02/26/makers-academy.html</link>
         <guid isPermaLink="true">http://vann.io/posts/general/2016/02/26/makers-academy.html</guid>
+        
+        <category>makers</category>
         
         
         <category>posts</category>
@@ -156,6 +164,10 @@
         <pubDate>Sun, 03 Jan 2016 22:21:00 +0000</pubDate>
         <link>http://vann.io/posts/projects/2016/01/03/smrt.html</link>
         <guid isPermaLink="true">http://vann.io/posts/projects/2016/01/03/smrt.html</guid>
+        
+        <category>projects</category>
+        
+        <category>tutorials</category>
         
         
         <category>posts</category>
@@ -263,13 +275,15 @@ You&#39;ll see that when this blog throws a server error (eg. 404) it points to 
 &lt;/ol&gt;
 </description>
         <pubDate>Sun, 27 Dec 2015 00:25:00 +0000</pubDate>
-        <link>http://vann.io/posts/server/2015/12/27/apache.html</link>
-        <guid isPermaLink="true">http://vann.io/posts/server/2015/12/27/apache.html</guid>
+        <link>http://vann.io/posts/tutorials/2015/12/27/apache.html</link>
+        <guid isPermaLink="true">http://vann.io/posts/tutorials/2015/12/27/apache.html</guid>
+        
+        <category>tutorials</category>
         
         
         <category>posts</category>
         
-        <category>server</category>
+        <category>tutorials</category>
         
       </item>
     
