@@ -1,0 +1,36 @@
+---
+layout: default
+title: Tutorials
+permalink: /posts/tutorials/
+nav: false
+---
+
+{{!-- Choose how many full posts we'd like to display --}}
+{% assign fullposts = 1 %}
+
+<h2>Posts</h2>
+{% for post in site.tags.tutorials %}
+{% if forloop.index <= fullposts %}
+  <article class="post post-index" itemscope itemtype="http://schema.org/BlogPosting">
+    <header class="post-header">
+      <h3 class="post-title" itemprop="name headline"><a href="{{ post.url | prepend: site.baseurl }}" class="ajax-link">{{ post.title }}</a></h3>
+      <p class="post-meta"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}</time>{% if post.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ post.author }}</span></span>{% endif %}</p>
+    </header>
+    <div class="post-content" itemprop="articleBody">
+      {{ post.content }}
+    </div>
+  </article>
+  {% if forloop.length > fullposts and forloop.index == fullposts %}
+<h2>Older Posts</h2>
+  <ul class="post-list">
+  {% endif %}
+{% else if forloop.length > 1 %}
+  <li>
+    <span class="post-title"><a class="post-link ajax-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></span>
+    <p class="post-meta"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}</time>{% if post.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ post.author }}</span></span>{% endif %}</p>
+  </li>
+  {% if forloop.last %}
+  </ul>
+  {% endif %}
+{% endif %}
+{% endfor %}
