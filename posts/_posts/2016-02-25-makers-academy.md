@@ -3,6 +3,7 @@ layout: post
 title:  Makers Academy
 date:   2016-02-26 00:00:00 +0000
 categories: general
+tags: makers
 ---
 
 I have a degree in Chemistry. After graduating and deciding the industry was not for me, I bounced around various comms-based jobs, unsure of what I really wanted. I ended up doing a masters in Science Communication, whilst working as a front-end web developer at a company who specialise in communicating scientific issues.

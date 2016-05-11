@@ -3,6 +3,7 @@ layout: post
 title:	Not just 'how'
 date:   2016-05-01 10:30:00 +0100
 categories: general
+tags: makers
 ---
 
 Initially, streams and pipes were just some magic terms that I thought were too hard for me to bother learning about, so I made an educated guess and continued to work on those assumptions for a long time. Now that I've actually taken the time to learn, it just seems so glaringly obvious (and in all fairness, pretty spot-on from what I had guessed). I've been writing gulpfiles and 'piping streams' for god knows how long, without being confident that I understood what I was doing.
