@@ -116,7 +116,7 @@ gulp.task('watch', () => {
   gulp.watch(['_sass/**/*.scss','css/*.scss'], ['sass']);
   gulp.watch(['_js/*.js'], ['uglify']);
   gulp.watch(['_assets/*'], ['images']);
-  gulp.watch(['*.html', '_includes/*', '_layouts/*.html', 'posts/**/*', 'assets/**/*', 'graveyard/**/*'], ['jekyll-rebuild']);
+  gulp.watch(['_data/*', '*.html', '_includes/*', '_layouts/*.html', 'posts/**/*', 'assets/**/*', 'graveyard/**/*'], ['jekyll-rebuild']);
 });
 
 /**

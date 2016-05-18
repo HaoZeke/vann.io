@@ -2,30 +2,39 @@
 layout: page
 title: Web developer
 ---
+<!-- Choose how many items we'd like to highlight -->
+{% assign detailedItems = 3 %}
+
 <h2>Hello! I’m Van.</h2>
 <p>I'm a <strong>full-stack developer</strong> in training (and aspiring &#x1F3AE; game developer) with over two years front-end agency experience. I build badass animated websites to communicate important issues.</p>
 <p>Here are some examples of what I can do &mdash;</p>
-<ul>
-	<li><strong>The Guardian</strong> &#x1f47e; <a href="http://www.theguardian.com/environment/ng-interactive/2016/jan/15/the-lone-climate-change-denier-interactive-game" target="_blank">The Lone Denier</a><sup>&dagger;</sup>
-		<p>Space Invaders clone built with Pixi.js for fast 2D rendering.</p>
-	</li>
-	<li><strong>Wellcome Collection</strong> &#x1f346; <a href="http://sexbynumbers.wellcomecollection.org/" target="_blank"> Sex By Numbers</a><sup>&dagger;</sup>
-		<p>Used D3.js to process, display and animate data. This site received <a href="http://www.cssdesignawards.com/sites/sex-by-numbers/25964" target="_blank">special kudos</a>.</p>
-	</li>
-	<li><strong>Feeding America</strong> &#x1f30e; <a href="http://www.feedingamerica.org/hunger-in-america/our-research/hunger-in-america/facts-and-faces/" target="_blank">Hunger in America</a><sup>&dagger;</sup>
-		<p>Built with ScrollMagic for its Greensock animation integration.</p>
-	</li>
-</ul>
 
+<ul>
+{% for project in site.data.work %}
+{% if forloop.index <= detailedItems %}
+	<li><strong>{{ project.client }}</strong>
+		{{ project.emoji }}
+		<a href="{{ project.url }}" target="_blank" class="js-expand expand-details">{{ project.title }}</a><sup>&dagger;</sup>
+		<!-- <a class="external-link" href="{{ project.url }}" target="_blank">&#x27c0;</a> -->
+		<p>{{ project.summary }}</p>
+	</li>
+	{% if forloop.length > detailedItems and forloop.index == detailedItems %}
+</ul>
 <p>If those piqued your interest, then you're in luck &mdash;</p>
 <ul>
-	<li><strong>RSPO</strong> <a href="http://goodbadpalmoil.org" target="_blank">Say yes to good palm oil.</a><sup>&dagger;</sup></li>
-	<li><strong>Chatham House</strong> <a href="http://syria.chathamhouse.org" target="_blank">Syria and its Neighbours</a><sup>&dagger;</sup></li>
-	<li><strong>The Guardian</strong> <a href="http://www.theguardian.com/environment/ng-interactive/2015/dec/12/dnyr-the-climate-change-denying-robot-interactive" target="_blank">Climate change denying robot</a><sup>&dagger;</sup></li>
-	<li><strong>Compassion in World Farming</strong> <a href="http://yourfarmtoy.com" target="_blank">Your Farm</a><sup>&dagger;</sup></li>
-	<li><strong>PwC</strong> <a href="http://changinglives.pwc.com/" target="_blank">Changing Lives</a><sup>&dagger;</sup></li>
+	{% endif %}
+{% else if forloop.length > 1 %}
+	<li>
+		<strong>{{ project.client }}</strong>
+		<a href="{{ project.url }}" target="_blank" class="js-expand expand-details">{{ project.title }}</a><sup>&dagger;</sup>
+		<!-- <a class="external-link" href="{{ project.url }}" target="_blank">&#x27c0;</a> -->
+	</li>
+{% endif %}
+{% endfor %}
 </ul>
 
 <p class="smallprint">
-	<sup>&dagger;</sup><span>Whilst at <a href="http://niceandserious.com/" target="_blank">Nice and Serious</span></a>
+	<sup>&dagger;</sup><span>Whilst at
+		<a href="http://niceandserious.com/" target="_blank">Nice and Serious</a>
+	</span>
 </p>
