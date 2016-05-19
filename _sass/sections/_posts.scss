@@ -20,12 +20,31 @@
   .post-list & {
     margin-bottom: $spacing-unit / 2;
     margin-top: 0;
-    line-height: 2.6;
+    // line-height: 2.6;
   }
 
   .post-single & {
     margin-top: $spacing-unit / 2;
   }
+
+	.post-tags {
+		// display: block;
+		margin-left: $spacing-unit / 4;
+
+		a:not(:last-child):after {
+			content: ',';
+		}
+
+		svg {
+			vertical-align: middle;
+			width: 12px;
+			height: 12px;
+
+			path {
+				fill: $text-color;
+			}
+		}
+	}
 }
 
 .post-link {
@@ -53,7 +72,7 @@
 
 .post-title {
   margin-bottom: 0;
-  line-height: 1.6;
+  // line-height: 1.6;
 
   a {
     text-decoration: none;
