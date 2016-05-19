@@ -53,56 +53,59 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	(0, _jquery2.default)(document).ready(function () {
-	  var outer = '.page-content';
-	  var inner = '.text-wrapper';
-
-	  function scrollTop() {
-	    var currentScroll = (0, _jquery2.default)(window).scrollTop();
-	    var limitScroll = (0, _jquery2.default)(window).height();
-
-	    if (currentScroll >= limitScroll) {
-	      (0, _jquery2.default)('html, body').animate({ scrollTop: 0 }, 500);
-	    }
-	  }
-
-	  function ajaxLoad(target, title) {
-	    _jquery2.default.ajax({
-	      type: 'get',
-	      url: target,
-	      cache: false,
-	      success: function success(response) {
-	        (0, _jquery2.default)(outer).fadeOut('fast', function () {
-	          (0, _jquery2.default)(outer).html('');
-	          (0, _jquery2.default)(outer).html((0, _jquery2.default)(_jquery2.default.parseHTML(response)).filter(outer).find(inner));
-	          (0, _jquery2.default)(outer).fadeIn('fast');
-	        });
-	        scrollTop();
-	      },
-	      error: function error() {
-	        (0, _jquery2.default)(outer).fadeOut('fast', function () {
-	          (0, _jquery2.default)(outer).html('');
-	          (0, _jquery2.default)(outer).html('<div class="text-wrapper">Oops, something went wrong!</div>');
-	          (0, _jquery2.default)(outer).hide().fadeIn('fast');
-	        });
-	      }
-	    });
-	  };
-
-	  (0, _jquery2.default)('body').on('click', '.ajax-link', function (e) {
-	    e.preventDefault();
-
-	    var target = (0, _jquery2.default)(this).attr('href');
-	    var title = (0, _jquery2.default)(this)[0].innerText;
-
-	    ajaxLoad(target, title);
-	    history.pushState({ title: title, target: target }, null, target);
-	  });
-
-	  (0, _jquery2.default)(window).on('popstate', function () {
-	    if (history.state !== null) {
-	      ajaxLoad(history.state.target, history.state.title);
-	    }
-	  });
+	  // var outer = '.page-content';
+	  // var inner = '.text-wrapper';
+	  //
+	  // function scrollTop(){
+	  //   var currentScroll = $(window).scrollTop();
+	  //   var limitScroll = $(window).height();
+	  //
+	  //   if (currentScroll >= limitScroll) {
+	  //     $('html, body').animate({ scrollTop: 0 }, 500);
+	  //   }
+	  // }
+	  //
+	  // function ajaxLoad(target, title){
+	  //   $.ajax({
+	  //     type: 'get',
+	  //     url: target,
+	  //     cache: false,
+	  //     success: function(response){
+	  // 			instgrm.Embeds.process();
+	  // 			console.log(instgrm.Embeds);
+	  //       $(outer).fadeOut('fast',function(){
+	  //         $(outer).html('');
+	  //         $(outer).html($($.parseHTML(response)).filter(outer).find(inner));
+	  //         $(outer).fadeIn('fast');
+	  //       });
+	  //       scrollTop();
+	  //     },
+	  //     error: function(){
+	  //       $(outer).fadeOut('fast',function(){
+	  //         $(outer).html('');
+	  //         $(outer).html('<div class="text-wrapper">Oops, something went wrong!</div>');
+	  //         $(outer).hide().fadeIn('fast');
+	  //       });
+	  //     }
+	  //   });
+	  // };
+	  //
+	  // $('body').on('click', '.ajax-link', function(e){
+	  //   e.preventDefault();
+	  //
+	  //   var target = $(this).attr('href');
+	  //   var title = $(this)[0].innerText;
+	  //
+	  //   ajaxLoad(target, title);
+	  //   history.pushState({ title: title, target: target }, null, target);
+	  //
+	  // });
+	  //
+	  // $(window).on('popstate', function () {
+	  //   if (history.state !== null){
+	  //     ajaxLoad(history.state.target, history.state.title);
+	  //   }
+	  // });
 
 	  // Disable the mobile nav button from doing anything!
 	  (0, _jquery2.default)('body').on('click', '.menu-icon', function (e) {

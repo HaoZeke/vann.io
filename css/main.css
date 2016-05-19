@@ -337,10 +337,19 @@ ul {
   margin-top: 0; }
   .post-list .post-meta {
     margin-bottom: 15px;
-    margin-top: 0;
-    line-height: 2.6; }
+    margin-top: 0; }
   .post-single .post-meta {
     margin-top: 15px; }
+  .post-meta .post-tags {
+    margin-left: 7.5px; }
+    .post-meta .post-tags a:not(:last-child):after {
+      content: ','; }
+    .post-meta .post-tags svg {
+      vertical-align: middle;
+      width: 12px;
+      height: 12px; }
+      .post-meta .post-tags svg path {
+        fill: #42403e; }
 
 .post-link {
   display: block; }
@@ -358,8 +367,7 @@ ul {
     margin-top: 0; }
 
 .post-title {
-  margin-bottom: 0;
-  line-height: 1.6; }
+  margin-bottom: 0; }
   .post-title a {
     text-decoration: none; }
   .post-list .post-title {
