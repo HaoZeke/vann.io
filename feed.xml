@@ -5,9 +5,64 @@
     <description></description>
     <link>http://vann.io/</link>
     <atom:link href="http://vann.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 19 May 2016 08:57:33 +0100</pubDate>
-    <lastBuildDate>Thu, 19 May 2016 08:57:33 +0100</lastBuildDate>
+    <pubDate>Thu, 19 May 2016 15:49:11 +0100</pubDate>
+    <lastBuildDate>Thu, 19 May 2016 15:49:11 +0100</lastBuildDate>
     <generator>Jekyll v3.1.0</generator>
+    
+      <item>
+        <title>Using tags in Jekyll</title>
+        <description>&lt;p&gt;Taking a sidestep from fizzbuzzing and &lt;a href=&quot;https://github.com/vannio/fizzbuzz-1/blob/master/lib/fizzbuzz.rb#L24&quot; target=&quot;_blank&quot;&gt;playing with Giphy APIs&lt;/a&gt;, I thought I’d implement tag index pages properly on this blog (without any plugins). My Makers Academy related posts keep being muddied up with unrelated posts, and I needed a way to filter them out.&lt;/p&gt;
+
+&lt;p&gt;If you’re unfamiliar with Jekyll, it’s a static site generator. You can type up some basic &lt;code class=&quot;highlighter-rouge&quot;&gt;.md&lt;/code&gt; files as blog posts and Jekyll generates the HTML for a fully functioning website. It has a templating engine built-in, which keeps the code DRY (don’t repeat yourself) by using templates that swap in variables and partials. It can even fill out templates with JSON/YAML data. I won’t go into detail about how to get started as it’s all in the documentation, although I did attempt to create a &lt;a href=&quot;https://github.com/vannio/Jekyll-babel-starter&quot; target=&quot;_blank&quot;&gt;boilerplate of sorts&lt;/a&gt; that aims to take the difficulty out of Jekyll by letting Gulp.js automate a lot of stuff.&lt;/p&gt;
+
+&lt;p&gt;Whilst categories work fine, tags aren’t really ‘supported’ in Jekyll. The documentation tells you how to tag your posts, but then you’re left to scratch your head in confusion from that point onwards.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yml&quot; data-lang=&quot;yml&quot;&gt;&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;post&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;  &lt;span class=&quot;s&quot;&gt;Using tags in Jekyll&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;   &lt;span class=&quot;s&quot;&gt;2016-05-19 10:00:00 +0100&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;categories&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;general&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# Here we go, tags!&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;tags&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;pi&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;this is how&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;I do&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;it&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# The rest of blog post content goes down here&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Here’s an example of the YAML Front Matter block for a blog post. The tags are &lt;code class=&quot;highlighter-rouge&quot;&gt;this is how&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;I do&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;it&lt;/code&gt;, just as expected. It’s a pain but you’ll need to manually create a page for every tag you have. For my tag &lt;code class=&quot;highlighter-rouge&quot;&gt;it&lt;/code&gt; (really useful name), I’d create an &lt;code class=&quot;highlighter-rouge&quot;&gt;it.html&lt;/code&gt; page with this snippet:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yml&quot; data-lang=&quot;yml&quot;&gt;&lt;span class=&quot;c1&quot;&gt;# Loop through all the posts tagged &#39;it&#39;&lt;/span&gt;
+&lt;span class=&quot;pi&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;for post in site.tags.it %&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;# Print the title of each post&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;pi&quot;&gt;{{&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;post.title&lt;/span&gt; &lt;span class=&quot;pi&quot;&gt;}}&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;# Loop through all the tags this post is tagged as&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;# and print the name of each tag&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;for tag in post.tags %&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;&amp;lt;br&amp;gt;tag&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;pi&quot;&gt;{{&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;tag&lt;/span&gt; &lt;span class=&quot;pi&quot;&gt;}}&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;endfor %&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;pi&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;endfor %&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Assuming I only have one sad post tagged &lt;code class=&quot;highlighter-rouge&quot;&gt;it&lt;/code&gt;, the html generated would be:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;title: Using tags in Jekyll
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;br&amp;gt;&lt;/span&gt;tag: this is how
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;br&amp;gt;&lt;/span&gt;tag: I do
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;br&amp;gt;&lt;/span&gt;tag: it&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;That’s pretty much it! I’d then go ahead and fill out &lt;code class=&quot;highlighter-rouge&quot;&gt;it.html&lt;/code&gt; with {{ post.content }} or link the title to the {{ post.url }}.&lt;/p&gt;
+
+&lt;p&gt;If you’re still confused, have a look at &lt;a href=&quot;https://github.com/vannio/vann.io&quot; target=&quot;_blank&quot;&gt;the repo for this blog&lt;/a&gt;. I always find that I need to be able to explore how something is structured before I really understand what’s going on.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 19 May 2016 10:00:00 +0100</pubDate>
+        <link>http://vann.io/posts/tutorials/2016/05/19/tagging.html</link>
+        <guid isPermaLink="true">http://vann.io/posts/tutorials/2016/05/19/tagging.html</guid>
+        
+        <category>tutorials</category>
+        
+        
+        <category>posts</category>
+        
+        <category>tutorials</category>
+        
+      </item>
     
       <item>
         <title>Thanks for the memories</title>

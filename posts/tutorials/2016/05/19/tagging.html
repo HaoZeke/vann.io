@@ -6,14 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Van Le &mdash; Web developer</title>
-  <meta name="description" content="">
+  <meta name="description" content="Taking a sidestep from fizzbuzzing and playing with Giphy APIs, I thought I’d implement tag index pages properly on this blog (without any plugins). My Maker...">
   <link rel="shortcut icon" href="/favicon.ico">
 
   <link href='http://fonts.googleapis.com/css?family=Quicksand:400,700|Montserrat' rel='stylesheet' type='text/css'>
   
   <link rel="stylesheet" href="/css/main.min.css">
   
-  <link rel="canonical" href="http://vann.io/posts/tutorials/">
+  <link rel="canonical" href="http://vann.io/posts/tutorials/2016/05/19/tagging.html">
   <link rel="alternate" type="application/rss+xml" title="Van Le &mdash; Web developer" href="http://vann.io/feed.xml">
 </head>
 
@@ -56,20 +56,15 @@
 
     <div class="page-content">
       <div class="text-wrapper">
-        
-
-
-<h2>Posts tagged 'Tutorials'</h2>
-
-
-  <article class="post post-index" itemscope itemtype="http://schema.org/BlogPosting">
-    <header class="post-header">
-      <h3 class="post-title" itemprop="name headline"><a href="/posts/tutorials/2016/05/19/tagging.html" class="ajax-link">Using tags in Jekyll</a></h3>
-      <p class="post-meta"><time datetime="2016-05-19T10:00:00+01:00" itemprop="datePublished">May 19, 2016</time> <span class="post-tags"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.605 0h-10.605v10.609l13.391 13.391 10.609-10.604-13.395-13.396zm-4.191 6.414c-.781.781-2.046.781-2.829.001-.781-.783-.781-2.048 0-2.829.782-.782 2.048-.781 2.829-.001.782.782.781 2.047 0 2.829z"/></svg>
+        <article class="post post-single" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <h2 class="post-title" itemprop="name headline">Using tags in Jekyll</h2>
+    <p class="post-meta"><time datetime="2016-05-19T10:00:00+01:00" itemprop="datePublished">May 19, 2016</time> <span class="post-tags"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.605 0h-10.605v10.609l13.391 13.391 10.609-10.604-13.395-13.396zm-4.191 6.414c-.781.781-2.046.781-2.829.001-.781-.783-.781-2.048 0-2.829.782-.782 2.048-.781 2.829-.001.782.782.781 2.047 0 2.829z"/></svg>
 <a href="/posts/tutorials">tutorials</a> </span></p>
-    </header>
-    <div class="post-content" itemprop="articleBody">
-      <p>Taking a sidestep from fizzbuzzing and <a href="https://github.com/vannio/fizzbuzz-1/blob/master/lib/fizzbuzz.rb#L24" target="_blank">playing with Giphy APIs</a>, I thought I’d implement tag index pages properly on this blog (without any plugins). My Makers Academy related posts keep being muddied up with unrelated posts, and I needed a way to filter them out.</p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>Taking a sidestep from fizzbuzzing and <a href="https://github.com/vannio/fizzbuzz-1/blob/master/lib/fizzbuzz.rb#L24" target="_blank">playing with Giphy APIs</a>, I thought I’d implement tag index pages properly on this blog (without any plugins). My Makers Academy related posts keep being muddied up with unrelated posts, and I needed a way to filter them out.</p>
 
 <p>If you’re unfamiliar with Jekyll, it’s a static site generator. You can type up some basic <code class="highlighter-rouge">.md</code> files as blog posts and Jekyll generates the HTML for a fully functioning website. It has a templating engine built-in, which keeps the code DRY (don’t repeat yourself) by using templates that swap in variables and partials. It can even fill out templates with JSON/YAML data. I won’t go into detail about how to get started as it’s all in the documentation, although I did attempt to create a <a href="https://github.com/vannio/Jekyll-babel-starter" target="_blank">boilerplate of sorts</a> that aims to take the difficulty out of Jekyll by letting Gulp.js automate a lot of stuff.</p>
 
@@ -109,34 +104,14 @@
 
 <p>If you’re still confused, have a look at <a href="https://github.com/vannio/vann.io" target="_blank">the repo for this blog</a>. I always find that I need to be able to explore how something is structured before I really understand what’s going on.</p>
 
-    </div>
-  </article>
-  
-<h2>Older Posts</h2>
-  <ul class="post-list">
-  
+  </div>
+</article>
 
+<div class="post-nav">
 
-
-  <li>
-    <span class="post-title"><a class="post-link ajax-link" href="/posts/projects/2016/01/03/smrt.html">S.M.R.T. (the smart mirror)</a></span>
-    <p class="post-meta"><time datetime="2016-01-03T22:21:00+00:00" itemprop="datePublished">Jan 3, 2016</time> <span class="post-tags"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.605 0h-10.605v10.609l13.391 13.391 10.609-10.604-13.395-13.396zm-4.191 6.414c-.781.781-2.046.781-2.829.001-.781-.783-.781-2.048 0-2.829.782-.782 2.048-.781 2.829-.001.782.782.781 2.047 0 2.829z"/></svg>
-<a href="/posts/projects">projects</a> <a href="/posts/tutorials">tutorials</a> </span></p>
-  </li>
-  
-
-
-
-  <li>
-    <span class="post-title"><a class="post-link ajax-link" href="/posts/tutorials/2015/12/27/apache.html">How to AWS, Apache and virtual host</a></span>
-    <p class="post-meta"><time datetime="2015-12-27T00:25:00+00:00" itemprop="datePublished">Dec 27, 2015</time> <span class="post-tags"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.605 0h-10.605v10.609l13.391 13.391 10.609-10.604-13.395-13.396zm-4.191 6.414c-.781.781-2.046.781-2.829.001-.781-.783-.781-2.048 0-2.829.782-.782 2.048-.781 2.829-.001.782.782.781 2.047 0 2.829z"/></svg>
-<a href="/posts/tutorials">tutorials</a> </span></p>
-  </li>
-  
-  </ul>
-  
-
-
+  <span class="post-nav__link">&#x2039; <a class="prev" href="/posts/general/2016/05/16/thnks-fr-th-mmrs.html">Thanks for the memories</a></span>
+  <span class="post-nav__link next"></span>
+</div>
 
       </div>
     </div>
