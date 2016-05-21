@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Makers Academy
+title:  Why Makers Academy?
 date:   2016-02-26 00:00:00 +0000
 categories: general
 tags: makers

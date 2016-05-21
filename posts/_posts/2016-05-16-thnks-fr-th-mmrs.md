@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Thanks for the memories
+title:  Precourse week 3 &mdash; Thanks for the memories
 date:   2016-05-16 23:00:00 +0100
 categories: general
 tags: makers

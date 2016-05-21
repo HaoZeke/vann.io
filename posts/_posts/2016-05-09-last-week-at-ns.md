@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  The final countdown
+title:  Precourse week 2 &mdash; The final countdown
 date:   2016-05-09 19:00:00 +0100
 categories: general
 tags: makers

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:	Not just 'how'
+title:	Precourse week 1 &mdash; Not just 'how'
 date:   2016-05-01 10:30:00 +0100
 categories: general
 tags: makers
