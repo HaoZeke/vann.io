@@ -5,8 +5,8 @@
     <description></description>
     <link>http://vann.io/</link>
     <atom:link href="http://vann.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 19 May 2016 16:01:37 +0100</pubDate>
-    <lastBuildDate>Thu, 19 May 2016 16:01:37 +0100</lastBuildDate>
+    <pubDate>Tue, 24 May 2016 00:05:19 +0100</pubDate>
+    <lastBuildDate>Tue, 24 May 2016 00:05:19 +0100</lastBuildDate>
     <generator>Jekyll v3.1.0</generator>
     
       <item>
@@ -65,7 +65,7 @@
       </item>
     
       <item>
-        <title>Thanks for the memories</title>
+        <title>Precourse week 3 &amp;mdash; Thanks for the memories</title>
         <description>&lt;p&gt;It’s been difficult completing week 3 of the precourse in depth as there were a lot of fiddly and time-consuming exercises, yet so little time to do them all. I had to do most of the work at the weekend, but by then I was nursing one hell of a hangover from my leaving do, and every line of code was a blurry struggle to write.&lt;/p&gt;
 
 &lt;p&gt;We covered recursion and a bit of blocks/procs/yielding, but anything that requires putting one thing into another thing and then that thing into another thing, really baffles me. I just about managed to scrape a green tick on my submitted answers the night before the deadline, and only because I skimmed through the exercises that didn’t have any RSpec tests (&lt;em&gt;CHEAT!&lt;/em&gt;).&lt;/p&gt;
@@ -93,7 +93,7 @@
       </item>
     
       <item>
-        <title>The final countdown</title>
+        <title>Precourse week 2 &amp;mdash; The final countdown</title>
         <description>&lt;p&gt;It’s my final week at Nice and Serious. I say that with a heavy heart, but also with excitement at what comes next. My swan song is a site for &lt;a href=&quot;http://goodbadpalmoil.org&quot; target=&quot;_blank&quot;&gt;RSPO’s campaign for good palm oil&lt;/a&gt; which fully launches today. If you’re a 30yr old woman in New York, watch out! Targeted ads are coming to get you.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/rspo-palm-oil.jpg&quot; alt=&quot;RSPO - Good or bad palm oil&quot; /&gt;&lt;/p&gt;
@@ -138,7 +138,7 @@
       </item>
     
       <item>
-        <title>Not just &#39;how&#39;</title>
+        <title>Precourse week 1 &amp;mdash; Not just &#39;how&#39;</title>
         <description>&lt;p&gt;Initially, streams and pipes were just some magic terms that I thought were too hard for me to bother learning about, so I made an educated guess and continued to work on those assumptions for a long time. Now that I’ve actually taken the time to learn, it just seems so glaringly obvious (and in all fairness, pretty spot-on from what I had guessed). I’ve been writing gulpfiles and ‘piping streams’ for god knows how long, without being confident that I understood what I was doing.&lt;/p&gt;
 
 &lt;p&gt;There are a lot of things I learnt how to do that have become second-nature, but I have rarely been able to describe &lt;em&gt;why&lt;/em&gt; I do such things. That in itself is a lesson learnt: understand the ‘why’ as well as the ‘how’ because it provides so much clarity, and as a result, allows room for reflection and improvement.&lt;/p&gt;
@@ -165,7 +165,7 @@
       </item>
     
       <item>
-        <title>It begins</title>
+        <title>Precourse intro &amp;mdash; It begins!</title>
         <description>&lt;p&gt;Yesterday evening was the induction to the precourse at Makers Academy. During the part-time precourse, we’re expected to get to the same skill-level as each other before starting the full-time course, so that trivial things like basic syntax and environment setup don’t hold us back. I met some of the other students too, of course. They’re all super friendly and keen (I expected no less) with very varied backgrounds — one student sells maps, which I think is amazing because it’s so damn niche.&lt;/p&gt;
 
 &lt;p&gt;I finally had a chance to look at the materials after work today. Command line and version control is up first? Easy peasy, I use these all the time! But hold up — what does &lt;code class=&quot;highlighter-rouge&quot;&gt;touch&lt;/code&gt; do? What about &lt;code class=&quot;highlighter-rouge&quot;&gt;tail&lt;/code&gt;? And &lt;code class=&quot;highlighter-rouge&quot;&gt;cat&lt;/code&gt;?&lt;/p&gt;
@@ -191,7 +191,7 @@
       </item>
     
       <item>
-        <title>Makers Academy</title>
+        <title>Why Makers Academy?</title>
         <description>&lt;p&gt;I have a degree in Chemistry. After graduating and deciding the industry was not for me, I bounced around various comms-based jobs, unsure of what I really wanted. I ended up doing a masters in Science Communication, whilst working as a front-end web developer at a company who specialise in communicating scientific issues.&lt;/p&gt;
 
 &lt;p&gt;I’ve been happy for the past 2 years, because my hobby had become my job. But now I’m starting to realise that front-end alone isn’t enough; I want to do more than make static sites. I want to be a well-rounded full-stack developer — and fast.&lt;/p&gt;

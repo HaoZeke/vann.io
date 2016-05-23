@@ -85,9 +85,8 @@ pre {
     word-wrap: normal; }
 
 sup {
-  font-size: 0.8em;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased; }
+  font-size: 0.4em;
+  line-height: 1; }
 
 .smallprint {
   text-align: right; }
