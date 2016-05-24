@@ -5,9 +5,28 @@
     <description></description>
     <link>http://vann.io/</link>
     <atom:link href="http://vann.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 24 May 2016 00:05:40 +0100</pubDate>
-    <lastBuildDate>Tue, 24 May 2016 00:05:40 +0100</lastBuildDate>
+    <pubDate>Wed, 25 May 2016 00:03:42 +0100</pubDate>
+    <lastBuildDate>Wed, 25 May 2016 00:03:42 +0100</lastBuildDate>
     <generator>Jekyll v3.1.0</generator>
+    
+      <item>
+        <title>Precourse week 4 &amp;mdash; POODR and chill</title>
+        <description>&lt;p&gt;The precourse is officially over! Week 4 work wasn’t nearly as intense, so I had time to start reading through the &lt;em&gt;Well Grounded Rubyist&lt;/em&gt; and flick through &lt;em&gt;POODR&lt;/em&gt; (Practical Object-Oriented Design in Ruby) — the two most recommended books for the course. I also picked up a dinky little O’Reilly Ruby pocket guide, because who has the shoulder strength to carry heavy books &lt;em&gt;and&lt;/em&gt; their laptop everyday?&lt;/p&gt;
+
+&lt;p&gt;I did my first proper pairing exercise earlier on in the week. Me and &lt;a href=&quot;https://github.com/andreamazza89&quot; target=&quot;_blank&quot;&gt;Andrea&lt;/a&gt; completed a couple of katas and the fizzbuzz challenge over Screenhero — a program that shares one screen with another user. One person ‘navigates’ (directs) whilst the other ‘drives’ (types) the code-writing. I actually really like paired-programming and wish it was a practice I had picked up earlier. Not only is it faster for solving problems, but staring at code all day can get lonely, so being able to ask silly questions to a real person &lt;em&gt;is just so nice&lt;/em&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 22 May 2016 21:00:00 +0100</pubDate>
+        <link>http://vann.io/posts/general/2016/05/22/poodr-n-chill.html</link>
+        <guid isPermaLink="true">http://vann.io/posts/general/2016/05/22/poodr-n-chill.html</guid>
+        
+        <category>makers</category>
+        
+        
+        <category>posts</category>
+        
+        <category>general</category>
+        
+      </item>
     
       <item>
         <title>Using tags in Jekyll</title>
@@ -367,25 +386,6 @@ You&#39;ll see that when this blog throws a server error (eg. 404) it points to 
         <category>posts</category>
         
         <category>tutorials</category>
-        
-      </item>
-    
-      <item>
-        <title>Hello, it&#39;s me</title>
-        <description>&lt;p&gt;&lt;em&gt;I was wondering if after all these years&lt;br /&gt;I should start a blog…&lt;/em&gt; 🎶&lt;/p&gt;
-
-&lt;p&gt;Last Wednesday marked the 4th session of the &lt;a href=&quot;http://girlsintechuk.com/programmes/mentoring-programme/&quot; target=&quot;\_blank&quot;&gt;Girls in Tech&lt;/a&gt; mentoring scheme. The scheme is essentially a monthly speed-dating session with respected, influential individuals (mainly women) in the tech industry. One of the mentors mentioned that keeping a blog immensely helped her and inspired me to do the same. For the first time in years, I also have the time to actually read for pleasure! I’m currently reading the classic ‘Dracula’ by Bram Stoker which — if you have read it, will understand — constantly reminds me of the importance of keeping journals.&lt;/p&gt;
-
-&lt;p&gt;So that brings us here, to this &lt;a href=&quot;//jekyllrb.com/&quot; target=&quot;\_blank&quot;&gt;jekyll-based&lt;/a&gt; blog. Hello. This will be my space to talk all things web development, and where you can follow my journey of learning/doing/building, should you choose to do so.&lt;/p&gt;
-</description>
-        <pubDate>Sat, 19 Dec 2015 10:44:00 +0000</pubDate>
-        <link>http://vann.io/posts/general/2015/12/19/hello.html</link>
-        <guid isPermaLink="true">http://vann.io/posts/general/2015/12/19/hello.html</guid>
-        
-        
-        <category>posts</category>
-        
-        <category>general</category>
         
       </item>
     
