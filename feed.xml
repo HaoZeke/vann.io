@@ -5,8 +5,8 @@
     <description></description>
     <link>http://vann.io/</link>
     <atom:link href="http://vann.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 28 May 2016 18:26:43 +0100</pubDate>
-    <lastBuildDate>Sat, 28 May 2016 18:26:43 +0100</lastBuildDate>
+    <pubDate>Sat, 28 May 2016 18:41:48 +0100</pubDate>
+    <lastBuildDate>Sat, 28 May 2016 18:41:48 +0100</lastBuildDate>
     <generator>Jekyll v3.1.0</generator>
     
       <item>
@@ -15,6 +15,11 @@
 
 &lt;p&gt;&lt;strong&gt;Mon&lt;/strong&gt;&lt;br /&gt;
 I’m in Maker’s biggest cohort, ever. That’s a lotta names and faces to remember.&lt;/p&gt;
+
+&lt;figure&gt;
+&lt;img src=&quot;/assets/samm-dayone.jpg&quot; alt=&quot;Makers Academy first day&quot; /&gt;
+&lt;figcaption&gt;Sorry for the blurry photo &amp;mdash; Sam is very animated&lt;/figcaption&gt;
+&lt;/figure&gt;
 
 &lt;p&gt;Had a few talks introducing ideologies like extreme programming, and generally what we’re expected to learn. Surprisingly, it’s not really about the code. They want us to walk away with, at the bare minimum, the right behaviours and attitudes as a developer. There was also emphasis on getting physical exercise to tire our bodies out, otherwise we may have difficulty getting a good amount of rest.&lt;/p&gt;
 
