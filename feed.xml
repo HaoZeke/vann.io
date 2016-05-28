@@ -5,8 +5,8 @@
     <description></description>
     <link>http://vann.io/</link>
     <atom:link href="http://vann.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 28 May 2016 18:25:44 +0100</pubDate>
-    <lastBuildDate>Sat, 28 May 2016 18:25:44 +0100</lastBuildDate>
+    <pubDate>Sat, 28 May 2016 18:26:43 +0100</pubDate>
+    <lastBuildDate>Sat, 28 May 2016 18:26:43 +0100</lastBuildDate>
     <generator>Jekyll v3.1.0</generator>
     
       <item>
@@ -47,8 +47,8 @@ Today’s workshop was on doubles in RSpec, and deciding whether or not to mock 
 &lt;p&gt;By 5:30pm I had had enough, so played Cards Against Humanity and ping-pong to wind down the week.&lt;/p&gt;
 </description>
         <pubDate>Sat, 28 May 2016 18:00:00 +0100</pubDate>
-        <link>http://vann.io/posts/general/2016/05/28/Week-1.html</link>
-        <guid isPermaLink="true">http://vann.io/posts/general/2016/05/28/Week-1.html</guid>
+        <link>http://vann.io/posts/general/2016/05/28/week-1.html</link>
+        <guid isPermaLink="true">http://vann.io/posts/general/2016/05/28/week-1.html</guid>
         
         <category>makers</category>
         
