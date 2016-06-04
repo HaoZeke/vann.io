@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Van Le &amp;mdash; Full-stack developer based in London</title>
+    <title>Van Le &amp;mdash; Web developer based in London</title>
     <description></description>
     <link>http://vann.io/</link>
     <atom:link href="http://vann.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 04 Jun 2016 13:12:57 +0100</pubDate>
-    <lastBuildDate>Sat, 04 Jun 2016 13:12:57 +0100</lastBuildDate>
+    <pubDate>Sat, 04 Jun 2016 13:21:04 +0100</pubDate>
+    <lastBuildDate>Sat, 04 Jun 2016 13:21:04 +0100</lastBuildDate>
     <generator>Jekyll v3.1.0</generator>
     
       <item>
