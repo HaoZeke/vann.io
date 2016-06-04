@@ -60,74 +60,81 @@
 
 
 <h2>Hello! I’m Van.</h2>
-<p>I'm a <strong>full-stack developer</strong> in training (and aspiring &#x1F3AE; game developer) with over two years front-end agency experience. I build badass animated websites to communicate important issues.</p>
-<p>Here are some examples of what I can do &mdash;</p>
+<p>I'm a <strong>full-stack developer</strong> in training (and aspiring &#x1F3AE; game developer) with over two years front-end agency experience. I build animated websites to communicate important issues.</p>
+<p>Here are some examples of what I can do (click summary to expand details) &mdash;</p>
 
-<ul>
+<ul class="projects">
 
 
-	<li><strong>The Guardian</strong>
+	<li class="projects__item js-challenges projects__challenges"><strong>The Guardian</strong>
 		&#x1f47e;
-		<a href="http://www.theguardian.com/environment/ng-interactive/2016/jan/15/the-lone-climate-change-denier-interactive-game" target="_blank" class="js-expand expand-details">The Lone Denier</a><sup>&dagger;</sup>
-		<!-- <a class="external-link" href="http://www.theguardian.com/environment/ng-interactive/2016/jan/15/the-lone-climate-change-denier-interactive-game" target="_blank">&#x27c0;</a> -->
-		<p>Space Invaders clone built with Pixi.js for fast 2D rendering.</p>
+		<a href="http://www.theguardian.com/environment/ng-interactive/2016/jan/15/the-lone-climate-change-denier-interactive-game" target="_blank">The Lone Denier</a><sup>&dagger;</sup>
+		<p>A custom clone of a Space Invaders game, as a light-hearted take on climate change deniers</p>
+		<div class="projects__hidden">
+			<strong>My Role</strong>Lead developer<br>
+			<p><strong>Libraries used</strong>Pixi.js</p>
+			<p><strong>Most challenging challenge</strong>Interaction differences between mobile and desktop devices</p>
+			<p><strong>The solution</strong>For small screens, I decreased the number of 'invaders' whilst increasing the dimensions to improve visibility. I implemented additional on-screen controls for devices that lack keyboard support.</p>
+			<p><a href="http://www.theguardian.com/environment/ng-interactive/2016/jan/15/the-lone-climate-change-denier-interactive-game" target="_blank">View project</a> &rarr;</p>
+		</div>
 	</li>
 	
 
 
 
-	<li><strong>Wellcome Collection</strong>
-		&#x1f346;
-		<a href="http://sexbynumbers.wellcomecollection.org/" target="_blank" class="js-expand expand-details">Sex By Numbers</a><sup>&dagger;</sup>
-		<!-- <a class="external-link" href="http://sexbynumbers.wellcomecollection.org/" target="_blank">&#x27c0;</a> -->
-		<p>Used D3.js to process, display and animate data. This site received <a href="http://www.cssdesignawards.com/sites/sex-by-numbers/25964" target="_blank">special kudos</a>.</p>
-	</li>
-	
-
-
-
-	<li><strong>Feeding America</strong>
+	<li class="projects__item js-challenges projects__challenges"><strong>Feeding America</strong>
 		&#x1f30e;
-		<a href="http://www.feedingamerica.org/hunger-in-america/our-research/hunger-in-america/facts-and-faces/" target="_blank" class="js-expand expand-details">Hunger in America</a><sup>&dagger;</sup>
-		<!-- <a class="external-link" href="http://www.feedingamerica.org/hunger-in-america/our-research/hunger-in-america/facts-and-faces/" target="_blank">&#x27c0;</a> -->
-		<p>Built with ScrollMagic for its Greensock animation integration.</p>
+		<a href="http://www.feedingamerica.org/hunger-in-america/our-research/hunger-in-america/facts-and-faces/" target="_blank">Hunger in America</a><sup>&dagger;</sup>
+		<p>An animated scrolling site following the stories of four people struggling with hunger</p>
+		<div class="projects__hidden">
+			<strong>My Role</strong>Lead developer<br>
+			<p><strong>Libraries used</strong>ScrollMagic, GreenSock</p>
+			<p><strong>Most challenging challenge</strong>Handling the sheer number of animations, timing and layering of assets</p>
+			<p><strong>The solution</strong>I used a mixture of CSS <code>position</code> and <code>translate</code> to keep images hidden off-screen, until tweened into view. I also divided tweens into 'scenes' based on the storyboard provided, to keep the arrangement of animations managable.</p>
+			<p><a href="http://www.feedingamerica.org/hunger-in-america/our-research/hunger-in-america/facts-and-faces/" target="_blank">View project</a> &rarr;</p>
+		</div>
+	</li>
+	
+
+
+
+	<li class="projects__item js-challenges projects__challenges"><strong>Chatham House</strong>
+		&#x231B;
+		<a href="http://syria.chathamhouse.org" target="_blank">Syria and its Neighbours</a><sup>&dagger;</sup>
+		<p>A map-based story detailing the conflicts surrounding Syria within the past 5 years</p>
+		<div class="projects__hidden">
+			<strong>My Role</strong>Lead developer (Introduction)<br>
+			<p><strong>Libraries used</strong>ScrollMagic, GreenSock, Paper.js</p>
+			<p><strong>Most challenging challenge</strong>Creating an animated 'glitchy pixel' image overlay</p>
+			<p><strong>The solution</strong>I generated a grid of small squares in a new canvas element. I then used paper.js to determine the average colour of the underlying image section behind each square. Each coloured square is then cycled through random opacities at random intervals to appear as though flickering.</p>
+			<p><a href="http://syria.chathamhouse.org" target="_blank">View project</a> &rarr;</p>
+		</div>
 	</li>
 	
 </ul>
 <p>If those piqued your interest, then you're in luck &mdash;</p>
-<ul>
+<ul class="projects">
 	
 
 
 
-	<li>
+	<li class="projects__item">
 		<strong>RSPO</strong>
-		<a href="http://goodbadpalmoil.org" target="_blank" class="js-expand expand-details">Say yes to good palm oil.</a><sup>&dagger;</sup>
-		<!-- <a class="external-link" href="http://goodbadpalmoil.org" target="_blank">&#x27c0;</a> -->
+		<a href="http://goodbadpalmoil.org" target="_blank">Say yes to good palm oil.</a><sup>&dagger;</sup>
 	</li>
 
 
 
-	<li>
-		<strong>Chatham House</strong>
-		<a href="http://syria.chathamhouse.org" target="_blank" class="js-expand expand-details">Syria and its Neighbours</a><sup>&dagger;</sup>
-		<!-- <a class="external-link" href="http://syria.chathamhouse.org" target="_blank">&#x27c0;</a> -->
-	</li>
-
-
-
-	<li>
+	<li class="projects__item">
 		<strong>The Guardian</strong>
-		<a href="http://www.theguardian.com/environment/ng-interactive/2015/dec/12/dnyr-the-climate-change-denying-robot-interactive" target="_blank" class="js-expand expand-details">Climate change denying robot</a><sup>&dagger;</sup>
-		<!-- <a class="external-link" href="http://www.theguardian.com/environment/ng-interactive/2015/dec/12/dnyr-the-climate-change-denying-robot-interactive" target="_blank">&#x27c0;</a> -->
+		<a href="http://www.theguardian.com/environment/ng-interactive/2015/dec/12/dnyr-the-climate-change-denying-robot-interactive" target="_blank">Climate change denying robot</a><sup>&dagger;</sup>
 	</li>
 
 
 
-	<li>
-		<strong>PwC</strong>
-		<a href="http://changinglives.pwc.com/" target="_blank" class="js-expand expand-details">Changing Lives</a><sup>&dagger;</sup>
-		<!-- <a class="external-link" href="http://changinglives.pwc.com/" target="_blank">&#x27c0;</a> -->
+	<li class="projects__item">
+		<strong>Wellcome Collection</strong>
+		<a href="http://sexbynumbers.wellcomecollection.org/" target="_blank">Sex By Numbers</a><sup>&dagger;</sup>
 	</li>
 
 

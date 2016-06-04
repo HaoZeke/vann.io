@@ -145,6 +145,62 @@ ul {
     ul li > p {
       margin-top: 0.5em;
       margin-bottom: 1em; }
+  ul.projects {
+    list-style-type: none; }
+    @media screen and (max-width: 600px) {
+      ul.projects {
+        padding-left: 1em;
+        padding-right: 1em;
+        max-width: none; } }
+    ul.projects li {
+      position: relative; }
+    ul.projects li:before {
+      content: '\203A';
+      margin-right: 0.5em;
+      display: inline-block;
+      -webkit-transition: -webkit-transform 0.2s ease-in;
+              transition: transform 0.2s ease-in;
+      -webkit-transform-origin: 50% 55%;
+              transform-origin: 50% 55%; }
+      @media screen and (max-width: 600px) {
+        ul.projects li:before {
+          position: absolute;
+          left: -1em; } }
+    ul.projects .projects__hidden {
+      -webkit-transition: opacity 0.15s, all 0.4s ease-in-out;
+              transition: opacity 0.15s, all 0.4s ease-in-out;
+      overflow: hidden;
+      max-height: 0;
+      padding: 0 1em;
+      border: solid 1px #42403e;
+      opacity: 0; }
+      @media screen and (max-width: 600px) {
+        ul.projects .projects__hidden {
+          padding: 0 0.5em; } }
+      ul.projects .projects__hidden strong {
+        display: block; }
+    ul.projects .projects__challenges {
+      cursor: pointer;
+      -webkit-transition: -webkit-transform 0.2s ease-in;
+              transition: transform 0.2s ease-in; }
+      ul.projects .projects__challenges:hover, ul.projects .projects__challenges.open {
+        -webkit-transform: translateX(0.5em);
+                transform: translateX(0.5em); }
+        @media screen and (max-width: 600px) {
+          ul.projects .projects__challenges:hover, ul.projects .projects__challenges.open {
+            -webkit-transform: none;
+                    transform: none; } }
+      ul.projects .projects__challenges.open:before {
+        -webkit-transform: rotate(90deg);
+                transform: rotate(90deg); }
+      ul.projects .projects__challenges.open .projects__hidden {
+        padding: 1em;
+        max-height: 999px;
+        margin-bottom: 2em;
+        opacity: 1; }
+        @media screen and (max-width: 600px) {
+          ul.projects .projects__challenges.open .projects__hidden {
+            padding: 0.5em; } }
 
 /**
  * Wrapper

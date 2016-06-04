@@ -51,5 +51,13 @@
 		e.preventDefault();
 	});
 
+	// Expanding project challenges
+	var challenges = document.getElementsByClassName('js-challenges');
+	for (var i = 0; i < challenges.length; i++) {
+		challenges[i].addEventListener('click', function () {
+			this.classList.toggle('open');
+		});
+	}
+
 /***/ }
 /******/ ]);
