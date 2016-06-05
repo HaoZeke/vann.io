@@ -5,9 +5,57 @@
     <description></description>
     <link>http://vann.io/</link>
     <atom:link href="http://vann.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 04 Jun 2016 13:21:04 +0100</pubDate>
-    <lastBuildDate>Sat, 04 Jun 2016 13:21:04 +0100</lastBuildDate>
+    <pubDate>Mon, 06 Jun 2016 00:44:43 +0100</pubDate>
+    <lastBuildDate>Mon, 06 Jun 2016 00:44:43 +0100</lastBuildDate>
     <generator>Jekyll v3.1.0</generator>
+    
+      <item>
+        <title>Week 2</title>
+        <description>&lt;p&gt;It feels like I’m only just getting the hang of things, but I’m already 2 weeks into the course. Nooooo!&lt;/p&gt;
+
+&lt;p&gt;I had my first code review at Makers on Tuesday, reflecting on last week’s weekend challenge (create an airport program to control incoming and outgoing flights). I wish I had attempted the challenge without reading the submission guide first. I probably would have made loads of unexpected mistakes and code smells (that’s a &lt;em&gt;thing&lt;/em&gt;, lolol), but at least I’d be able to see where where I was going wrong and learn never to make the same mistakes. My pair clearly hadn’t seen it and really tested the boundaries with some alien ‘null object pattern’ stuff.&lt;/p&gt;
+
+&lt;p&gt;The workshops this week have mostly been looking at design patterns: abstract vs concrete, delegating responsibilities, and composition over inheritance. Duck typing is something else that came up this week — as a weakly-typed language, Ruby only cares about what an object responds to, not how it looks. If an object can quack and can swim, it can be considered a duck!&lt;/p&gt;
+
+&lt;p&gt;Delegating responsibilities to other classes absolutely makes sense, yet I struggled actually implementing it during this week’s &lt;a href=&quot;https://github.com/vannio/challenge-takeaway&quot; target=&quot;_blank&quot;&gt;weekend challenge&lt;/a&gt; (create a takeaway/restaurant program to take orders) because I wasn’t really sure how to write &lt;em&gt;meaningful&lt;/em&gt; tests.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Order&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initialize&lt;/span&gt;
+    &lt;span class=&quot;vi&quot;&gt;@basket&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;update_basket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;vi&quot;&gt;@basket&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Takeaway&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initialize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;order&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Order&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;vi&quot;&gt;@order&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;order&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;add_to_basket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;vi&quot;&gt;@order&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;update_basket&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;I’m still unsure of how I go about testing &lt;code class=&quot;highlighter-rouge&quot;&gt;add_to_basket&lt;/code&gt; without it being a vacuous test that only checks for a response, and without it relying on &lt;code class=&quot;highlighter-rouge&quot;&gt;update_basket&lt;/code&gt; working correctly.
+&lt;br /&gt;¯\&lt;em&gt;(ツ)&lt;/em&gt;/¯&lt;/p&gt;
+
+&lt;p&gt;The rest of the week has been a blur. I definitely can’t keep up with this blogging business, so this entry is going to be short and sweet (like me, ha). So much stuff is crammed into each day, so unless I note down what’s happened &lt;em&gt;on that same day&lt;/em&gt;, I’ve already forgotten what I’ve accomplished by the next morning. I know it’s a lot though!&lt;/p&gt;
+</description>
+        <pubDate>Sun, 05 Jun 2016 20:00:00 +0100</pubDate>
+        <link>http://vann.io/posts/general/2016/06/05/week-2.html</link>
+        <guid isPermaLink="true">http://vann.io/posts/general/2016/06/05/week-2.html</guid>
+        
+        <category>makers</category>
+        
+        
+        <category>posts</category>
+        
+        <category>general</category>
+        
+      </item>
     
       <item>
         <title>Week 1</title>
@@ -287,49 +335,6 @@ Today’s workshop was on doubles in RSpec, and deciding whether or not to mock 
         <category>posts</category>
         
         <category>general</category>
-        
-      </item>
-    
-      <item>
-        <title>S.M.R.T. (the smart mirror)</title>
-        <description>&lt;figure&gt;
-&lt;img src=&quot;/assets/smrt-1.jpg&quot; alt=&quot;Smart mirror wide view&quot; class=&quot;xl&quot; /&gt;
-&lt;figcaption&gt;Grab a brush and put a little makeup&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;I moved out of my family home recently, but found that there was no dressing-table mirror in my new flat *gasp*. Since moving out, my time-keeping has also taken a nosedive and I’ve found myself constantly being late, so to make living independently smoother and to solve such problems in one fell swoop, I made a smart mirror!&lt;/p&gt;
-
-&lt;p&gt;The mirror itself is a sheet of 2-way glass, custom cut to fit inside a cheap photo frame I got from Ikea. Unlike regular mirror glass it only reflects about 50% of light, but otherwise lets the rest through.&lt;/p&gt;
-
-&lt;figure&gt;
-&lt;img src=&quot;/assets/smrt-2.jpg&quot; alt=&quot;Smart mirror set-up&quot; /&gt;
-&lt;figcaption&gt;Monitor and Raspberry Pi setup behind the mirror&lt;br /&gt;(sorry for potato-quality)&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;An old monitor hooked up to a Raspberry Pi lives behind the glass, and a simple web-app is displayed in kiosk mode. Once the mirror is in place (aka haphazardly balanced on the monitor), anything that isn’t black shows through the glass.&lt;/p&gt;
-
-&lt;p&gt;The web-app, which can be found &lt;a href=&quot;/graveyard/smrt&quot; target=&quot;\_blank&quot;&gt;here&lt;/a&gt;, is what makes the mirror ‘smart’ — it includes the date and time, travel updates (TfL) to speed up my mornings, and the weather forecast (MetOffice) so that I leave the flat in weather-appropriate clothes.&lt;/p&gt;
-
-&lt;figure&gt;
-&lt;img src=&quot;/assets/smrt-3.jpg&quot; alt=&quot;Smart mirror close-up view&quot; /&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;If I ever get round to it, motion detection — to make the monitor switch itself on as someone walks by — would be a pretty awesome addition.&lt;/p&gt;
-
-&lt;p&gt;Update Jan 5&lt;sup&gt;th&lt;/sup&gt; —&lt;br /&gt;I shared this on Reddit. I think people &lt;a href=&quot;https://www.reddit.com/r/MakeupAddiction/comments/3zc5qh/i_built_a_smart_mirror_for_my_vanity/&quot; target=&quot;\_blank&quot;&gt;liked it&lt;/a&gt;.&lt;/p&gt;
-</description>
-        <pubDate>Sun, 03 Jan 2016 22:21:00 +0000</pubDate>
-        <link>http://vann.io/posts/projects/2016/01/03/smrt.html</link>
-        <guid isPermaLink="true">http://vann.io/posts/projects/2016/01/03/smrt.html</guid>
-        
-        <category>projects</category>
-        
-        <category>tutorials</category>
-        
-        
-        <category>posts</category>
-        
-        <category>projects</category>
         
       </item>
     
