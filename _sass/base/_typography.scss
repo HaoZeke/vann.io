@@ -8,6 +8,7 @@ body {
   color: $text-color;
   box-sizing: border-box;
   margin: 0;
+  -webkit-font-smoothing: subpixel-antialiased; // Force Safari to not transition fonts oddly
 }
 
 /**

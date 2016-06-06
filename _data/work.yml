@@ -3,41 +3,48 @@
   title: The Lone Denier
   emoji: '&#x1f47e;'
   url: http://www.theguardian.com/environment/ng-interactive/2016/jan/15/the-lone-climate-change-denier-interactive-game
-  summary: Space Invaders clone built with Pixi.js for fast 2D rendering.
-  description:
-
-- client: Wellcome Collection
-  title: Sex By Numbers
-  emoji: '&#x1f346;'
-  url: http://sexbynumbers.wellcomecollection.org/
-  summary: Used D3.js to process, display and animate data. This site received <a href="http://www.cssdesignawards.com/sites/sex-by-numbers/25964" target="_blank">special kudos</a>.
-  description:
+  summary: A custom clone of a Space Invaders game, as a light-hearted approach to climate change deniers
+  role: Lead developer
+  technologies: Pixi.js
+  challenges: Interaction differences between mobile and desktop devices
+  solution: For small screens, I decreased the number of 'invaders' (in comparison to the number on larger screens) whilst increasing the dimensions to improve visibility. I implemented additional on-screen controls for devices that lack keyboard support.
 
 - client: Feeding America
   title: Hunger in America
   emoji: '&#x1f30e;'
   url: http://www.feedingamerica.org/hunger-in-america/our-research/hunger-in-america/facts-and-faces/
-  summary: Built with ScrollMagic for its Greensock animation integration.
-  description:
+  summary: An animated scrolling site following the stories of four people struggling with hunger
+  role: Lead developer
+  technologies: ScrollMagic, GreenSock
+  challenges: Handling the sheer number of animations, timing and layering of assets
+  solution: I used a mixture of CSS <code>position</code> and <code>translate</code> to keep images hidden off-screen, until tweened into view. I divided GreenSock tweens into 'scenes' based on the storyboard provided, to keep the arrangement of animations managable.
+
+- client: Chatham House
+  title: Syria and its Neighbours
+  emoji: '&#x231B;'
+  url: http://syria.chathamhouse.org
+  summary: A map-based story detailing the conflicts surrounding Syria within the last 5 years
+  role: Lead developer (Introduction)
+  technologies: ScrollMagic, GreenSock, Paper.js
+  challenges: Creating an animated 'glitchy pixel' image overlay
+  solution: I generated a grid of small squares in a canvas element, then used paper.js to determine the 'average colour' of the underlying image section behind each square. I cycled the coloured squares through random opacities at random intervals to create a pixelated flicker.
 
 # Other
 - client: RSPO
   title: Say yes to good palm oil.
   url: http://goodbadpalmoil.org
   summary:
-  description:
-
-- client: Chatham House
-  title: Syria and its Neighbours
-  url: http://syria.chathamhouse.org
-  summary:
-  description:
 
 - client: The Guardian
   title: Climate change denying robot
   url: http://www.theguardian.com/environment/ng-interactive/2015/dec/12/dnyr-the-climate-change-denying-robot-interactive
   summary:
-  description:
+
+- client: Wellcome Collection
+  title: Sex By Numbers
+  emoji: '&#x1f346;'
+  url: http://sexbynumbers.wellcomecollection.org/
+  summary:
 
 - client: PwC
   title: Changing Lives
