@@ -150,7 +150,7 @@ gulp.task('build-prod', done => {
 /**
 * Push the build to github/bitbucket
 */
-gulp.task('deploy', ['build-prod'], function() {
+gulp.task('deploy', ['htmlmin'], function() {
   return gulp.src('./_site/**/*')
     .pipe(ghPages({
       branch: 'prod'
