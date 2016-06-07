@@ -9,8 +9,13 @@ import uglify from 'gulp-uglify';
 import ghPages from 'gulp-gh-pages';
 import imagemin from 'gulp-imagemin';
 import webpack from 'webpack-stream';
+import htmlmin from 'gulp-htmlmin';
 
 const reload = browserSync.reload;
+
+
+// http://www.codeofclimber.ru/2015/use-gulp-to-automate-building-of-jekyll-based-site/
+
 
 /**
 * Compile files from _sass into both _site/css (for live injecting) and site (for future jekyll builds)
@@ -36,14 +41,12 @@ gulp.task('uglify', () => {
   return gulp.src('_js/main.js')
     .pipe(webpack({
       module: {
-        loaders: [
-          {
-            test: /\.js$/,
-            loader: 'babel',
-            exclude: '/node_modules/',
-            query: { compact: false }
-          }
-        ]
+        loaders: [{
+          test: /\.js$/,
+          loader: 'babel',
+          exclude: '/node_modules/',
+          query: { compact: false }
+        }]
       }
     }))
     .pipe(rename('main.js'))
@@ -56,7 +59,7 @@ gulp.task('uglify', () => {
     .pipe(gulp.dest('_site/scripts'));
 });
 
-gulp.task('images', () => {
+gulp.task('imagemin', () => {
   return gulp.src('_assets/*')
     .pipe(imagemin({
       progressive: true,
@@ -66,24 +69,9 @@ gulp.task('images', () => {
 });
 
 /**
-* Build the Jekyll Site
-*/
-gulp.task('jekyll-build', done => {
-  return cp.spawn('jekyll', ['build', '--drafts'], {stdio: 'inherit'})
-    .on('close', done);
-});
-
-/**
-* Rebuild Jekyll & do page reload
-*/
-gulp.task('jekyll-rebuild', ['jekyll-build'], () => {
-  reload();
-});
-
-/**
 * Wait for jekyll-build, then launch the Server
 */
-gulp.task('browser-sync', ['sass', 'uglify', 'jekyll-build'], function() {
+gulp.task('browser-sync', ['sass', 'uglify', 'jekyll-build:dev'], () => {
   browserSync({
     notify: {
       styles: [
@@ -115,8 +103,8 @@ gulp.task('browser-sync', ['sass', 'uglify', 'jekyll-build'], function() {
 gulp.task('watch', () => {
   gulp.watch(['_sass/**/*.scss','css/*.scss'], ['sass']);
   gulp.watch(['_js/*.js'], ['uglify']);
-  gulp.watch(['_assets/*'], ['images']);
-  gulp.watch(['_data/*', '*.html', '_includes/*', '_layouts/*.html', 'posts/**/*', 'assets/**/*', 'graveyard/**/*'], ['jekyll-rebuild']);
+  gulp.watch(['_assets/*'], ['imagemin']);
+  gulp.watch(['assets/**/*', 'graveyard/**/*', '_data/*', '*.html', '_layouts/*/**.html', '_includes/*', 'posts/**/*'], ['jekyll-rebuild']);
 });
 
 /**
@@ -126,20 +114,36 @@ gulp.task('watch', () => {
 gulp.task('default', ['browser-sync', 'watch']);
 
 /**
- * Build the Jekyll Site for production
- */
-gulp.task('build-prod', function (done) {
-  var productionEnv = process.env;
-  productionEnv.JEKYLL_ENV = 'production';
-
-  return cp.spawn('jekyll', ['build'], { stdio: 'inherit' , env:productionEnv })
+* Build the Jekyll Site
+*/
+gulp.task('jekyll-build:dev', done => {
+  return cp.spawn('jekyll', ['build', '--drafts'], {stdio: 'inherit'})
     .on('close', done);
 });
 
 /**
-* Push the build to github/bitbucket
+* Rebuild Jekyll & do page reload
 */
-gulp.task('deploy', ['build-prod'], function() {
+gulp.task('jekyll-rebuild', ['jekyll-build:dev'], () => { reload(); });
+
+// Build the Jekyll site for production
+gulp.task('jekyll-build:prod', done => {
+  var productionEnv = process.env;
+  productionEnv.JEKYLL_ENV = 'production';
+
+  return cp.spawn('jekyll', ['build'], { stdio: 'inherit' , env: productionEnv })
+    .on('close', done);
+});
+
+gulp.task('build:prod', ['jekyll-build:prod'], () => {
+  return gulp.src('./_site/**/*.html')
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest('./_site/'))
+    .pipe(reload({stream:true}));
+});
+
+// Push the build to github/bitbucket
+gulp.task('deploy', ['build:prod'], () => {
   return gulp.src('./_site/**/*')
     .pipe(ghPages({
       branch: 'prod'
