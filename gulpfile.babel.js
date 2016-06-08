@@ -68,17 +68,10 @@ gulp.task('imagemin', () => {
     .pipe(gulp.dest('assets'));
 });
 
-gulp.task('htmlmin', ['build-prod'], function() {
-  return gulp.src('./_site/**/*.html')
-    .pipe(htmlmin({collapseWhitespace: true}))
-    .pipe(gulp.dest('./_site/'))
-    .pipe(reload({stream:true}));
-});
-
 /**
 * Wait for jekyll-build, then launch the Server
 */
-gulp.task('browser-sync', ['sass', 'uglify', 'jekyll-build'], function() {
+gulp.task('browser-sync', ['sass', 'uglify', 'jekyll-build:dev'], () => {
   browserSync({
     notify: {
       styles: [
@@ -111,8 +104,7 @@ gulp.task('watch', () => {
   gulp.watch(['_sass/**/*.scss','css/*.scss'], ['sass']);
   gulp.watch(['_js/*.js'], ['uglify']);
   gulp.watch(['_assets/*'], ['imagemin']);
-  gulp.watch(['_data/*', '*.html', '_layouts/*/**.html', '_includes/*', 'posts/**/*'], ['htmlmin'])
-  gulp.watch(['assets/**/*', 'graveyard/**/*'], ['jekyll-rebuild']);
+  gulp.watch(['assets/**/*', 'graveyard/**/*', '_data/*', '*.html', '_layouts/*/**.html', '_includes/*', 'posts/**/*'], ['jekyll-rebuild']);
 });
 
 /**
@@ -124,7 +116,7 @@ gulp.task('default', ['browser-sync', 'watch']);
 /**
 * Build the Jekyll Site
 */
-gulp.task('jekyll-build', done => {
+gulp.task('jekyll-build:dev', done => {
   return cp.spawn('jekyll', ['build', '--drafts'], {stdio: 'inherit'})
     .on('close', done);
 });
@@ -132,14 +124,10 @@ gulp.task('jekyll-build', done => {
 /**
 * Rebuild Jekyll & do page reload
 */
-gulp.task('jekyll-rebuild', ['jekyll-build'], () => {
-  reload();
-});
+gulp.task('jekyll-rebuild', ['jekyll-build:dev'], () => { reload(); });
 
-/**
- * Build the Jekyll Site for production
- */
-gulp.task('build-prod', done => {
+// Build the Jekyll site for production
+gulp.task('jekyll-build:prod', done => {
   var productionEnv = process.env;
   productionEnv.JEKYLL_ENV = 'production';
 
@@ -147,10 +135,15 @@ gulp.task('build-prod', done => {
     .on('close', done);
 });
 
-/**
-* Push the build to github/bitbucket
-*/
-gulp.task('deploy', ['htmlmin'], function() {
+gulp.task('build:prod', ['jekyll-build:prod'], () => {
+  return gulp.src('./_site/**/*.html')
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest('./_site/'))
+    .pipe(reload({stream:true}));
+});
+
+// Push the build to github/bitbucket
+gulp.task('deploy', ['build:prod'], () => {
   return gulp.src('./_site/**/*')
     .pipe(ghPages({
       branch: 'prod'
