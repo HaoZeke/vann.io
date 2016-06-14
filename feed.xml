@@ -5,15 +5,15 @@
     <description></description>
     <link>http://vann.io/</link>
     <atom:link href="http://vann.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 14 Jun 2016 23:41:41 +0100</pubDate>
-    <lastBuildDate>Tue, 14 Jun 2016 23:41:41 +0100</lastBuildDate>
+    <pubDate>Tue, 14 Jun 2016 23:53:01 +0100</pubDate>
+    <lastBuildDate>Tue, 14 Jun 2016 23:53:01 +0100</lastBuildDate>
     <generator>Jekyll v3.1.0</generator>
     
       <item>
         <title>Week 3 — Rock, Paper, Scissors</title>
         <description>&lt;p&gt;This week has been &lt;em&gt;on point&lt;/em&gt;. We’ve moved from programs that only live on the command line to making web applications, hooray! It’s unbelievably satisfying building something concrete to show to my non-coding friends, rather than some strange, abstract Ruby thing that requires decent knowledge of the command line and &lt;code class=&quot;highlighter-rouge&quot;&gt;irb&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;The weekend challenge was to create a fully test-driven, neatly encapsulated, object-orientated game of Rock, Paper, Scissors. Once I got the bare-bones functioning game with all the unit and feature tests down, I was in my element as a front-end developer, making it &lt;em&gt;look&lt;/em&gt; cool. I started off with an embarrassing storyboard drawing, whilst eating breakfast:&lt;/p&gt;
+&lt;p&gt;The weekend challenge was to create a fully test-driven, neatly encapsulated, object-orientated game of Rock, Paper, Scissors. Once I got the bare-bones functioning game with all the unit and feature tests down, I was in my element as a front-end developer, making it &lt;em&gt;look&lt;/em&gt; cool. I started off with an embarrassing storyboard drawing:&lt;/p&gt;
 &lt;figure&gt;
 &lt;img src=&quot;/assets/rock-paper-sizzle.jpg&quot; alt=&quot;attempt at storyboarding&quot; /&gt;
 &lt;figcaption&gt;Can you believe I got an A* in GCSE Art? &amp;#x1F3A8;&lt;/figcaption&gt;
