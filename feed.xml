@@ -5,8 +5,8 @@
     <description></description>
     <link>http://vann.io/</link>
     <atom:link href="http://vann.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 15 Jun 2016 00:28:15 +0100</pubDate>
-    <lastBuildDate>Wed, 15 Jun 2016 00:28:15 +0100</lastBuildDate>
+    <pubDate>Wed, 15 Jun 2016 00:46:18 +0100</pubDate>
+    <lastBuildDate>Wed, 15 Jun 2016 00:46:18 +0100</lastBuildDate>
     <generator>Jekyll v3.1.0</generator>
     
       <item>
@@ -27,7 +27,7 @@
 
 &lt;p&gt;The animations work by sliding a spritesheet, one frame at a time, through a narrow container — like a film reel projector.&lt;/p&gt;
 
-&lt;p&gt;I had a lot of fun with this challenge. It was pretty much complete by the end of Saturday, so I spent most of the evening with G&amp;amp;Ts in hand, chatting to my friends whilst tidying up the code. Luckily, they didn’t seem to mind me working.&lt;/p&gt;
+&lt;p&gt;I had a lot of fun with this challenge. It was pretty much complete by the end of Saturday, so I spent the evening tidying my code with G&amp;amp;Ts in hand. I had friends over, but they didn’t seem to mind me working, luckily!&lt;/p&gt;
 
 &lt;figure&gt;
 &lt;a href=&quot;http://rock-paper-sizzle.herokuapp.com&quot; target=&quot;_blank&quot;&gt;
