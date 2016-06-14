@@ -5,33 +5,29 @@
     <description></description>
     <link>http://vann.io/</link>
     <atom:link href="http://vann.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 14 Jun 2016 23:33:45 +0100</pubDate>
-    <lastBuildDate>Tue, 14 Jun 2016 23:33:45 +0100</lastBuildDate>
+    <pubDate>Tue, 14 Jun 2016 23:41:41 +0100</pubDate>
+    <lastBuildDate>Tue, 14 Jun 2016 23:41:41 +0100</lastBuildDate>
     <generator>Jekyll v3.1.0</generator>
     
       <item>
         <title>Week 3 — Rock, Paper, Scissors</title>
         <description>&lt;p&gt;This week has been &lt;em&gt;on point&lt;/em&gt;. We’ve moved from programs that only live on the command line to making web applications, hooray! It’s unbelievably satisfying building something concrete to show to my non-coding friends, rather than some strange, abstract Ruby thing that requires decent knowledge of the command line and &lt;code class=&quot;highlighter-rouge&quot;&gt;irb&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;After web developing for TWO YEARS I still didn’t &lt;em&gt;really&lt;/em&gt; know how the web worked, until Makers came to the rescue and showed me the magic of HTTP responses, servers, clients and MVC patterns. I was always very good at putting things into practice, but not so much explaining how it worked, so this week has been incredibly valuable.&lt;/p&gt;
-
-&lt;p&gt;The weekend challenge was to create a fully test-driven, neatly encapsulated, object-orientated game of Rock, Paper, Scissors. Once I got the bare-bones functioning game with all the unit and feature tests down, I was in my element as a front-end developer, making it &lt;em&gt;look&lt;/em&gt; cool.&lt;/p&gt;
-
-&lt;p&gt;This is the embarrassing storyboard I drew whilst having breakfast:&lt;/p&gt;
+&lt;p&gt;The weekend challenge was to create a fully test-driven, neatly encapsulated, object-orientated game of Rock, Paper, Scissors. Once I got the bare-bones functioning game with all the unit and feature tests down, I was in my element as a front-end developer, making it &lt;em&gt;look&lt;/em&gt; cool. I started off with an embarrassing storyboard drawing, whilst eating breakfast:&lt;/p&gt;
 &lt;figure&gt;
 &lt;img src=&quot;/assets/rock-paper-sizzle.jpg&quot; alt=&quot;attempt at storyboarding&quot; /&gt;
 &lt;figcaption&gt;Can you believe I got an A* in GCSE Art? &amp;#x1F3A8;&lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;I wanted a short time-lapse animation of the hands gesturing for each move, so I roped in my boyfriend for a couple of hours to help me take and edit a bunch of photos for some spritesheets.&lt;/p&gt;
+&lt;p&gt;I wanted a short time-lapse animation of the hands gesturing for each move, so I roped in my boyfriend for a couple of hours to help me take and edit a bunch of photos.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;figure&gt;
 &lt;img src=&quot;/assets/rock-paper-open.png&quot; alt=&quot;Example spritesheet&quot; class=&quot;xl&quot; /&gt;
 &lt;/figure&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;The animations work by sliding the spritesheet, one frame at a time, through a narrow container — like a film reel projector.&lt;/p&gt;
+&lt;p&gt;The animations work by sliding a spritesheet, one frame at a time, through a narrow container — like a film reel projector.&lt;/p&gt;
 
-&lt;p&gt;I had a lot of fun completing this challenge. I had it pretty much complete by the end of Saturday, and spent most of the evening with G&amp;amp;Ts in hand, chatting to my friends whilst tidying up my code. Luckily they didn’t seem to mind me working!&lt;/p&gt;
+&lt;p&gt;I had a lot of fun completing this challenge. I had it pretty much complete by the end of Saturday, and spent most of the evening with G&amp;amp;Ts in hand, chatting to my friends whilst tidying up my code. Luckily they didn’t seem to mind me working.&lt;/p&gt;
 
 &lt;figure&gt;
 &lt;a href=&quot;http://rock-paper-sizzle.herokuapp.com&quot; target=&quot;_blank&quot;&gt;
@@ -41,7 +37,7 @@
 
 &lt;p&gt;And &lt;a href=&quot;http://rock-paper-sizzle.herokuapp.com&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt; is the finished product. It’s hosted on a free Heroku package, which means it takes a while to wake up if it hasn’t been viewed for a while. Be patient!&lt;/p&gt;
 
-&lt;p&gt;As for the silly player 2 names… Well, what’s coding without a little bit of whimsy?&lt;/p&gt;
+&lt;p&gt;As for the silly player 2 names… Well, what is code without a little bit of whimsy?&lt;/p&gt;
 </description>
         <pubDate>Sun, 12 Jun 2016 20:00:00 +0100</pubDate>
         <link>http://vann.io/posts/general/2016/06/12/week-3.html</link>
