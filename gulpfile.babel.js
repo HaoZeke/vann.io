@@ -1,77 +1,63 @@
 import gulp from 'gulp';
+import gulpLoadPlugins from 'gulp-load-plugins';
 import browserSync from 'browser-sync';
-import sass from 'gulp-sass';
-import prefix from 'gulp-autoprefixer';
-import cp from 'child_process';
-import rename from 'gulp-rename';
-import minifyCSS from 'gulp-minify-css';
-import uglify from 'gulp-uglify';
-import ghPages from 'gulp-gh-pages';
-import imagemin from 'gulp-imagemin';
+import childProcess from 'child_process';
 import webpack from 'webpack-stream';
-import htmlmin from 'gulp-htmlmin';
 
+const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
 
+// =======================
+//  TASKS FOR DEVELOPMENT
+// =======================
 
-// http://www.codeofclimber.ru/2015/use-gulp-to-automate-building-of-jekyll-based-site/
-
-
-/**
-* Compile files from _sass into both _site/css (for live injecting) and site (for future jekyll builds)
-*/
-gulp.task('sass', () => {
-  return gulp.src('_sass/main.scss')
-    .pipe(sass({
-      includePaths: ['sass'],
-      onError: browserSync.notify
-    }))
-    .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
-    .pipe(rename('main.css'))
-    .pipe(gulp.dest('css'))
-    .pipe(gulp.dest('_site/css'))
-    .pipe(reload({stream:true}))
-    .pipe(minifyCSS({keepBreaks: false, keepSpecialComments:true}))
-    .pipe(rename('main.min.css'))
-    .pipe(gulp.dest('css'))
-    .pipe(gulp.dest('_site/css'));
+// Starts browsersync and file watching
+gulp.task('serve', ['browser-sync'], () => {
+  gulp.watch(['_sass/**/*.scss','css/*.scss'], ['sass']);
+  gulp.watch(['_js/**/*.js'], ['js']);
+  gulp.watch(['_assets/**/*'], ['imagemin']);
+  gulp.watch(['graveyard/**/*', '_data/*', '*.html', '_layouts/**/*', '_includes/**/*', 'posts/**/*'], ['build:reload']);
 });
 
-gulp.task('uglify', () => {
-  return gulp.src('_js/main.js')
-    .pipe(webpack({
-      module: {
-        loaders: [{
-          test: /\.js$/,
-          loader: 'babel',
-          exclude: '/node_modules/',
-          query: { compact: false }
-        }]
-      }
-    }))
-    .pipe(rename('main.js'))
-    .pipe(gulp.dest('scripts'))
-    .pipe(gulp.dest('_site/scripts'))
-    .pipe(reload({stream:true}))
-    .pipe(uglify({onError: browserSync.notify}))
-    .pipe(rename('main.min.js'))
-    .pipe(gulp.dest('scripts'))
-    .pipe(gulp.dest('_site/scripts'));
+// Builds Jekyll site (including drafts)
+gulp.task('build', done => {
+  return childProcess.spawn('jekyll', ['build', '--drafts'], {stdio: 'inherit'}).on('close', done);
 });
 
-gulp.task('imagemin', () => {
-  return gulp.src('_assets/*')
-    .pipe(imagemin({
-      progressive: true,
-      svgoPlugins: [{removeViewBox: false}]
-    }))
-    .pipe(gulp.dest('assets'));
+// First runs jekyll build task, then reloads browser
+gulp.task('build:reload', ['build'], () => { reload(); });
+
+// ======================
+//  TASKS FOR DEPLOYMENT
+// ======================
+
+// First run htmlmin, then deploy to github
+gulp.task('deploy', ['htmlmin'], () => {
+  return gulp.src('./_site/**/*').pipe($.ghPages({branch: 'prod'}));
 });
 
-/**
-* Wait for jekyll-build, then launch the Server
-*/
-gulp.task('browser-sync', ['sass', 'uglify', 'jekyll-build:dev'], () => {
+// First run build:prod and then minify HTML
+gulp.task('htmlmin', ['build:prod'], () => {
+  return gulp.src('./_site/**/*.html')
+    .pipe($.htmlmin( {collapseWhitespace: true}))
+    .pipe(gulp.dest('./_site/'))
+    .pipe(reload({stream: true}));
+});
+
+// Runs jekyll build for 'production' environment
+gulp.task('build:prod', ['js', 'sass', 'imagemin'], done => {
+  var productionEnv = process.env;
+      productionEnv.JEKYLL_ENV = 'production';
+
+  return childProcess.spawn('jekyll', ['build'], {stdio: 'inherit' , env: productionEnv}).on('close', done);
+});
+
+// ====================
+//  OTHER USEFUL TASKS
+// ====================
+
+// Browser sync + styles for the notification
+gulp.task('browser-sync', ['js', 'sass', 'imagemin', 'build'], () => {
   browserSync({
     notify: {
       styles: [
@@ -96,56 +82,51 @@ gulp.task('browser-sync', ['sass', 'uglify', 'jekyll-build:dev'], () => {
   });
 });
 
-/**
-* Watch scss files for changes & recompile
-* Watch html/md files, run jekyll & reload BrowserSync
-*/
-gulp.task('watch', () => {
-  gulp.watch(['_sass/**/*.scss','css/*.scss'], ['sass']);
-  gulp.watch(['_js/*.js'], ['uglify']);
-  gulp.watch(['_assets/*'], ['imagemin']);
-  gulp.watch(['assets/**/*', 'graveyard/**/*', '_data/*', '*.html', '_layouts/*/**.html', '_includes/*', 'posts/**/*'], ['jekyll-rebuild']);
+// Compile sass + livereload with css injection + minificiation
+gulp.task('sass', () => {
+  return gulp.src('_sass/main.scss')
+    .pipe($.sass({
+      includePaths: ['sass'],
+      onError: browserSync.notify
+    }))
+    .pipe($.autoprefixer(['last 15 versions', '> 1%', 'ie 8'], {cascade: true}))
+    .pipe($.rename('main.css'))
+    .pipe(gulp.dest('css'))
+    .pipe(gulp.dest('_site/css'))
+    .pipe(reload({stream: true}))
+    .pipe($.minifyCss({keepBreaks: false, keepSpecialComments:true}))
+    .pipe($.rename({extname: '.min.css'}))
+    .pipe(gulp.dest('css'))
+    .pipe(gulp.dest('_site/css'));
 });
 
-/**
-* Default task, running just `gulp` will compile the sass,
-* compile the jekyll site, launch BrowserSync & watch files.
-*/
-gulp.task('default', ['browser-sync', 'watch']);
-
-/**
-* Build the Jekyll Site
-*/
-gulp.task('jekyll-build:dev', done => {
-  return cp.spawn('jekyll', ['build', '--drafts'], {stdio: 'inherit'})
-    .on('close', done);
+// Compile JavaScript files + uglifies files
+gulp.task('js', () => {
+  return gulp.src('_js/main.js')
+    .pipe(webpack({
+      module: {
+        loaders: [{
+          test: /\.js$/,
+          loader: 'babel',
+          exclude: '/node_modules/',
+          query: { compact: false }
+        }]
+      }
+    }))
+    .pipe($.rename('main.js'))
+    .pipe(gulp.dest('scripts'))
+    .pipe(gulp.dest('_site/scripts'))
+    .pipe(reload({stream: true}))
+    .pipe($.uglify({onError: browserSync.notify}))
+    .pipe($.rename({extname: '.min.js'}))
+    .pipe(gulp.dest('scripts'))
+    .pipe(gulp.dest('_site/scripts'));
 });
 
-/**
-* Rebuild Jekyll & do page reload
-*/
-gulp.task('jekyll-rebuild', ['jekyll-build:dev'], () => { reload(); });
-
-// Build the Jekyll site for production
-gulp.task('jekyll-build:prod', done => {
-  var productionEnv = process.env;
-  productionEnv.JEKYLL_ENV = 'production';
-
-  return cp.spawn('jekyll', ['build'], { stdio: 'inherit' , env: productionEnv })
-    .on('close', done);
-});
-
-gulp.task('build:prod', ['jekyll-build:prod'], () => {
-  return gulp.src('./_site/**/*.html')
-    .pipe(htmlmin({collapseWhitespace: true}))
-    .pipe(gulp.dest('./_site/'))
-    .pipe(reload({stream:true}));
-});
-
-// Push the build to github/bitbucket
-gulp.task('deploy', ['build:prod'], () => {
-  return gulp.src('./_site/**/*')
-    .pipe(ghPages({
-      branch: 'prod'
-    }));
+// Optimise images + copy any other assets
+gulp.task('imagemin', () => {
+  return gulp.src('_assets/*')
+    .pipe($.imagemin())
+    .pipe(gulp.dest('assets'))
+    .pipe(gulp.dest('_site/assets'));
 });
