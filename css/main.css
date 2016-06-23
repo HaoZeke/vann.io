@@ -13,7 +13,7 @@ body {
   font-family: "Quicksand", sans-serif;
   font-size: 1.2em;
   line-height: 2;
-  color: #42403e;
+  color: #555;
   box-sizing: border-box;
   margin: 0;
   -webkit-font-smoothing: subpixel-antialiased; }
@@ -48,7 +48,7 @@ h2 {
 a {
   -webkit-transition: all 0.3s ease;
           transition: all 0.3s ease;
-  color: #42403e; }
+  color: #555; }
   a:hover {
     color: #ED1882; }
 
@@ -173,7 +173,7 @@ ul {
       overflow: hidden;
       max-height: 0;
       padding: 0 1em;
-      border: solid 1px #42403e;
+      border: solid 1px #555;
       opacity: 0; }
       @media screen and (max-width: 600px) {
         ul.projects .projects__hidden {
@@ -405,7 +405,7 @@ ul {
       width: 12px;
       height: 12px; }
       .post-meta .post-tags svg path {
-        fill: #42403e; }
+        fill: #555; }
 
 .post-link {
   display: block; }
@@ -415,7 +415,7 @@ ul {
   margin-bottom: 120px; }
   .post-index:after {
     content: '';
-    border-bottom: solid 1px #42403e;
+    border-bottom: solid 1px #555;
     display: block;
     max-width: 150px; }
   .post-single {
@@ -479,7 +479,7 @@ ul {
   .site-nav .menu-icon {
     display: none; }
   .site-nav .page-link {
-    color: #42403e;
+    color: #555;
     line-height: 2;
     text-transform: lowercase; }
     .site-nav .page-link:not(:last-child) {
@@ -506,7 +506,7 @@ ul {
           width: 18px;
           height: 15px; }
           .site-nav .menu-icon > svg path {
-            fill: #42403e; }
+            fill: #555; }
       .site-nav .trigger {
         clear: both;
         display: none; }
@@ -526,7 +526,7 @@ ul {
   .site-footer .wrapper {
     text-align: center; }
     .site-footer .wrapper p {
-      border-top: solid 1px #42403e;
+      border-top: solid 1px #555;
       padding-top: 15px; }
     .site-footer .wrapper a {
       text-transform: lowercase; }
