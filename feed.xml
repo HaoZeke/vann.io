@@ -5,8 +5,8 @@
     <description></description>
     <link>http://vann.io/</link>
     <atom:link href="http://vann.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 23 Jun 2016 01:07:02 +0100</pubDate>
-    <lastBuildDate>Thu, 23 Jun 2016 01:07:02 +0100</lastBuildDate>
+    <pubDate>Sun, 26 Jun 2016 20:38:16 +0100</pubDate>
+    <lastBuildDate>Sun, 26 Jun 2016 20:38:16 +0100</lastBuildDate>
     <generator>Jekyll v3.1.0</generator>
     
       <item>
@@ -23,7 +23,7 @@
 
 &lt;p&gt;Despite a few attempts to break the app by embedding HTML in the comments, I think it still looks and works pretty well. In typical Van-style, I made it 92% more goofy by seeding the database with infamous Jaden Smith/Ed Balls Twitter quotes.&lt;/p&gt;
 
-&lt;p&gt;My code was collaboratively reviewed on a big screen by the rest of the cohort. I’ve always worried about sharing my code because I feel like there’s this weird pressure for me to write “good code” because I “have experience”. I wouldn’t be here if I thought I could write exceptional code! I hate doing anything in front of big groups of people too, so I was understandably nervous (palms sweaty, mom’s spaghetti). I actually got some really helpful feedback and suggestions that I would never have otherwise considered, so in the nicest way possible, I urge anyone who is hesitant to show their code to get over themselves and just do it. To get the most out of this course, you really need to get out of your comfort zone!&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/vannio/challenge-chitter/tree/bonus&quot; target=&quot;_blank&quot;&gt;My code&lt;/a&gt; was collaboratively reviewed on a big screen by the rest of the cohort. I’ve always worried about sharing my code because I feel like there’s this weird pressure for me to write “good code” because I “have experience”. I wouldn’t be here if I thought I could write exceptional code! I hate doing anything in front of big groups of people too, so I was understandably nervous (palms sweaty, mom’s spaghetti). I actually got some really helpful feedback and suggestions that I would never have otherwise considered, so in the nicest way possible, I urge anyone who is hesitant to show their code to get over themselves and just do it. To get the most out of this course, you really need to get out of your comfort zone!&lt;/p&gt;
 </description>
         <pubDate>Fri, 17 Jun 2016 20:00:00 +0100</pubDate>
         <link>http://vann.io/posts/general/2016/06/17/week-4.html</link>
