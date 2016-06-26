@@ -45,7 +45,7 @@ gulp.task('htmlmin', ['build:prod'], () => {
 });
 
 // Runs jekyll build for 'production' environment
-gulp.task('build:prod', done => {
+gulp.task('build:prod', ['js', 'sass', 'imagemin'], done => {
   var productionEnv = process.env;
       productionEnv.JEKYLL_ENV = 'production';
 
