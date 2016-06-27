@@ -5,9 +5,37 @@
     <description></description>
     <link>http://vann.io/</link>
     <atom:link href="http://vann.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 26 Jun 2016 20:38:16 +0100</pubDate>
-    <lastBuildDate>Sun, 26 Jun 2016 20:38:16 +0100</lastBuildDate>
+    <pubDate>Mon, 27 Jun 2016 01:02:19 +0100</pubDate>
+    <lastBuildDate>Mon, 27 Jun 2016 01:02:19 +0100</lastBuildDate>
     <generator>Jekyll v3.1.0</generator>
+    
+      <item>
+        <title>Week 5 — JavaScript week</title>
+        <description>&lt;p&gt;In my last job, I used a lot of JavaScript to animate &lt;em&gt;all the things&lt;/em&gt;, but because I learnt everything as I went along, I picked up all the worst practices and bad habits (so many global functions, yay). This week has been a revelation — I finally understand how to use prototypes and constructors to better structure my code. It’s been quite the challenge to unlearn what I thought I knew, but I’m a lot happier thinking about JavaScript in a more object-orientated way.&lt;/p&gt;
+
+&lt;p&gt;This has also been the graduation week for the seniors. They’ve been working hard to build and present their fully-functional apps. They all used entirely new technologies and frameworks that aren’t in the curriculum, so I’m amazed at how much new learning happened in so little time.&lt;/p&gt;
+
+&lt;figure&gt;
+&lt;img src=&quot;/assets/railsgirls-june16.jpg&quot; alt=&quot;Rails Girls, June 2016&quot; /&gt;
+&lt;figcaption&gt;Who is that awkward smiley person on the far-right?&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Instead of doing the weekend challenge, I spent my Saturday volunteer-coaching at Rails Girls, a 1.5 day workshop to get badass women coding and building their first web-app using Ruby on Rails (RoR). 200 coaches and coachees turned up!&lt;/p&gt;
+
+&lt;p&gt;This time last year, I turned up to Rails Girls as a student (I hadn’t touched Ruby &lt;em&gt;or&lt;/em&gt; RoR before), and have since paid it forward by coaching at each subsequent event. I still haven’t had much experience with RoR, but my understanding of MVC patterns, Ruby and CSS was more than enough. I spent a bit too long celebrating with the seniors on Friday, so I was running on 3-4 hours of sleep. I still had a great time and really think I got my coachee excited about code.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 26 Jun 2016 20:00:00 +0100</pubDate>
+        <link>http://vann.io/posts/general/2016/06/26/week-5.html</link>
+        <guid isPermaLink="true">http://vann.io/posts/general/2016/06/26/week-5.html</guid>
+        
+        <category>makers</category>
+        
+        
+        <category>posts</category>
+        
+        <category>general</category>
+        
+      </item>
     
       <item>
         <title>Week 4 — Chitter, not Twitter</title>
@@ -323,33 +351,6 @@ Today’s workshop was on doubles in RSpec, and deciding whether or not to mock 
         <pubDate>Wed, 04 May 2016 21:00:00 +0100</pubDate>
         <link>http://vann.io/posts/general/2016/05/04/holiday-graduate.html</link>
         <guid isPermaLink="true">http://vann.io/posts/general/2016/05/04/holiday-graduate.html</guid>
-        
-        
-        <category>posts</category>
-        
-        <category>general</category>
-        
-      </item>
-    
-      <item>
-        <title>Precourse week 1 &amp;mdash; Not just &#39;how&#39;</title>
-        <description>&lt;p&gt;Initially, streams and pipes were just some magic terms that I thought were too hard for me to bother learning about, so I made an educated guess and continued to work on those assumptions for a long time. Now that I’ve actually taken the time to learn, it just seems so glaringly obvious (and in all fairness, pretty spot-on from what I had guessed). I’ve been writing gulpfiles and ‘piping streams’ for god knows how long, without being confident that I understood what I was doing.&lt;/p&gt;
-
-&lt;p&gt;There are a lot of things I learnt how to do that have become second-nature, but I have rarely been able to describe &lt;em&gt;why&lt;/em&gt; I do such things. That in itself is a lesson learnt: understand the ‘why’ as well as the ‘how’ because it provides so much clarity, and as a result, allows room for reflection and improvement.&lt;/p&gt;
-
-&lt;p&gt;I finished the first week’s challenge rather belatedly this morning. It was as fun as I had imagined, and it was great to see that the guides were written with a sense of humour, like using a bank robbery scenario as an example of version control (e.g. messing up; needing to restore a previous commit → forgetting a balaclava during the robbery; needing to time-travel back to retry).&lt;/p&gt;
-
-&lt;p&gt;Embarrassingly, I’d never done a pull request up until now either.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/pull-req.png&quot; alt=&quot;First pull request&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;This was the teeny-tiniest adjustment (literally the removal of a single dash) but it took me what felt like half an hour just going back and forth to check it was correct before submitting. Now that I’m well past my first pull request hurdle and I’ve just about stopped my nervous shakes, I’m that little bit more confident to contribute to open-source projects. A very wise supermarket slogan once told me that every little helps 😊&lt;/p&gt;
-</description>
-        <pubDate>Sun, 01 May 2016 10:30:00 +0100</pubDate>
-        <link>http://vann.io/posts/general/2016/05/01/not-just-how.html</link>
-        <guid isPermaLink="true">http://vann.io/posts/general/2016/05/01/not-just-how.html</guid>
-        
-        <category>makers</category>
         
         
         <category>posts</category>
