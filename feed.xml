@@ -5,9 +5,32 @@
     <description></description>
     <link>http://vann.io/</link>
     <atom:link href="http://vann.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 27 Jun 2016 01:11:17 +0100</pubDate>
-    <lastBuildDate>Mon, 27 Jun 2016 01:11:17 +0100</lastBuildDate>
+    <pubDate>Tue, 05 Jul 2016 14:52:03 +0100</pubDate>
+    <lastBuildDate>Tue, 05 Jul 2016 14:52:03 +0100</lastBuildDate>
     <generator>Jekyll v3.1.0</generator>
+    
+      <item>
+        <title>Week 6 — Project week 1.0</title>
+        <description>&lt;p&gt;In groups of 4, we were tasked to build an app ‘inspired’ by Airbnb by the end of the week. I was grouped with the class clowns which made for a pretty entertaining week! On our first day, we wrote our own user stories from the specifications, and spent a long time diagramming, deciding how all our models were going to interact with each other and how our database tables should be structured.&lt;/p&gt;
+
+&lt;p&gt;We were pretty ambitious and wanted to use this opportunity to try a new stack, specifically using Node.js. After some research, we settled with Express as our web framework, Sequelize as our object relational mapper and Mocha as our test suite. We quickly came to the realisation that picking up so many new technologies at once was overwhelming. Since Node operates so heavily on asynchrony, we were left with a messy time trying to feature test our models, particularly because not everyone was comfortable coding in JavaScript in the first place. On Wednesday morning, in the interest of having a decent minimum viable product by the end of the week, we all swallowed our pride and decided to re-write the app in Ruby. We agreed that it was more important to allow everyone the chance to get involved with the coding and make a fair contribution, as well as keeping our sanity and well-being in check.&lt;/p&gt;
+
+&lt;p&gt;It’s probably been my most fun week so far and I wouldn’t have done it any other way. This process has shown me the importance of listening to everyone on the team, putting the needs of the ‘client’ specification ahead of our own need to try something new and shiny, as well as &lt;em&gt;learning to walk before learning to run&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;I ended up re-writing my Rock Paper Scissors game for Node and Express in my spare time, so I managed to successfully use this newfangled technology after all. Not only that, in my search for new tech to try, I stumbled across a bug in some open source software that I wasn’t too scared to make a pull request for! I fixed a bug, yay.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 03 Jul 2016 20:00:00 +0100</pubDate>
+        <link>http://vann.io/posts/general/2016/07/03/week-6.html</link>
+        <guid isPermaLink="true">http://vann.io/posts/general/2016/07/03/week-6.html</guid>
+        
+        <category>makers</category>
+        
+        
+        <category>posts</category>
+        
+        <category>general</category>
+        
+      </item>
     
       <item>
         <title>Week 5 — JavaScript week</title>
@@ -333,24 +356,6 @@ Today’s workshop was on doubles in RSpec, and deciding whether or not to mock 
         <guid isPermaLink="true">http://vann.io/posts/general/2016/05/09/last-week-at-ns.html</guid>
         
         <category>makers</category>
-        
-        
-        <category>posts</category>
-        
-        <category>general</category>
-        
-      </item>
-    
-      <item>
-        <title>If we took a holiday, took some time to graduate</title>
-        <description>&lt;blockquote class=&quot;instagram-media&quot; data-instgrm-captioned=&quot;&quot; data-instgrm-version=&quot;6&quot; style=&quot; background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 2rem auto; max-width:400px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);&quot;&gt;&lt;div style=&quot;padding:8px;&quot;&gt; &lt;div style=&quot; background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;&quot;&gt; &lt;div style=&quot; background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;&quot;&gt;&lt;/div&gt;&lt;/div&gt; &lt;p style=&quot; margin:8px 0 0 0; padding:0 4px;&quot;&gt; &lt;a href=&quot;https://www.instagram.com/p/BE-sBj8EkPm/&quot; style=&quot; color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;&quot; target=&quot;_blank&quot;&gt;Graduation Day 🎓📸🎖📃&lt;/a&gt;&lt;/p&gt; &lt;p style=&quot; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;&quot;&gt;A photo posted by Vannio (@vannio) on &lt;time style=&quot; font-family:Arial,sans-serif; font-size:14px; line-height:17px;&quot; datetime=&quot;2016-05-04T08:59:25+00:00&quot;&gt;May 4, 2016 at 1:59am PDT&lt;/time&gt;&lt;/p&gt;&lt;/div&gt;&lt;/blockquote&gt;
-&lt;script async=&quot;&quot; defer=&quot;&quot; src=&quot;//platform.instagram.com/en_US/embeds.js&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;Today I did this thing where I walked up on stage in front of thousands of people at the Royal Albert Hall, and then walked straight back off again. Somehow, that took up most of my day and now I am &lt;em&gt;exhausted&lt;/em&gt;. I got back and managed 1.5 Ruby challenges before I fell asleep again. Sometimes I just need to accept that my body needs to rest!&lt;/p&gt;
-</description>
-        <pubDate>Wed, 04 May 2016 21:00:00 +0100</pubDate>
-        <link>http://vann.io/posts/general/2016/05/04/holiday-graduate.html</link>
-        <guid isPermaLink="true">http://vann.io/posts/general/2016/05/04/holiday-graduate.html</guid>
         
         
         <category>posts</category>
