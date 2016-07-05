@@ -5,8 +5,8 @@
     <description></description>
     <link>http://vann.io/</link>
     <atom:link href="http://vann.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 05 Jul 2016 14:52:03 +0100</pubDate>
-    <lastBuildDate>Tue, 05 Jul 2016 14:52:03 +0100</lastBuildDate>
+    <pubDate>Tue, 05 Jul 2016 22:19:08 +0100</pubDate>
+    <lastBuildDate>Tue, 05 Jul 2016 22:19:08 +0100</lastBuildDate>
     <generator>Jekyll v3.1.0</generator>
     
       <item>
@@ -17,7 +17,7 @@
 
 &lt;p&gt;It’s probably been my most fun week so far and I wouldn’t have done it any other way. This process has shown me the importance of listening to everyone on the team, putting the needs of the ‘client’ specification ahead of our own need to try something new and shiny, as well as &lt;em&gt;learning to walk before learning to run&lt;/em&gt;.&lt;/p&gt;
 
-&lt;p&gt;I ended up re-writing my Rock Paper Scissors game for Node and Express in my spare time, so I managed to successfully use this newfangled technology after all. Not only that, in my search for new tech to try, I stumbled across a bug in some open source software that I wasn’t too scared to make a pull request for! I fixed a bug, yay.&lt;/p&gt;
+&lt;p&gt;I ended up re-writing my &lt;a href=&quot;http://rock-paper-sizzle.herokuapp.com&quot;&gt;Rock Paper Scissors game&lt;/a&gt; with Node and Express in my spare time, so I managed to successfully use this newfangled technology after all. Not only that, in my search for new tech to try, I stumbled across a bug in some open source software that I wasn’t too scared to make a pull request for! I fixed a bug, yay.&lt;/p&gt;
 </description>
         <pubDate>Sun, 03 Jul 2016 20:00:00 +0100</pubDate>
         <link>http://vann.io/posts/general/2016/07/03/week-6.html</link>
