@@ -8,6 +8,7 @@
   technologies: Pixi.js
   challenges: Interaction differences between mobile and desktop devices
   solution: For small screens, I decreased the number of 'invaders' (in comparison to the number on larger screens) whilst increasing the dimensions to improve visibility. I implemented additional on-screen controls for devices that lack keyboard support.
+  footnote: '&dagger;'
 
 - client: Feeding America
   title: Hunger in America
@@ -18,6 +19,21 @@
   technologies: ScrollMagic, GreenSock
   challenges: Handling the sheer number of animations, timing and layering of assets
   solution: I used a mixture of CSS <code>position</code> and <code>translate</code> to keep images hidden off-screen, until tweened into view. I divided GreenSock tweens into 'scenes' based on the storyboard provided, to keep the arrangement of animations managable.
+  footnote: '&dagger;'
+
+- client: Makers Academy
+  title: Battlecodes
+  emoji: '&#x1F4BB;'
+  url: https://github.com/gtormiston/battlecodes
+  summary: A real-time multiplayer game inspired by Codewars, where players race to solve code katas
+  role: Full-stack developer
+  technologies: Socket.io
+  challenges: Ability to have concurrent active games, each with a maximum of two players
+  solution: This was the first time I had ever worked with websockets. By pair-programming, I was able to comb through the documentation more efficiently. I wrote a function that listens for players requesting to join an open room (a room with one player awaiting an opponent), which subsequently moves the player to the new room, as well as blocking any further players from joining.
+
+- client: Makers Academy
+  title: Chitter, not Twitter
+  url: https://github.com/vannio/chitter
 
 - client: Chatham House
   title: Syria and its Neighbours
@@ -28,26 +44,30 @@
   technologies: ScrollMagic, GreenSock, Paper.js
   challenges: Creating an animated 'glitchy pixel' image overlay
   solution: I generated a grid of small squares in a canvas element, then used paper.js to determine the 'average colour' of the underlying image section behind each square. I cycled the coloured squares through random opacities at random intervals to create a pixelated flicker.
+  footnote: '&dagger;'
 
-# Other
 - client: RSPO
   title: Say yes to good palm oil.
   url: http://goodbadpalmoil.org
   summary:
+  footnote: '&dagger;'
 
 - client: The Guardian
   title: Climate change denying robot
   url: http://www.theguardian.com/environment/ng-interactive/2015/dec/12/dnyr-the-climate-change-denying-robot-interactive
   summary:
+  footnote: '&dagger;'
 
 - client: Wellcome Collection
   title: Sex By Numbers
   emoji: '&#x1f346;'
   url: http://sexbynumbers.wellcomecollection.org/
   summary:
+  footnote: '&dagger;'
 
 - client: PwC
   title: Changing Lives
   url: http://changinglives.pwc.com/
   summary:
   description:
+  footnote: '&dagger;'

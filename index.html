@@ -6,20 +6,20 @@ title: Web developer
 {% assign detailedItems = 3 %}
 
 <h2>Hello! I’m Van.</h2>
-<p>I'm a <strong>full-stack developer</strong> with over two years of front-end experience at a digital agency, building animated websites to communicate important issues.</p> Whilst I do love crafting a slick user interface and fanciful animations, I'm looking for opportunities to contribute to projects right across the stack.</p>
+<p>I'm a <strong>full-stack developer</strong> with over two years of front-end experience at a digital agency, building websites to communicate important issues. Whilst I do love crafting a slick user interface and fanciful animations, I'm looking for opportunities to contribute right across the stack.</p>
 
-<p>Here are some examples of what I can do &mdash;<br>(click the summary to expand)</p>
+<p>Here are some examples of what I can already do &mdash;<br>(click the summary to expand)</p>
 
 <ul class="projects">
 {% for project in site.data.work %}
 {% if forloop.index <= detailedItems %}
 	<li class="projects__item js-challenges projects__challenges"><strong>{{ project.client }}</strong>
 		{{ project.emoji }}
-		<a href="{{ project.url }}" target="_blank">{{ project.title }}</a><sup>&dagger;</sup>
+		<a href="{{ project.url }}" target="_blank">{{ project.title }}</a>{% if project.footnote %}<sup>&dagger;</sup>{% endif %}
 		<p>{{ project.summary }}</p>
 		<div class="projects__hidden">
 			<strong>My role</strong>{{ project.role }}<br>
-			<p><strong>Libraries used</strong>{{ project.technologies }}</p>
+			<p><strong>Key technologies used</strong>{{ project.technologies }}</p>
 			<p><strong>Most challenging challenge</strong>{{ project.challenges }}</p>
 			<p><strong>The solution</strong>{{ project.solution }}</p>
 			<p><a href="{{ project.url }}" target="_blank">View project</a> &rarr;</p>
@@ -33,7 +33,7 @@ title: Web developer
 {% else if forloop.length > 1 %}
 	<li class="projects__item">
 		<strong>{{ project.client }}</strong>
-		<a href="{{ project.url }}" target="_blank">{{ project.title }}</a><sup>&dagger;</sup>
+		<a href="{{ project.url }}" target="_blank">{{ project.title }}</a>{% if project.footnote %}<sup>&dagger;</sup>{% endif %}
 	</li>
 {% endif %}
 {% endfor %}
