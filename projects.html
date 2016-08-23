@@ -21,11 +21,11 @@ nav: false
 		<a href="{{ project.url }}" target="_blank">{{ project.title }}</a>{% if project.footnote %}<sup>&dagger;</sup>{% endif %}
 		<p>{{ project.summary }}</p>
 		<div class="projects__hidden">
-			<strong>My role</strong>{{ project.role }}<br>
-			<p><strong>Key technologies used</strong>{{ project.technologies }}</p>
-      <img class="projects__thumbnail" src="{{ project.screenshot }}" alt="{{ project.title }}" />
-			<p><strong>Most challenging challenge</strong>{{ project.challenges }}</p>
-			<p><strong>The solution</strong>{{ project.solution }}</p>
+			{% if project.role %}<strong>My role</strong>{{ project.role }}<br>{% endif %}
+			{% if project.technologies %}<p><strong>Key technologies used</strong>{{ project.technologies }}</p>{% endif %}
+      {% if project.screenshot %}<img class="projects__thumbnail" src="{{ project.screenshot }}" alt="{{ project.title }}" />{% endif %}
+			{% if project.challenges %}<p><strong>Most challenging challenge</strong>{{ project.challenges }}</p>{% endif %}
+			{% if project.solution %}<p><strong>The solution</strong>{{ project.solution }}</p>{% endif %}
 			<p><a href="{{ project.url }}" target="_blank">View project</a> &rarr;</p>
 		</div>
 	</li>
