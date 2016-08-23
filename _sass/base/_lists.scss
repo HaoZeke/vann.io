@@ -6,8 +6,6 @@ ul {
 	margin-bottom: 2em;
 
 	@include media-query($on-palm) {
-		// padding-left: 1em;
-
 		strong {
 			display: block;
 		}
@@ -75,14 +73,6 @@ ul {
       cursor: pointer;
       transition: transform 0.2s ease-in;
 
-      &:hover, &.open {
-        transform: translateX(0.5em);
-
-        @include media-query($on-palm) {
-          transform: none;
-        }
-      }
-
       &.open {
         &:before {
           transform: rotate(90deg);
@@ -101,10 +91,9 @@ ul {
       }
     }
 
-
-    // .open &__hidden {
-    //   // height: auto;
-    //   display: block;
-    // }
+    .projects__thumbnail {
+      border-radius: 2px;
+      margin: 0.5rem auto;
+    }
   }
 }
