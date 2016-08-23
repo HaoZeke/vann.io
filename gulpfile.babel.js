@@ -125,7 +125,7 @@ gulp.task('js', () => {
 
 // Optimise images + copy any other assets
 gulp.task('imagemin', () => {
-  return gulp.src('_assets/*')
+  return gulp.src('_assets/**/*')
     .pipe($.imagemin())
     .pipe(gulp.dest('assets'))
     .pipe(gulp.dest('_site/assets'));

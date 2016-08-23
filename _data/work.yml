@@ -16,7 +16,7 @@
   url: https://github.com/vannio/snap-o-gram
   screenshot: '/assets/screenshots/snapogram.png'
   summary: A social photo-sharing app with optional filters to make your photos <em>pop</em>
-  role: Full-stack developer
+  role: Lead developer
   technologies: Ruby on Rails, PostgreSQL, RSpec, ImageMagick, AWS (S3)
   challenges: Adding image post-processing in the form of filters
   solution:
