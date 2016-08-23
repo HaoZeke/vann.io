@@ -184,13 +184,6 @@ ul {
       cursor: pointer;
       -webkit-transition: -webkit-transform 0.2s ease-in;
               transition: transform 0.2s ease-in; }
-      ul.projects .projects__challenges:hover, ul.projects .projects__challenges.open {
-        -webkit-transform: translateX(0.5em);
-                transform: translateX(0.5em); }
-        @media screen and (max-width: 600px) {
-          ul.projects .projects__challenges:hover, ul.projects .projects__challenges.open {
-            -webkit-transform: none;
-                    transform: none; } }
       ul.projects .projects__challenges.open:before {
         -webkit-transform: rotate(90deg);
                 transform: rotate(90deg); }
@@ -202,6 +195,9 @@ ul {
         @media screen and (max-width: 600px) {
           ul.projects .projects__challenges.open .projects__hidden {
             padding: 0.5em; } }
+    ul.projects .projects__thumbnail {
+      border-radius: 2px;
+      margin: 0.5rem auto; }
 
 /**
  * Wrapper
@@ -377,6 +373,17 @@ ul {
     color: #008080; }
   .highlight .il {
     color: #099; }
+
+.cv-nav a {
+  margin-right: 20px; }
+
+.education {
+  margin-top: 5rem; }
+
+.skills {
+  border: solid 1px #555;
+  padding: 1rem;
+  margin: 5rem auto; }
 
 .post-list {
   padding-left: 0;
