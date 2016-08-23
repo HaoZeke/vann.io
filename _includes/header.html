@@ -10,6 +10,8 @@
       </a>
       <div class="trigger">
         <a class="page-link ajax-link" href="{{ site.baseurl }}/">Home</a>
+        <a class="page-link ajax-link" href="{{ site.baseurl }}/projects">Projects</a>
+        <a class="page-link ajax-link" href="{{ site.baseurl }}/cv">CV</a>
         {% for my_page in site.pages %}
           {% if my_page.title and my_page.nav %}
           <a class="page-link ajax-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>

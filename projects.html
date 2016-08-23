@@ -1,0 +1,50 @@
+---
+layout: page
+title: Projects
+permalink: /projects/
+nav: false
+---
+
+<!-- Choose how many items we'd like to highlight -->
+{% assign detailedItems = 4 %}
+
+<h2>Projects</h2>
+<p>
+  I've been very lucky to be involved in bespoke projects for big name clients, from <em>The Guardian</em> to <em>Wellcome Collection</em> and even <em>PwC</em>, as well as all the collaborative web apps I've built at Makers Academy. Here's a selection of my favourites (click to expand) &mdash;
+</p>
+
+<ul class="projects">
+{% for project in site.data.work %}
+{% if forloop.index <= detailedItems %}
+	<li class="projects__item js-challenges projects__challenges"><strong>{{ project.client }}</strong>
+		{{ project.emoji }}
+		<a href="{{ project.url }}" target="_blank">{{ project.title }}</a>{% if project.footnote %}<sup>&dagger;</sup>{% endif %}
+		<p>{{ project.summary }}</p>
+		<div class="projects__hidden">
+			<strong>My role</strong>{{ project.role }}<br>
+			<p><strong>Key technologies used</strong>{{ project.technologies }}</p>
+      <img class="projects__thumbnail" src="{{ project.screenshot }}" alt="{{ project.title }}" />
+			<p><strong>Most challenging challenge</strong>{{ project.challenges }}</p>
+			<p><strong>The solution</strong>{{ project.solution }}</p>
+			<p><a href="{{ project.url }}" target="_blank">View project</a> &rarr;</p>
+		</div>
+	</li>
+	{% if forloop.length > detailedItems and forloop.index == detailedItems %}
+</ul>
+<p>Haven't had enough yet? Here's a myriad of other things I'm proud to say I worked on &mdash;</p>
+<ul class="projects">
+	{% endif %}
+{% else if forloop.length > 1 %}
+	<li class="projects__item">
+		<strong>{{ project.client }}</strong>
+		<a href="{{ project.url }}" target="_blank">{{ project.title }}</a>{% if project.footnote %}<sup>&dagger;</sup>{% endif %}
+	</li>
+{% endif %}
+{% endfor %}
+</ul>
+
+<p class="smallprint">
+	<sup>&dagger;</sup><span>Whilst at
+		<a href="http://niceandserious.com/" target="_blank">Nice and Serious</a>
+	</span>
+</p>
