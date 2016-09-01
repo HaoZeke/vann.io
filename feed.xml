@@ -5,8 +5,8 @@
     <description></description>
     <link>http://vann.io/</link>
     <atom:link href="http://vann.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 01 Sep 2016 20:14:15 +0100</pubDate>
-    <lastBuildDate>Thu, 01 Sep 2016 20:14:15 +0100</lastBuildDate>
+    <pubDate>Thu, 01 Sep 2016 20:28:01 +0100</pubDate>
+    <lastBuildDate>Thu, 01 Sep 2016 20:28:01 +0100</lastBuildDate>
     <generator>Jekyll v3.1.0</generator>
     
       <item>
@@ -26,7 +26,7 @@
 &lt;img src=&quot;/assets/smrt-dash.png&quot; /&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;One of our challenges was to somehow get the mirror interface to update itself when a user changed the dashboard settings, as there aren’t any touch-screen capabilities (but think of the smudges if there were, &lt;em&gt;shudder&lt;/em&gt;). As the settings were saved to disk in a &lt;code class=&quot;highlighter-rouge&quot;&gt;json&lt;/code&gt; file, I used BrowserSync to listen to changes on that particular file, then force a refresh of the mirror interface without user intervention. Voilá, a self-updating smart mirror.&lt;/p&gt;
+&lt;p&gt;One of the challenges was to somehow get the mirror interface to update itself when a user changed the dashboard settings, as there aren’t any touch-screen capabilities (but think of the smudges if there were, &lt;em&gt;shudder&lt;/em&gt;). As the settings were saved to disk in a &lt;code class=&quot;highlighter-rouge&quot;&gt;json&lt;/code&gt; file, I used BrowserSync to listen to changes on that particular file, then force a refresh of the mirror interface without user intervention. Voilá, a self-updating smart mirror.&lt;/p&gt;
 
 &lt;p&gt;We also experimented with using a LeapMotion sensor to put the mirror to sleep and wake it up with a swipe gesture, as well as some more advanced widgets like radio alarms that could be snoozed with a different gesture.&lt;/p&gt;
 
