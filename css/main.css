@@ -471,6 +471,10 @@ ul {
   .post-nav .next {
     text-align: right; }
 
+.twitter-tweet, .yt {
+  display: block;
+  margin: 0 auto; }
+
 .site-header {
   min-height: 56px;
   background-color: #fff;

@@ -5,9 +5,46 @@
     <description></description>
     <link>http://vann.io/</link>
     <atom:link href="http://vann.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 01 Sep 2016 13:48:02 +0100</pubDate>
-    <lastBuildDate>Thu, 01 Sep 2016 13:48:02 +0100</lastBuildDate>
+    <pubDate>Thu, 01 Sep 2016 17:04:04 +0100</pubDate>
+    <lastBuildDate>Thu, 01 Sep 2016 17:04:04 +0100</lastBuildDate>
     <generator>Jekyll v3.1.0</generator>
+    
+      <item>
+        <title>Week 12 &amp;mdash; Makers Mirror / SMRT mk II</title>
+        <description>&lt;p&gt;Remember &lt;a href=&quot;/posts/projects/2016/01/03/smrt.html&quot; target=&quot;_blank&quot;&gt;this old thing&lt;/a&gt;? As a final group project, we rebuilt my botched attempt at a smart mirror, &lt;em&gt;with actual test-driven development&lt;/em&gt; this time round.&lt;/p&gt;
+
+&lt;p&gt;The idea is that the mirror is a self-contained product, capable of running a server on itself and displaying an interface with widgets. A user would connect the mirror to their wifi network and configure the widgets externally from a phone or computer on the same network, similar to the configuration of a router.&lt;/p&gt;
+
+&lt;figure&gt;
+&lt;img src=&quot;/assets/smrt-dash-2.png&quot; /&gt;
+&lt;figcaption&gt;&lt;strong&gt;Left&lt;/strong&gt; mirror interface &amp;mdash; &lt;strong&gt;Right&lt;/strong&gt; personalisation dashboard&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;The personalisation dashboard has a grid that represents the available positions of a widget on the interface. In the example below, the clock widget would appear in the top left corner of the mirror interface. The widget blocks can be toggled on/off and moved around by dragging and dropping into position on the grid.&lt;/p&gt;
+
+&lt;figure&gt;
+&lt;img src=&quot;/assets/smrt-dash.png&quot; /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;One of our challenges was to somehow get the mirror interface to update itself when a user changed the dashboard settings, as there aren’t any touch-screen capabilities (but think of the smudges if there were, &lt;em&gt;shudder&lt;/em&gt;). As the settings were saved to disk in a &lt;code class=&quot;highlighter-rouge&quot;&gt;json&lt;/code&gt; file, I got BrowserSync to listen to changes on that particular file, then force a refresh of the mirror interface without user intervention. Voilá, a self-updating smart mirror.&lt;/p&gt;
+
+&lt;p&gt;We also experimented with using a LeapMotion sensor to put the mirror to sleep and wake it up with a swipe gesture, as well as some more advanced widgets like radio alarms that could be snoozed with a different gesture.&lt;/p&gt;
+
+&lt;p&gt;Watch the video of the project in progress. Just a warning, there’s a lot of my face in it. &lt;sup&gt;I did not make the video&lt;/sup&gt;&lt;/p&gt;
+&lt;iframe class=&quot;yt&quot; width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://www.youtube.com/embed/OYk-d6q4iWI?rel=0&amp;amp;controls=0&amp;amp;showinfo=0&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+</description>
+        <pubDate>Fri, 05 Aug 2016 20:00:00 +0100</pubDate>
+        <link>http://vann.io/posts/general/2016/08/05/smrt-mk2.html</link>
+        <guid isPermaLink="true">http://vann.io/posts/general/2016/08/05/smrt-mk2.html</guid>
+        
+        <category>makers</category>
+        
+        
+        <category>posts</category>
+        
+        <category>general</category>
+        
+      </item>
     
       <item>
         <title>Week 9 &amp;mdash; Sockets galore</title>
@@ -329,34 +366,6 @@ Today’s workshop was on doubles in RSpec, and deciding whether or not to mock 
         <category>posts</category>
         
         <category>tutorials</category>
-        
-      </item>
-    
-      <item>
-        <title>Precourse week 3 &amp;mdash; Thanks for the memories</title>
-        <description>&lt;p&gt;It’s been difficult completing week 3 of the precourse in depth as there were a lot of fiddly and time-consuming exercises, yet so little time to do them all. I had to do most of the work at the weekend, but by then I was nursing one hell of a hangover from my leaving do, and every line of code was a blurry struggle to write.&lt;/p&gt;
-
-&lt;p&gt;We covered recursion and a bit of blocks/procs/yielding, but anything that requires putting one thing into another thing and then that thing into another thing, really baffles me. I just about managed to scrape a green tick on my submitted answers the night before the deadline, and only because I skimmed through the exercises that didn’t have any RSpec tests (&lt;em&gt;CHEAT!&lt;/em&gt;).&lt;/p&gt;
-
-&lt;figure&gt;
-&lt;a href=&quot;http://vanvanvanvanvan.com&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;/assets/vanvanvanvanvan.jpg&quot; alt=&quot;Smart mirror wide view&quot; /&gt;&lt;/a&gt;
-&lt;figcaption&gt;&lt;a href=&quot;http://vanvanvanvanvan.com&quot; target=&quot;_blank&quot;&gt;vanvanvanvanvan.com&lt;/a&gt;&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;I’ve now officially left my job though (&lt;em&gt;sob&lt;/em&gt;). They built me this incredibly beautiful monstrosity so I don’t forget about them, and it’s working! However, my first day off has been &lt;em&gt;amazing&lt;/em&gt;. I… Queen Helene’d my face (that’s a face mask to the non-skincare addicts) whilst doing a few paired-programming katas over Screenhero, had a nap, made myself a fish finger sandwich, got a manicure, went shopping, then for a few rounds of badminton, a natter at the pub, and back in time for Game of Thrones. I feel so free!&lt;/p&gt;
-
-&lt;p&gt;My point is that I absolutely recommend keeping your schedule free during the precourse weeks. I know the guidelines are to spend about 15 hours a week on the content, which you can &lt;em&gt;technically&lt;/em&gt; fit around a 9-5 job, but it is really difficult to maintain a &lt;strong&gt;healthy&lt;/strong&gt; work-life balance. Ever heard of the cheap—fast—quality triangle? Generally speaking, client projects will fit two of those three requirements, whilst the third is sacrificed. For example, a project can be done cheaply and quickly, but will likely have awful quality spaghetti code. If you’re still at a full-time job, the precourse definitely feels like that, only it’s a work—life—study triangle. RIP lyf 😥&lt;/p&gt;
-</description>
-        <pubDate>Mon, 16 May 2016 23:00:00 +0100</pubDate>
-        <link>http://vann.io/posts/general/2016/05/16/thnks-fr-th-mmrs.html</link>
-        <guid isPermaLink="true">http://vann.io/posts/general/2016/05/16/thnks-fr-th-mmrs.html</guid>
-        
-        <category>makers</category>
-        
-        
-        <category>posts</category>
-        
-        <category>general</category>
         
       </item>
     
