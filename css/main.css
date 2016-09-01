@@ -471,9 +471,15 @@ ul {
   .post-nav .next {
     text-align: right; }
 
-.twitter-tweet, .yt {
-  display: block;
-  margin: 0 auto; }
+.yt {
+  position: relative;
+  padding-bottom: 56.25%; }
+  .yt iframe {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; }
 
 .site-header {
   min-height: 56px;
