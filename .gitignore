@@ -7,3 +7,4 @@ css
 graveyard
 node_modules
 scripts
+*.log
