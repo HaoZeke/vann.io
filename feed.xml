@@ -5,9 +5,32 @@
     <description></description>
     <link>http://vann.io/</link>
     <atom:link href="http://vann.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 23 Aug 2016 11:08:42 +0100</pubDate>
-    <lastBuildDate>Tue, 23 Aug 2016 11:08:42 +0100</lastBuildDate>
+    <pubDate>Thu, 01 Sep 2016 13:48:02 +0100</pubDate>
+    <lastBuildDate>Thu, 01 Sep 2016 13:48:02 +0100</lastBuildDate>
     <generator>Jekyll v3.1.0</generator>
+    
+      <item>
+        <title>Week 9 &amp;mdash; Sockets galore</title>
+        <description>&lt;p&gt;I have no idea what happened to the time after week 6, but it has flown by! In that time, I’ve built a web framework (move aside Express), a convincing clone of Instagram &lt;em&gt;with&lt;/em&gt; photo filters, and even a multiplayer game.&lt;/p&gt;
+
+&lt;p&gt;One of my favourite group projects has definitely been the multiplayer game. The coaches set a theme of ‘useful tools for developers’, and out of that, &lt;s&gt;Battletoads&lt;/s&gt; BattleCodes was born. It’s a happy mix between CodeWars (improve coding skills by completing challenges) and typeracer (race to type the fastest), where players race in real-time to complete code challenges before their opponents.&lt;/p&gt;
+
+&lt;p&gt;The reason I enjoyed this so much was because its a &lt;em&gt;game&lt;/em&gt; (yay fun), and because there was the challenge of getting real-time, low-latency responses. HTTP relies on a client sending a request, and &lt;em&gt;then&lt;/em&gt; the server responding. In a game where speed is crucial, that just won’t cut the mustard. With websockets, there’s a persistent connection between the client and the server which allows data to be sent and received immediately.&lt;/p&gt;
+
+&lt;p&gt;Find the project &lt;a href=&quot;https://github.com/vannio/battlecodes&quot; target=&quot;_blank&quot;&gt;on Github&lt;/a&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 25 Jul 2016 20:00:00 +0100</pubDate>
+        <link>http://vann.io/posts/general/2016/07/25/sockets-galore.html</link>
+        <guid isPermaLink="true">http://vann.io/posts/general/2016/07/25/sockets-galore.html</guid>
+        
+        <category>makers</category>
+        
+        
+        <category>posts</category>
+        
+        <category>general</category>
+        
+      </item>
     
       <item>
         <title>Week 6 — Project week 1.0</title>
@@ -327,33 +350,6 @@ Today’s workshop was on doubles in RSpec, and deciding whether or not to mock 
         <pubDate>Mon, 16 May 2016 23:00:00 +0100</pubDate>
         <link>http://vann.io/posts/general/2016/05/16/thnks-fr-th-mmrs.html</link>
         <guid isPermaLink="true">http://vann.io/posts/general/2016/05/16/thnks-fr-th-mmrs.html</guid>
-        
-        <category>makers</category>
-        
-        
-        <category>posts</category>
-        
-        <category>general</category>
-        
-      </item>
-    
-      <item>
-        <title>Precourse week 2 &amp;mdash; The final countdown</title>
-        <description>&lt;p&gt;It’s my final week at Nice and Serious. I say that with a heavy heart, but also with excitement at what comes next. My swan song is a site for &lt;a href=&quot;http://goodbadpalmoil.org&quot; target=&quot;_blank&quot;&gt;RSPO’s campaign for good palm oil&lt;/a&gt; which fully launches today. If you’re a 30yr old woman in New York, watch out! Targeted ads are coming to get you.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/rspo-palm-oil.jpg&quot; alt=&quot;RSPO - Good or bad palm oil&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The site uses the SVG.js library to dynamically create and tile squiggly sprinkles, so that they don’t overflow the containers, don’t overlap each other, don’t intercept the text (much) and scale reasonably on different screen sizes. It was so much work for such a seemingly small feature!&lt;/p&gt;
-
-&lt;p&gt;😲 😞&lt;/p&gt;
-
-&lt;p&gt;I’m still struggling to find the time to do any of the precourse work outside of my working hours, so in all honesty I am quite relieved to be leaving soon.&lt;/p&gt;
-
-&lt;p&gt;I managed to get a few more code katas (smallish exercises) completed over the weekend though. There were some that gave me typer’s block, so I ended up breaking the #1 Makers rule by fixating on them waaay longer than 30mins. I’m too fiercely stubborn to simply give up.&lt;/p&gt;
-</description>
-        <pubDate>Mon, 09 May 2016 19:00:00 +0100</pubDate>
-        <link>http://vann.io/posts/general/2016/05/09/last-week-at-ns.html</link>
-        <guid isPermaLink="true">http://vann.io/posts/general/2016/05/09/last-week-at-ns.html</guid>
         
         <category>makers</category>
         
