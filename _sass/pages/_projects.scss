@@ -7,24 +7,7 @@
     max-width: none;
   }
 
-  li {
-    position: relative;
-  }
-
-  li:before {
-    content: '\203A';
-    margin-right: 0.5em;
-    display: inline-block;
-    transition: transform 0.2s ease-in;
-    transform-origin: 50% 55%;
-
-    @include media-query($on-palm) {
-      position: absolute;
-      left: -1em;
-    }
-  }
-
-  .projects__hidden {
+  &__hidden {
     transition: opacity 0.15s, all 0.4s ease-in-out;
     overflow: hidden;
     max-height: 0;
@@ -41,9 +24,22 @@
     }
   }
 
-  .projects__challenges {
+  &__challenges {
     cursor: pointer;
-    transition: transform 0.2s ease-in;
+    position: relative;
+
+    &:before {
+      content: '\203A';
+      margin-right: 0.5em;
+      display: inline-block;
+      transition: transform 0.2s ease-in;
+      transform-origin: 50% 55%;
+
+      @include media-query($on-palm) {
+        position: absolute;
+        left: -1em;
+      }
+    }
 
     &.open {
       &:before {
@@ -63,7 +59,7 @@
     }
   }
 
-  .projects__thumbnail {
+  &__thumbnail {
     border-radius: 2px;
     margin: 0.5rem auto;
   }
