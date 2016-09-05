@@ -51,6 +51,13 @@
 	  e.preventDefault();
 	});
 
+	// Send events to Google Analytics when link clicked
+	document.addEventListener('click', function (e) {
+	  if (e.target.nodeName == 'A') {
+	    ga('send', 'event', 'links', 'clicked', e.target.innerText);
+	  }
+	});
+
 	// Expanding project challenges
 	var challenges = document.getElementsByClassName('js-challenges');
 	for (var i = 0; i < challenges.length; i++) {
@@ -58,7 +65,7 @@
 	    if (e.target.nodeName !== 'A') {
 	      this.classList.toggle('open');
 
-	      // Send click event to Google Analytics when opened
+	      // Send event to Google Analytics when expanded
 	      var projectName = getProjectName(e.target);
 	      if (projectName) {
 	        ga('send', 'event', 'project', 'toggleVisibility', projectName);
