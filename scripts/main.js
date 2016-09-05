@@ -54,7 +54,7 @@
 	// Send events to Google Analytics when link clicked
 	document.addEventListener('click', function (e) {
 	  if (e.target.nodeName == 'A') {
-	    ga('send', 'event', 'links', 'clicked', e.target.innerText);
+	    ga('send', 'event', 'link', 'clicked', e.target.innerText);
 	  }
 	});
 
@@ -68,7 +68,7 @@
 	      // Send event to Google Analytics when expanded
 	      var projectName = getProjectName(e.target);
 	      if (projectName) {
-	        ga('send', 'event', 'project', 'toggleVisibility', projectName);
+	        ga('send', 'event', 'project', 'expand', projectName);
 	      }
 	    }
 	  });
