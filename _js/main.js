@@ -3,6 +3,20 @@ document.getElementById('js-menu').addEventListener('click', function(e){
 	e.preventDefault();
 });
 
+
+document.addEventListener('scroll', function(e){
+  var header = document.getElementById('js-header');
+  // add debounce!
+  if (document.body.scrollTop > 25) {
+    console.log(document.body.scrollTop);
+
+    document.body.classList.add('sticky-navigation');
+  }
+  else {
+    document.body.classList.remove('sticky-navigation');
+  }
+});
+
 // Send events to Google Analytics when link clicked
 document.addEventListener('click', function(e){
   if (e.target.nodeName == 'A') {
