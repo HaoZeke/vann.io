@@ -2,13 +2,9 @@
  * Lists
  */
 ul {
-  max-width: 80%;
-	margin-bottom: 2em;
-
-	@include media-query($on-palm) {
-		strong {
-			display: block;
-		}
+	@include media-query($desktop) {
+    max-width: 80%;
+    margin-bottom: 2em;
 	}
 
   li {

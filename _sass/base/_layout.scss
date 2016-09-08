@@ -2,14 +2,14 @@
  * Wrapper
  */
 .wrapper {
-  max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
+  max-width: calc(#{$content-width} - (#{$spacing-unit}));
   margin: 0 auto;
-  padding: 0 $spacing-unit;
+  padding: 0 $spacing-unit / 2;
   @extend %clearfix;
 
-  @include media-query($on-laptop) {
-    max-width: calc(#{$content-width} - (#{$spacing-unit}));
-    padding: 0 $spacing-unit / 2;
+  @include media-query($desktop) {
+    max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
+    padding: 0 $spacing-unit;
   }
 }
 
@@ -19,10 +19,7 @@
   overflow-x: hidden;
   position: relative;
   z-index: 1;
-
-  @include media-query($on-palm) {
-    padding-top: 1px;
-  }
+  padding-top: 1px;
 }
 
 .text-wrapper {

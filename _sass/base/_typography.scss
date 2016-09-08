@@ -101,13 +101,11 @@ sup {
 }
 
 .smallprint {
-	text-align: right;
-
 	span {
 		font-size: 0.9rem;
 	}
 
-	@include media-query($on-palm) {
-		text-align: left;
+	@include media-query($tablet) {
+		text-align: right;
 	}
 }

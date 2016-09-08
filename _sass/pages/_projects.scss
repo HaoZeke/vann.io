@@ -1,10 +1,18 @@
 .projects {
+  padding-left: 1em;
+  padding-right: 1em;
   list-style-type: none;
 
-  @include media-query($on-palm) {
-    padding-left: 1em;
-    padding-right: 1em;
-    max-width: none;
+  strong {
+    display: block;
+  }
+
+  @include media-query($tablet) {
+    padding-left: 3em;
+
+    strong {
+      display: inline-block;
+    }
   }
 
   &__hidden {
@@ -15,7 +23,7 @@
     border: solid 1px $grey-color-dark;
     opacity: 0;
 
-    @include media-query($on-palm) {
+    @include media-query($tablet) {
       padding: 0 0.5em;
     }
 
@@ -24,22 +32,27 @@
     }
   }
 
-  &__challenges {
-    cursor: pointer;
+  &__item {
     position: relative;
-    transition: all 0.2s ease-in;
 
     &:before {
-      content: '\203A';
+      content: '';
       margin-right: 0.5em;
       display: inline-block;
       transition: transform 0.2s ease-in;
       transform-origin: 50% 55%;
+      position: absolute;
+      left: -1em;
+    }
+  }
 
-      @include media-query($on-palm) {
-        position: absolute;
-        left: -1em;
-      }
+  &__challenges {
+    // list-style-type: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+
+    &:before {
+      content: '\203A';
     }
 
     &:hover,
@@ -61,7 +74,7 @@
         margin-bottom: 2em;
         opacity: 1;
 
-        @include media-query($on-palm) {
+        @include media-query($tablet) {
           padding: 0.5em;
         }
       }
