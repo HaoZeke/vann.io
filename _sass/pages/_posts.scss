@@ -72,10 +72,17 @@
 
 .post-title {
   margin-bottom: 0;
-  // line-height: 1.6;
 
-  a {
-    text-decoration: none;
+  .post-header & {
+    a {
+      text-decoration: none;
+    }
+    
+    @include media-query($tablet) {
+      a::before {
+        display: none;
+      }
+    }
   }
 
   .post-list & {
@@ -84,14 +91,9 @@
     a {
       font-family: $base-font-family;
       font-weight: 400;
-      text-decoration: underline;
-      display: inline-block;
+      display: inline;
     }
   }
-
-  // .post-single & {
-  //   line-height: 1;
-  // }
 }
 
 .post-content {
@@ -123,7 +125,6 @@
 }
 
 .post-nav {
-  // font-size: 14px;
   display: block;
   width: auto;
   overflow: hidden;

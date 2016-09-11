@@ -44,7 +44,6 @@
     display: block;
     padding: 0px 15px;
     color: $text-color;
-    line-height: $base-line-height;
     text-transform: lowercase;
 
     &:hover,
@@ -54,7 +53,8 @@
     }
 
     @include media-query($tablet) {
-      display: inline-block;
+      text-decoration: none;
+      display: inline;
       padding: 0;
 
       &:not(:last-child) {

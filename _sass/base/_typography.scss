@@ -48,9 +48,30 @@ h2 {
 a {
   transition: all 0.3s ease;
   color: $text-color;
+  position: relative;
+
+  @include media-query($tablet) {
+    text-decoration: none;
+    
+    &::before {
+      transition: background-color 0.3s ease, width 0.3s cubic-bezier(.28,.93,.47,1.61);
+      content: '';
+      height: 1px;
+      background-color: $text-color;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
 
   &:hover {
     color: $brand-color;
+
+    &::before {
+      background-color: $brand-color;
+      width: 80%;
+    }
   }
 }
 
