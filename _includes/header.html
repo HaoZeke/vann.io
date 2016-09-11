@@ -5,12 +5,15 @@
         {% include hamburger.svg %}
       </a>
       <div class="trigger">
-        <a class="page-link ajax-link" href="{{ site.baseurl }}/">Home</a>
-        <a class="page-link ajax-link" href="{{ site.baseurl }}/projects">Projects</a>
-        <a class="page-link ajax-link" href="{{ site.baseurl }}/cv">CV</a>
+        {% for link in site.navigation %}
+          <a class="page-link ajax-link{% if page.url == link.url %} page-link--active{% endif %}"
+            href="{{ link.url | prepend: site.baseurl }}">{{ link.text }}</a>
+        {% endfor %}
+
         {% for my_page in site.pages %}
           {% if my_page.title and my_page.nav %}
-          <a class="page-link ajax-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
+          <a class="page-link ajax-link{% if page.url contains my_page.url %} page-link--active{% endif %}"
+            href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
           {% endif %}
         {% endfor %}
       </div>

@@ -48,7 +48,8 @@
 
     &:hover,
     &:active,
-    &:focus {
+    &:focus,
+    &--active {
       color: $brand-color;
     }
 
@@ -59,6 +60,13 @@
 
       &:not(:last-child) {
         margin-right: 20px;
+      }
+
+      &--active {
+        &::before {
+          background-color: $brand-color;
+          width: 80%;
+        }
       }
     }
   }

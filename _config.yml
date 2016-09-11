@@ -13,12 +13,20 @@ twitter_username: vannio
 github_username: vannio
 linkedin_username: vannio
 
+navigation:
+  - text: Home
+    url: /
+  - text: Projects
+    url: /projects/
+  - text: CV
+    url: /cv/
+
 # Build settings
 markdown: kramdown
 exclude:
-    - node_modules
-    - Gemfile
-    - Gemfile.lock
-    - gulpfile.js
-    - package.json
-    - README.md
+  - node_modules
+  - Gemfile
+  - Gemfile.lock
+  - gulpfile.js
+  - package.json
+  - README.md
