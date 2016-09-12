@@ -1,18 +1,18 @@
 <header class="site-header">
   <div class="wrapper">
     <nav class="site-nav">
-      <a href="#" class="menu-icon" id="js-menu">
+      <a href="#" class="site-nav__hamburger" id="js-menu">
         {% include hamburger.svg %}
       </a>
-      <div class="trigger">
+      <div class="site-nav__dropdown">
         {% for link in site.navigation %}
-          <a class="page-link ajax-link{% if page.url == link.url %} page-link--active{% endif %}"
+          <a class="site-nav__link ajax-link{% if page.url == link.url %} site-nav__link--active{% endif %}"
             href="{{ link.url | prepend: site.baseurl }}">{{ link.text }}</a>
         {% endfor %}
 
         {% for my_page in site.pages %}
           {% if my_page.title and my_page.nav %}
-          <a class="page-link ajax-link{% if page.url contains my_page.url %} page-link--active{% endif %}"
+          <a class="site-nav__link ajax-link{% if page.url contains my_page.url %} site-nav__link--active{% endif %}"
             href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
           {% endif %}
         {% endfor %}

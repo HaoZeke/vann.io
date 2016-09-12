@@ -1,8 +1,6 @@
 .site-header {
   min-height: 56px;
   background-color: #fff;
-
-  // Positioning context for the mobile navigation icon
   position: relative;
   z-index: 5;
 }
@@ -22,25 +20,7 @@
     background-color: transparent;
   }
 
-  .trigger {
-    clear: both;
-    display: none;
-
-    @include media-query($tablet) {
-      display: block;
-    }
-  }
-
-  &:hover .trigger {
-    display: block;
-    padding-bottom: 5px;
-
-    @include media-query($tablet) {
-      padding-bottom: 0;
-    }
-  }
-
-  .page-link {
+  &__link {
     display: block;
     padding: 0px 15px;
     color: $text-color;
@@ -71,7 +51,7 @@
     }
   }
 
-  .menu-icon {
+  &__hamburger {
     display: block;
     float: right;
     width: 36px;
@@ -91,6 +71,24 @@
 
     @include media-query($tablet) {
       display: none;
+    }
+  }
+
+  &__dropdown {
+    clear: both;
+    display: none;
+
+    @include media-query($tablet) {
+      display: block;
+    }
+  }
+
+  &:hover &__dropdown {
+    display: block;
+    padding-bottom: 5px;
+
+    @include media-query($tablet) {
+      padding-bottom: 0;
     }
   }
 }
