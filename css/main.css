@@ -353,36 +353,24 @@ ul li {
       padding-top: 15px;
       position: inherit;
       background-color: transparent; } }
-  .site-nav .trigger {
-    clear: both;
-    display: none; }
-    @media screen and (min-width: 600px) {
-      .site-nav .trigger {
-        display: block; } }
-  .site-nav:hover .trigger {
-    display: block;
-    padding-bottom: 5px; }
-    @media screen and (min-width: 600px) {
-      .site-nav:hover .trigger {
-        padding-bottom: 0; } }
-  .site-nav .page-link {
+  .site-nav__link {
     display: block;
     padding: 0px 15px;
     color: #555;
     text-transform: lowercase; }
-    .site-nav .page-link:hover, .site-nav .page-link:active, .site-nav .page-link:focus, .site-nav .page-link--active {
+    .site-nav__link:hover, .site-nav__link:active, .site-nav__link:focus, .site-nav__link--active {
       color: #ED1882; }
     @media screen and (min-width: 600px) {
-      .site-nav .page-link {
+      .site-nav__link {
         text-decoration: none;
         display: inline;
         padding: 0; }
-        .site-nav .page-link:not(:last-child) {
+        .site-nav__link:not(:last-child) {
           margin-right: 20px; }
-        .site-nav .page-link--active::before {
+        .site-nav__link--active::before {
           background-color: #ED1882;
           width: 80%; } }
-  .site-nav .menu-icon {
+  .site-nav__hamburger {
     display: block;
     float: right;
     width: 36px;
@@ -390,14 +378,26 @@ ul li {
     line-height: 0;
     padding-top: 10px;
     text-align: center; }
-    .site-nav .menu-icon > svg {
+    .site-nav__hamburger > svg {
       width: 18px;
       height: 15px; }
-      .site-nav .menu-icon > svg path {
+      .site-nav__hamburger > svg path {
         fill: #555; }
     @media screen and (min-width: 600px) {
-      .site-nav .menu-icon {
+      .site-nav__hamburger {
         display: none; } }
+  .site-nav__dropdown {
+    clear: both;
+    display: none; }
+    @media screen and (min-width: 600px) {
+      .site-nav__dropdown {
+        display: block; } }
+  .site-nav:hover .site-nav__dropdown {
+    display: block;
+    padding-bottom: 5px; }
+    @media screen and (min-width: 600px) {
+      .site-nav:hover .site-nav__dropdown {
+        padding-bottom: 0; } }
 
 .site-footer {
   padding-bottom: 60px; }
@@ -572,7 +572,8 @@ ul li {
 
 .yt {
   position: relative;
-  padding-bottom: 56.25%; }
+  padding-bottom: 56.25%;
+  overflow: hidden; }
   .yt iframe {
     position: absolute;
     left: 0;
