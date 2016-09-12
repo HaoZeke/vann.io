@@ -179,8 +179,7 @@ ul li {
   padding-bottom: 60px;
   overflow-x: hidden;
   position: relative;
-  z-index: 1;
-  padding-top: 1px; }
+  z-index: 1; }
 
 .text-wrapper {
   max-width: 620px;
