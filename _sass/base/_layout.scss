@@ -1,6 +1,7 @@
-/**
- * Wrapper
- */
+body {
+  background-color: $background-color;
+}
+
 .wrapper {
   max-width: calc(#{$content-width} - (#{$spacing-unit}));
   margin: 0 auto;
@@ -14,15 +15,22 @@
 }
 
 .page-content {
-  padding-top: $spacing-unit * 2;
-  padding-bottom: $spacing-unit * 2;
+  max-width: $content-width * 1.2;
+  margin: $spacing-unit / 2 auto;
+  background-color: $white;
+  padding-bottom: $spacing-unit;
   overflow-x: hidden;
   position: relative;
   z-index: 1;
+
+  @include media-query($desktop) {
+    padding-top: $spacing-unit * 2;
+    padding-bottom: $spacing-unit * 2;
+  }
 }
 
 .text-wrapper {
-  max-width: 620px;
+  max-width: $content-width * 0.8;
   margin: 0 auto;
   padding: 0 $spacing-unit;
 }

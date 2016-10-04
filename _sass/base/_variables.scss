@@ -1,15 +1,16 @@
 // Our variables
 $base-font-family: 'Quicksand', sans-serif;
 $header-font-family: 'Montserrat', sans-serif;
-$base-font-size:   1.2em;
-$base-font-weight: 400;
-$small-font-size:  $base-font-size * 0.65;
+$base-font-size:   1.25em;
+$base-font-weight: 300;
+$small-font-size:  $base-font-size * 0.7;
 $base-line-height: 2;
 
 $spacing-unit:     30px;
 
+$white:            #fff;
 $grey-color:       #84807c;
-$grey-color-light: lighten($grey-color, 45%);
+$grey-color-light: lighten($grey-color, 50%);
 $grey-color-dark:  #555;
 
 $text-color:       $grey-color-dark;
