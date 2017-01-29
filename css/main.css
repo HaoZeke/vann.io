@@ -78,7 +78,7 @@ a {
  */
 blockquote {
   color: #84807c;
-  border-left: 4px solid #f3f3f2;
+  border-left: 4px solid white;
   padding-left: 15px;
   font-size: 18px;
   font-style: italic; }
@@ -92,7 +92,7 @@ pre,
 code {
   font-size: 15px;
   border-radius: 3px;
-  background-color: #f3f3f2; }
+  background-color: white; }
 
 code {
   padding: 1px 5px; }
@@ -140,7 +140,7 @@ figure > img {
     max-width: 140%; }
 
 figcaption {
-  font-size: 0.91em;
+  font-size: 0.868em;
   text-align: center;
   margin-top: 0.5em; }
 
@@ -352,7 +352,7 @@ ul li {
   position: absolute;
   top: 9px;
   right: 15px;
-  background-color: #f3f3f2;
+  background-color: white;
   border-radius: 2px;
   text-align: right; }
   @media screen and (min-width: 600px) {
@@ -508,7 +508,7 @@ section + section {
     margin-top: 30px; }
 
 .post-meta {
-  font-size: 0.91em;
+  font-size: 0.868em;
   color: #84807c;
   margin-top: 0; }
   .post-list .post-meta {
