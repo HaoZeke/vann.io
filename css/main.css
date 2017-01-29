@@ -151,7 +151,7 @@ iframe.instagram-media {
 /**
  * Lists
  */
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 800px) {
   ul {
     max-width: 80%;
     margin-bottom: 2em; } }
@@ -170,12 +170,12 @@ ul li {
  * Wrapper
  */
 .wrapper {
-  max-width: calc(700px - (30px));
+  max-width: calc(800px - (30px));
   margin: 0 auto;
   padding: 0 15px; }
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: 800px) {
     .wrapper {
-      max-width: calc(700px - (30px * 2));
+      max-width: calc(800px - (30px * 2));
       padding: 0 30px; } }
 
 .page-content {
@@ -183,13 +183,13 @@ ul li {
   overflow-x: hidden;
   position: relative;
   z-index: 1; }
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: 800px) {
     .page-content {
       padding-top: 60px;
       padding-bottom: 60px; } }
 
 .text-wrapper {
-  max-width: 620px;
+  max-width: 700px;
   margin: 0 auto;
   padding: 0 30px; }
 
@@ -406,7 +406,7 @@ ul li {
       .site-nav:hover .site-nav__dropdown {
         padding-bottom: 0; } }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 800px) {
   .site-footer {
     padding-bottom: 60px; } }
 
@@ -560,17 +560,17 @@ section + section {
   margin-bottom: 30px; }
   .post-content h2 {
     font-size: 32px; }
-    @media screen and (min-width: 700px) {
+    @media screen and (min-width: 800px) {
       .post-content h2 {
         font-size: 28px; } }
   .post-content h3 {
     font-size: 26px; }
-    @media screen and (min-width: 700px) {
+    @media screen and (min-width: 800px) {
       .post-content h3 {
         font-size: 22px; } }
   .post-content h4 {
     font-size: 20px; }
-    @media screen and (min-width: 700px) {
+    @media screen and (min-width: 800px) {
       .post-content h4 {
         font-size: 18px; } }
 
