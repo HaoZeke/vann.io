@@ -11,7 +11,7 @@
  */
 body {
   font-family: "Quicksand", sans-serif;
-  font-size: 1.4em;
+  font-size: 1.25em;
   line-height: 2;
   font-weight: 300;
   color: #555;
@@ -140,7 +140,7 @@ figure > img {
     max-width: 140%; }
 
 figcaption {
-  font-size: 0.868em;
+  font-size: 0.875em;
   text-align: center;
   margin-top: 0.5em; }
 
@@ -189,7 +189,7 @@ ul li {
       padding-bottom: 60px; } }
 
 .text-wrapper {
-  max-width: 700px;
+  max-width: 640px;
   margin: 0 auto;
   padding: 0 30px; }
 
@@ -508,7 +508,7 @@ section + section {
     margin-top: 30px; }
 
 .post-meta {
-  font-size: 0.868em;
+  font-size: 0.875em;
   color: #84807c;
   margin-top: 0; }
   .post-list .post-meta {
