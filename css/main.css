@@ -166,9 +166,9 @@ ul li {
     margin-top: 0.5em;
     margin-bottom: 1em; }
 
-/**
- * Wrapper
- */
+body {
+  background-color: white; }
+
 .wrapper {
   max-width: calc(800px - (30px));
   margin: 0 auto;
@@ -179,6 +179,9 @@ ul li {
       padding: 0 30px; } }
 
 .page-content {
+  max-width: 960px;
+  margin: 15px auto;
+  background-color: #fff;
   padding-bottom: 30px;
   overflow-x: hidden;
   position: relative;
@@ -343,7 +346,6 @@ ul li {
 
 .site-header {
   min-height: 56px;
-  background-color: #fff;
   position: relative;
   z-index: 5; }
 
@@ -413,6 +415,7 @@ ul li {
 .site-footer .wrapper {
   text-align: center; }
   .site-footer .wrapper p {
+    margin-top: 0;
     border-top: solid 1px #555;
     padding-top: 15px; }
   .site-footer .wrapper a {
