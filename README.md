@@ -1,4 +1,6 @@
 # vann.io
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/HaoZeke/vann.io.svg)](https://greenkeeper.io/)
 This is a static blog site built with Jekyll and Gulp.
 
 ### Dependencies
